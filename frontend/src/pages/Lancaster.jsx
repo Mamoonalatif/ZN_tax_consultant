@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LocationInfo from '../components/locations/LocationInfo';
 import OtherLocations from '../components/locations/OtherLocations';
 import LocationReviews from '../components/locations/LocationReviews';
@@ -30,7 +31,7 @@ const Lancaster = () => {
                     </p>
                     <div className="wp-block-buttons" style={{ justifyContent: 'flex-start' }}>
                         <div className="wp-block-button">
-                            <a className="wp-block-button__link wp-element-button" href="/schedule" style={{ backgroundColor: '#d13239', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '700', fontSize: '14px' }}>Book A Consultation</a>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ backgroundColor: '#d13239', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '700', fontSize: '14px' }}>Book A Consultation</Link>
                         </div>
                     </div>
                 </div>
@@ -55,17 +56,17 @@ const Lancaster = () => {
                                     From its vibrant downtown to its sprawling rural landscapes, Lancaster relies on the strength and resilience of its small business community. Our team acts as your outsourced financial department, providing the clarity and stability needed to thrive in any season.
                                 </p>
                                 <p>
-                                    If you think improvements to operations can help your business, then we’re ready with the <a href="/tax">accounting</a> and <a href="/bookkeeping">bookkeeping</a> services that will help make that possible.
+                                    If you think improvements to operations can help your business, then we’re ready with the <Link to="/tax">accounting</Link> and <Link to="/bookkeeping">bookkeeping</Link> services that will help make that possible.
                                 </p>
                                 <p>
-                                    From bank reconciliations to <a href="/valuations">business valuations</a> and expert tax preparation, we deliver the insights you need to make informed decisions. You will also benefit from our comprehensive <a href="/tax">tax planning and preparation</a> services.
+                                    From bank reconciliations to <Link to="/valuations">business valuations</Link> and expert tax preparation, we deliver the insights you need to make informed decisions. You will also benefit from our comprehensive <Link to="/tax">tax planning and preparation</Link> services.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="location-contact-box">
                         <p>
-                            <a href="/contact">Contact us</a> now to book a consultation. We’re ready to learn about your Lancaster-area business or nonprofit so we help you make an impact in our community—and beyond.
+                            <Link to="/contact">Contact us</Link> now to book a consultation. We’re ready to learn about your Lancaster-area business or nonprofit so we help you make an impact in our community—and beyond.
                         </p>
                     </div>
                 </div>
@@ -92,7 +93,7 @@ const Lancaster = () => {
                             <p>And that's just the beginning of what you'll experience when you partner with ZN Tax Consultant.</p>
                         </div>
                         <div className="services-right-info">
-                            <p>If you're looking for broad advice about how to improve your overall business, our <a href="/consulting">business and financial consulting</a> can:</p>
+                            <p>If you're looking for broad advice about how to improve your overall business, our <Link to="/consulting">business and financial consulting</Link> can:</p>
                             <ul className="checkmark-list">
                                 <li>Offer guidance on day-to-day financial operations</li>
                                 <li>Help you create business goals and monitor progress</li>
@@ -100,7 +101,7 @@ const Lancaster = () => {
                                 <li>Assist with executive-level business decisions</li>
                                 <li>Evaluate succession planning options and help create an exit strategy</li>
                             </ul>
-                            <p>And for those interested in starting a new business or expanding a business through the purchase of an existing company, ZN Tax Consultant <a href="/acquisitions">acquisition & startup services</a> will:</p>
+                            <p>And for those interested in starting a new business or expanding a business through the purchase of an existing company, ZN Tax Consultant <Link to="/acquisitions">acquisition & startup services</Link> will:</p>
                             <ul className="checkmark-list">
                                 <li>Evaluate purchase costs to ensure fair pricing</li>
                                 <li>Assist with obtaining financing</li>
@@ -109,14 +110,14 @@ const Lancaster = () => {
                                 <li>Conduct due diligence (licenses, permits, zoning requirements, environmental concerns)</li>
                                 <li>Work with your team and other trusted advisors for a unified, strategic approach</li>
                             </ul>
-                            <p>You can also count on us for periodic or one-time <a href="/valuations">business valuations</a>.</p>
+                            <p>You can also count on us for periodic or one-time <Link to="/valuations">business valuations</Link>.</p>
                         </div>
                     </div>
 
                     <div className="location-inline-cta">
                         <p>Are you ready to see what a partnership with ZN Tax Consultant can do for your business? It all starts with a no-cost consultation.</p>
                         <div className="wp-block-button">
-                            <a className="wp-block-button__link wp-element-button" href="/schedule">Schedule A Consultation</a>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule">Schedule A Consultation</Link>
                         </div>
                     </div>
                 </div>

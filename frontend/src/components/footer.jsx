@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logoWithoutBg from '../assets/images/logo-withoutbg.png';
 import logoNameOnly from '../assets/images/logo-nameonly.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -36,11 +37,11 @@ const Footer = () => {
                                 </div>
                                 <div className="contact-item">
                                     <i className="fa-solid fa-envelope"></i>
-                                    <a href="/contact">Email Us</a>
+                                    <Link to="/contact">Email Us</Link>
                                 </div>
                                 <div className="contact-item">
                                     <i className="fa-solid fa-calendar-days"></i>
-                                    <a href="/schedule">Schedule a Consultation</a>
+                                    <Link to="/schedule">Schedule a Consultation</Link>
                                 </div>
                             </div>
 
@@ -55,18 +56,18 @@ const Footer = () => {
                         <div className="footer-col-2">
                             <div className="footer-heading">Locations</div>
                             <ul className="footer-menu">
-                                <li><a href="/mechanicsburg">Mechanicsburg, PA</a></li>
-                                <li><a href="/myerstown">Myerstown, PA</a></li>
-                                <li><a href="/harrisburg">Harrisburg, PA</a></li>
-                                <li><a href="/lancaster">Lancaster, PA</a></li>
+                                <li><Link to="/mechanicsburg">Mechanicsburg, PA</Link></li>
+                                <li><Link to="/myerstown">Myerstown, PA</Link></li>
+                                <li><Link to="/harrisburg">Harrisburg, PA</Link></li>
+                                <li><Link to="/lancaster">Lancaster, PA</Link></li>
                             </ul>
 
                             <div className="footer-heading" style={{ marginTop: '30px' }}>Resources</div>
                             <ul className="footer-menu">
-                                <li><a href="/blogs">Blog</a></li>
-                                <li><a href="/videos">Videos</a></li>
-                                <li><a href="/guides">Guides</a></li>
-                                <li><a href="/checklists">Checklists</a></li>
+                                <li><Link to="/blogs">Blog</Link></li>
+                                <li><Link to="/videos">Videos</Link></li>
+                                <li><Link to="/guides">Guides</Link></li>
+                                <li><Link to="/checklists">Checklists</Link></li>
                             </ul>
                         </div>
 
@@ -74,12 +75,12 @@ const Footer = () => {
                         <div className="footer-col-3">
                             <div className="footer-heading">Accounting Services</div>
                             <ul className="footer-menu footer-menu-underlined">
-                                <li><a href="/bookkeeping">Bookkeeping</a></li>
-                                <li><a href="/tax">Tax Prep & Planning</a></li>
-                                <li><a href="/acquisitions">Acquisitions & Startups</a></li>
-                                <li><a href="/consulting">Business & Financial Consulting</a></li>
-                                <li><a href="/valuations">Business Valuations</a></li>
-                                <li><a href="/quickbooks">QuickBooks®</a></li>
+                                <li><Link to="/bookkeeping">Bookkeeping</Link></li>
+                                <li><Link to="/tax">Tax Prep & Planning</Link></li>
+                                <li><Link to="/acquisitions">Acquisitions & Startups</Link></li>
+                                <li><Link to="/consulting">Business & Financial Consulting</Link></li>
+                                <li><Link to="/valuations">Business Valuations</Link></li>
+                                <li><Link to="/quickbooks">QuickBooks®</Link></li>
                             </ul>
                         </div>
 
@@ -115,7 +116,7 @@ const Footer = () => {
                                     </div>
 
                                     <p className="newsletter-disclaimer">
-                                        By submitting this form, you are consenting to receive marketing emails from: ZN Tax Consultant, 1205 Manor Drive, Suite 100, Mechanicsburg, PA, 17055, US, http://www.zntaxconsultant.com. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. <a href="/privacy-policy">Emails are serviced by Constant Contact.</a>
+                                        By submitting this form, you are consenting to receive marketing emails from: ZN Tax Consultant, 1205 Manor Drive, Suite 100, Mechanicsburg, PA, 17055, US, http://www.zntaxconsultant.com. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. <Link to="/privacy-policy">Emails are serviced by Constant Contact.</Link>
                                     </p>
 
                                     <button type="submit" className="newsletter-submit">Sign Up!</button>
@@ -127,13 +128,13 @@ const Footer = () => {
                     {/* Bottom Footer Links */}
                     <div className="footer-bottom-links">
                         <ul className="copyright-menu">
-                            <li><a href="/why-choose-zn">Why Choose ZN Tax Consultant</a></li>
-                            <li><a href="/find-accountant">Find an Accountant</a></li>
-                            <li><a href="/our-people">Our People</a></li>
-                            <li><a href="/our-process">Our Process</a></li>
-                            <li><a href="/careers">Careers</a></li>
-                            <li><a href="/client-hub">Client Hub</a></li>
-                            <li><a href="/contact">Contact</a></li>
+                            <li><Link to="/why-choose-zn">Why Choose ZN Tax Consultant</Link></li>
+                            <li><Link to="/find-accountant">Find an Accountant</Link></li>
+                            <li><Link to="/our-people">Our People</Link></li>
+                            <li><Link to="/our-process">Our Process</Link></li>
+                            <li><Link to="/careers">Careers</Link></li>
+                            <li><Link to="/client-hub">Client Hub</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -141,7 +142,7 @@ const Footer = () => {
                     <div id="copyright" className="container">
                         <div className="copyright-left">
                             <img src={logoNameOnly} alt="ZN Tax Consultant icon" width="40" height="auto" />
-                            <span>©2025, ZN Tax Consultant. All Rights Reserved. <a href="/privacy-policy">Privacy Policy</a></span>
+                            <span>©2025, ZN Tax Consultant. All Rights Reserved. <Link to="/privacy-policy">Privacy Policy</Link></span>
                         </div>
                     </div>
                 </div>

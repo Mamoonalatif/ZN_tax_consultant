@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LocationInfo from '../components/locations/LocationInfo';
 import OtherLocations from '../components/locations/OtherLocations';
 import LocationReviews from '../components/locations/LocationReviews';
@@ -30,7 +31,7 @@ const Harrisburg = () => {
                     </p>
                     <div className="wp-block-buttons" style={{ justifyContent: 'flex-start' }}>
                         <div className="wp-block-button">
-                            <a className="wp-block-button__link wp-element-button" href="/schedule" style={{ backgroundColor: '#d13239', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '700', fontSize: '14px' }}>Book A Consultation</a>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ backgroundColor: '#d13239', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '700', fontSize: '14px' }}>Book A Consultation</Link>
                         </div>
                     </div>
                 </div>
@@ -56,14 +57,14 @@ const Harrisburg = () => {
                                     The Harrisburg area is booming with new and growing businesses. That brings new opportunities—and new challenges for every size, age, and type of business. Our team of accounting professionals is ready to help you tackle and navigate those opportunities and challenges so you can enhance your company’s performance and profitability.
                                 </p>
                                 <p>
-                                    If you think improvements to operations can help your business, then we’re ready with the <a href="/tax">accounting</a> and <a href="/bookkeeping">bookkeeping</a> services that will help make that possible. Those services might include check-writing for accounts payable, general ledgers, performance graphs, operating statements, balance sheets, bank reconciliations, and more. And don’t forget <a href="/tax">tax preparation and planning</a> that will help you stay in compliance and save money on taxes!
+                                    If you think improvements to operations can help your business, then we’re ready with the <Link to="/tax">accounting</Link> and <Link to="/bookkeeping">bookkeeping</Link> services that will help make that possible. Those services might include check-writing for accounts payable, general ledgers, performance graphs, operating statements, balance sheets, bank reconciliations, and more. And don’t forget <Link to="/tax">tax preparation and planning</Link> that will help you stay in compliance and save money on taxes!
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="location-contact-box">
                         <p>
-                            <a href="/contact">Contact us</a> now to book a consultation. We’re ready to learn about your Harrisburg-area business or nonprofit so we help you make an impact in our community—and beyond.
+                            <Link to="/contact">Contact us</Link> now to book a consultation. We’re ready to learn about your Harrisburg-area business or nonprofit so we help you make an impact in our community—and beyond.
                         </p>
                     </div>
                 </div>
@@ -79,7 +80,7 @@ const Harrisburg = () => {
                     <div className="services-detailed-flex">
                         <div className="services-left-card">
                             <h2>Typical Accounting Services—and so Much More—in <strong>Harrisburg, PA</strong></h2>
-                            <p>You may have already discovered that every accounting firm is unique. When you work with ZN Tax Consultant in Harrisburg, you’ll immediately see differences from the rest—like our core values and processes. And when you start to experience the results of our tax planning, bookkeeping, and <a href="/bookkeeping">accounting services for your Harrisburg business</a>, you’ll also notice our:</p>
+                            <p>You may have already discovered that every accounting firm is unique. When you work with ZN Tax Consultant in Harrisburg, you’ll immediately see differences from the rest—like our core values and processes. And when you start to experience the results of our tax planning, bookkeeping, and <Link to="/bookkeeping">accounting services for your Harrisburg business</Link>, you’ll also notice our:</p>
                             <ul className="wp-block-list">
                                 <li>Dedication to getting to know your business so we can better serve you</li>
                                 <li>Service plans with fixed monthly rates, including unlimited access to our team</li>
@@ -90,7 +91,7 @@ const Harrisburg = () => {
                             <p>Those are just a few of the things you’ll enjoy about partnering with ZN Tax Consultant for basic accounting services. And there’s more!</p>
                         </div>
                         <div className="services-right-info">
-                            <p>Are you looking for targeted, qualified advice on how to improve your operations, future-proof your business, and make it more profitable? Take a look at our <a href="/consulting">business and financial consulting</a>, in which we will:</p>
+                            <p>Are you looking for targeted, qualified advice on how to improve your operations, future-proof your business, and make it more profitable? Take a look at our <Link to="/consulting">business and financial consulting</Link>, in which we will:</p>
                             <ul className="checkmark-list">
                                 <li>Provide direction for improving everyday operations</li>
                                 <li>Work with you to establish business goals and track progress</li>
@@ -98,7 +99,7 @@ const Harrisburg = () => {
                                 <li>Offer advice when needed for C-level business decisions</li>
                                 <li>Assess succession planning alternatives and strategize an exit strategy</li>
                             </ul>
-                            <p>If you’re starting a new business or buying another business to expand operations, our <a href="/acquisitions">acquisition & startup services</a> will help with:</p>
+                            <p>If you’re starting a new business or buying another business to expand operations, our <Link to="/acquisitions">acquisition & startup services</Link> will help with:</p>
                             <ul className="checkmark-list">
                                 <li>Purchase cost evaluation to ensure fair pricing</li>
                                 <li>Financing assistance</li>
@@ -107,14 +108,14 @@ const Harrisburg = () => {
                                 <li>Due diligence (environmental concerns, permits, licenses, zoning requirements)</li>
                                 <li>Development of a strategic approach that’s both unified and effective</li>
                             </ul>
-                            <p>Need a <a href="/valuations">business valuation</a>? You can count on us.</p>
+                            <p>Need a <Link to="/valuations">business valuation</Link>? You can count on us.</p>
                         </div>
                     </div>
 
                     <div className="location-inline-cta">
                         <p>What can a partnership with ZN Tax Consultant bring to your business? Let’s find out with a consultation.</p>
                         <div className="wp-block-button">
-                            <a className="wp-block-button__link wp-element-button" href="/schedule">Schedule A Consultation</a>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule">Schedule A Consultation</Link>
                         </div>
                     </div>
                 </div>

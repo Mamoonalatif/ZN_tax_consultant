@@ -59,9 +59,9 @@ const Consulting = () => {
                         </p>
                     </div>
                     <div className="wp-block-buttons">
-                        <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
                             Consult With ZN Tax Consultant
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 {/* Decorative background element mirroring the site's design language */}
@@ -156,9 +156,9 @@ const Consulting = () => {
                         <p style={{ fontSize: '17px', fontWeight: '700', color: '#333', marginBottom: '25px' }}>
                             It's time to build a better business together!
                         </p>
-                        <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239', padding: '15px 40px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 40px' }}>
                             Contact ZN Tax Consultant
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -173,7 +173,7 @@ const Consulting = () => {
                             Small Business Financial Consulting <br /><strong>is Just One Service Offered by ZN Tax Consultant</strong>
                         </h2>
                         <p style={{ fontSize: '15px', color: '#e0e0e0', maxWidth: '1000px', margin: '0 auto', lineHeight: '1.6' }}>
-                            Small business financial consulting is a critical part of your success, but it’s only one part. Once you have begun moving towards greater success for your business, you might wonder what else can be improved by small business consulting services. <a href="/client-hub" style={{ color: '#ff7b7b', textDecoration: 'underline' }}>Our clients</a> also benefit from these services:
+                            Small business financial consulting is a critical part of your success, but it’s only one part. Once you have begun moving towards greater success for your business, you might wonder what else can be improved by small business consulting services. <Link to="/client-hub" style={{ color: '#ff7b7b', textDecoration: 'underline' }}>Our clients</Link> also benefit from these services:
                         </p>
                     </div>
 
@@ -199,8 +199,8 @@ const Consulting = () => {
                             Find the services you need, provided by people who want to see your business succeed. The ZN Tax Consultant team is waiting to hear from you.
                         </p>
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                            <a className="wp-block-button__link wp-element-button" href="/schedule" style={{ background: '#d13239', padding: '12px 35px' }}>Find An Accountant</a>
-                            <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239', padding: '12px 35px' }}>Find A Bookkeeper</a>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239', padding: '12px 35px' }}>Find An Accountant</Link>
+                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '12px 35px' }}>Find A Bookkeeper</Link>
                         </div>
                     </div>
                 </div>
@@ -232,7 +232,7 @@ const Consulting = () => {
                             <li key={i} style={{ marginBottom: '12px', paddingLeft: '20px', position: 'relative', fontSize: '14.5px', color: '#444' }}>
                                 <span style={{ position: 'absolute', left: 0, color: '#333', fontWeight: 'bold' }}>•</span>
                                 <strong>{industry.name}</strong> – {industry.desc.split(industry.name + ' Accounting Services')[0]}
-                                <a href={industry.link} style={{ color: '#d13239', textDecoration: 'underline' }}>{industry.name} Accounting Services</a>
+                                <Link to={industry.link} style={{ color: '#d13239', textDecoration: 'underline' }}>{industry.name} Accounting Services</Link>
                                 {industry.desc.split(industry.name + ' Accounting Services')[1]}
                             </li>
                         ))}
@@ -252,7 +252,7 @@ const Consulting = () => {
                             Frequently Asked Questions <strong>About Small Business Financial Consulting</strong>
                         </h2>
                         <p style={{ fontSize: '15.5px', color: '#666', maxWidth: '1000px', margin: '0 auto', lineHeight: '1.6' }}>
-                            If you've made it this far, you already have questions for us to answer and need them answered now. Here are some of the most common questions we answer daily – if we haven't addressed your question here or you'd like more information, please <a href="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contact our team</a>.
+                            If you've made it this far, you already have questions for us to answer and need them answered now. Here are some of the most common questions we answer daily – if we haven't addressed your question here or you'd like more information, please <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contact our team</Link>.
                         </p>
                     </div>
 
@@ -264,9 +264,9 @@ const Consulting = () => {
                         <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.7', maxWidth: '850px', margin: '0 auto 40px auto' }}>
                             When you work with the ZN Tax Consultant team, you will always have a team of professional business accounting experts available to answer your most pressing questions. If you want to learn more about our areas of expertise and what you can expect from our small business financial consultants, call us today and start the conversation!
                         </p>
-                        <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
                             Contact ZN Tax Consultant
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

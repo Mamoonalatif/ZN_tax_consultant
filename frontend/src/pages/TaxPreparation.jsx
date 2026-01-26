@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 
 // Import images
@@ -57,7 +58,7 @@ const TaxPreparation = () => {
                     </p>
                     <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
                         <div className="wp-block-button">
-                            <a className="wp-block-button__link wp-element-button" href="/contact" style={{
+                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
                                 background: '#d13239',
                                 color: '#fff',
                                 padding: '15px 40px',
@@ -66,7 +67,7 @@ const TaxPreparation = () => {
                                 fontSize: '16px'
                             }}>
                                 Contact ZN Tax Consultant
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -295,7 +296,7 @@ const TaxPreparation = () => {
                                 <div style={{ height: '80px', display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
                                     <img src={service.img} alt={service.title} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                                 </div>
-                                <a href={service.link} style={{
+                                <Link to={service.link} style={{
                                     color: '#d13239',
                                     fontWeight: '700',
                                     fontSize: '15px',
@@ -303,7 +304,7 @@ const TaxPreparation = () => {
                                     lineHeight: '1.3'
                                 }}>
                                     {service.title}
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>
@@ -313,12 +314,12 @@ const TaxPreparation = () => {
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                        <a className="wp-block-button__link wp-element-button" href="/find-accountant" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{ background: '#d13239' }}>
                             Find An Accountant
-                        </a>
-                        <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239' }}>
+                        </Link>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
                             Find A Bookkeeper
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -331,12 +332,12 @@ const TaxPreparation = () => {
                     </h2>
                     <div style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', maxWidth: '900px', margin: '0 auto 40px auto' }}>
                         <p style={{ marginBottom: '15px' }}>
-                            We can relieve tax time pressure and help you <a href="/consulting" style={{ color: '#d13239', textDecoration: 'underline' }}>develop a strategic approach</a> to handling your tax obligations. Make an appointment at one of our four locations in <a href="/harrisburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Harrisburg</a>, <a href="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Mechanicsburg</a>, <a href="/myerstown" style={{ color: '#d13239', textDecoration: 'underline' }}>Myerstown</a>, or <a href="/lancaster" style={{ color: '#d13239', textDecoration: 'underline' }}>Lancaster</a>, PA.
+                            We can relieve tax time pressure and help you <Link to="/consulting" style={{ color: '#d13239', textDecoration: 'underline' }}>develop a strategic approach</Link> to handling your tax obligations. Make an appointment at one of our four locations in <Link to="/harrisburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Harrisburg</Link>, <Link to="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#d13239', textDecoration: 'underline' }}>Myerstown</Link>, or <Link to="/lancaster" style={{ color: '#d13239', textDecoration: 'underline' }}>Lancaster</Link>, PA.
                         </p>
                     </div>
-                    <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
+                    <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
                         Contact ZN Tax Consultant
-                    </a>
+                    </Link>
                 </div>
             </div>
 

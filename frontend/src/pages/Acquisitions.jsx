@@ -58,9 +58,9 @@ const Acquisitions = () => {
                         When You Have an Experienced Startup Consultant or Business Evaluation Partner on Your Side, You Can Expect a More Efficient Transition.
                     </p>
                     <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
-                        <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
                             Consult With ZN Tax Consultant
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -84,9 +84,9 @@ const Acquisitions = () => {
                                     With a strategic <a href="#" style={{ color: '#d13239', textDecoration: 'underline' }}>business acquisition strategy</a>, you can make informed decisions, minimize risks, and ensure financial stability. A CPA for startups and acquisitions provides the due diligence, financial structuring, and cash flow analysis needed for a seamless transition. Get expert insights to navigate mergers and acquisitions with confidence.
                                 </p>
                             </div>
-                            <a className="wp-block-button__link wp-element-button" href="/schedule" style={{ background: '#d13239', padding: '15px 40px' }}>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239', padding: '15px 40px' }}>
                                 Book An Acquisition Consultation
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ const Acquisitions = () => {
                                 Frequently Asked <strong>Business Acquisition</strong> Questions
                             </h2>
                             <p style={{ fontSize: '15px', color: '#555', marginBottom: '30px', lineHeight: '1.6' }}>
-                                Navigating a business acquisition comes with many uncertainties. Here are answers to some common questions to help you make an informed decision. If you have additional concerns or need personalized guidance, a business acquisition consultant can <a href="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>provide expert insight</a> tailored to your situation.
+                                Navigating a business acquisition comes with many uncertainties. Here are answers to some common questions to help you make an informed decision. If you have additional concerns or need personalized guidance, a business acquisition consultant can <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>provide expert insight</Link> tailored to your situation.
                             </p>
                             <FAQ items={faqItems} />
                         </div>
@@ -223,7 +223,7 @@ const Acquisitions = () => {
                                 ))}
                             </div>
                             <p style={{ fontSize: '14px', color: '#555', fontStyle: 'italic', lineHeight: '1.6' }}>
-                                A strong startup CPA service ensures your business starts on a solid financial footing, helping you avoid costly mistakes and maximize opportunities. Take the first step toward success—<a href="/schedule" style={{ color: '#d13239', textDecoration: 'underline' }}>schedule a consultation today!</a>
+                                A strong startup CPA service ensures your business starts on a solid financial footing, helping you avoid costly mistakes and maximize opportunities. Take the first step toward success—<Link to="/schedule" style={{ color: '#d13239', textDecoration: 'underline' }}>schedule a consultation today!</Link>
                             </p>
                         </div>
 
@@ -247,11 +247,11 @@ const Acquisitions = () => {
                             ]} />
                             <div style={{ borderLeft: '4px solid #d13239', background: '#fff', padding: '30px', marginTop: '30px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)' }}>
                                 <p style={{ fontSize: '14px', marginBottom: '20px' }}>
-                                    <a href="/contact" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: 'bold' }}>Our team</a> will work closely with you to help make your startup a success. Let's schedule a consultation to get started.
+                                    <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: 'bold' }}>Our team</Link> will work closely with you to help make your startup a success. Let's schedule a consultation to get started.
                                 </p>
-                                <a className="wp-block-button__link wp-element-button" href="/schedule" style={{ background: '#d13239' }}>
+                                <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239' }}>
                                     Book A Startup Consultation
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -293,7 +293,7 @@ const Acquisitions = () => {
                                 <div style={{ fontSize: '40px', color: '#d13239', marginBottom: '20px' }}>
                                     <i className={`fa-solid ${s.icon}`}></i>
                                 </div>
-                                <a href={s.link} style={{
+                                <Link to={s.link} style={{
                                     color: '#d13239',
                                     fontWeight: '700',
                                     fontSize: '15px',
@@ -301,7 +301,7 @@ const Acquisitions = () => {
                                     lineHeight: '1.3'
                                 }}>
                                     {s.title}
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>
@@ -311,12 +311,12 @@ const Acquisitions = () => {
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                        <a className="wp-block-button__link wp-element-button" href="/find-accountant" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{ background: '#d13239' }}>
                             Find An Accountant
-                        </a>
-                        <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239' }}>
+                        </Link>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
                             Find A Bookkeeper
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -329,12 +329,12 @@ const Acquisitions = () => {
                     </h2>
                     <div style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', maxWidth: '900px', margin: '0 auto 40px auto' }}>
                         <p style={{ marginBottom: '15px' }}>
-                            We can help you <a href="/consulting" style={{ color: '#d13239', textDecoration: 'underline' }}>develop a strategic approach</a> to handling your startup or acquisition. Make an appointment at one of our four locations in <a href="/harrisburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Harrisburg</a>, <a href="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Mechanicsburg</a>, <a href="/myerstown" style={{ color: '#d13239', textDecoration: 'underline' }}>Myerstown</a>, or <a href="/lancaster" style={{ color: '#d13239', textDecoration: 'underline' }}>Lancaster</a>, PA.
+                            We can help you <Link to="/consulting" style={{ color: '#d13239', textDecoration: 'underline' }}>develop a strategic approach</Link> to handling your startup or acquisition. Make an appointment at one of our four locations in <Link to="/harrisburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Harrisburg</Link>, <Link to="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#d13239', textDecoration: 'underline' }}>Myerstown</Link>, or <Link to="/lancaster" style={{ color: '#d13239', textDecoration: 'underline' }}>Lancaster</Link>, PA.
                         </p>
                     </div>
-                    <a className="wp-block-button__link wp-element-button" href="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
+                    <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
                         Contact ZN Tax Consultant
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

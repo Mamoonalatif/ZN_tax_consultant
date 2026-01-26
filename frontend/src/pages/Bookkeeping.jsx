@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import whiteBg from '../assets/images/white-bg.jpg';
 
@@ -45,7 +46,7 @@ const Bookkeeping = () => {
                     <p style={{ fontSize: '22px', color: '#222', fontWeight: '400', marginBottom: '30px' }}>With Outsourced Bookkeeping Services, You’ll Have More Time to Focus on What Matters</p>
                     <div className="wp-block-buttons">
                         <div className="wp-block-button">
-                            <a className="wp-block-button__link wp-element-button" href="/contact">Contact ZN Tax Consultant</a>
+                            <Link className="wp-block-button__link wp-element-button" to="/contact">Contact ZN Tax Consultant</Link>
                         </div>
                     </div>
                 </div>
@@ -77,11 +78,11 @@ const Bookkeeping = () => {
                                 <p style={{ marginBottom: '15px' }}>Are your books suffering because your staff is too busy attending to your customers, expanding your operations, or making sure that your business is fulfilling its purpose? There's nothing wrong with that. In fact, for many small businesses, the ledger is the last item to get attention when things get busy.</p>
                                 <p style={{ marginBottom: '15px' }}>What separates average from great is recognizing the need for help.</p>
                                 <p style={{ marginBottom: '30px' }}>
-                                    Perhaps it's time to <a href="/find-accountant" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: '600' }}>hire a fractional bookkeeper</a> to help you get back on track, ready for tax season, informed about your finances, and in compliance. ZN Tax Consultant can help.
+                                    Perhaps it's time to <Link to="/find-accountant" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: '600' }}>hire a fractional bookkeeper</Link> to help you get back on track, ready for tax season, informed about your finances, and in compliance. ZN Tax Consultant can help.
                                 </p>
                             </div>
                             <div>
-                                <a className="wp-block-button__link wp-element-button" href="/find-accountant" style={{
+                                <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{
                                     background: '#d13239',
                                     color: '#fff',
                                     padding: '12px 35px',
@@ -91,7 +92,7 @@ const Bookkeeping = () => {
                                     display: 'inline-block'
                                 }}>
                                     Find A Bookkeeper
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -137,7 +138,7 @@ const Bookkeeping = () => {
                             Are you ready to see what a fractional bookkeeper could do for your business? A member of the ZN Tax Consultant team is ready to discuss it with you.
                         </p>
                         <div>
-                            <a className="wp-block-button__link wp-element-button" href="/contact" style={{
+                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
                                 background: '#d13239',
                                 color: '#fff',
                                 padding: '15px 40px',
@@ -148,7 +149,7 @@ const Bookkeeping = () => {
                                 display: 'inline-block'
                             }}>
                                 Contact ZN Tax Consultant
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -175,7 +176,7 @@ const Bookkeeping = () => {
                                     ))}
                                 </ul>
                                 <p style={{ fontWeight: '500' }}>
-                                    <a href="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>Get in touch with ZN Tax Consultant</a> today to see if our bookkeeping services for small businesses can help you take your company from great to outstanding!
+                                    <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>Get in touch with ZN Tax Consultant</Link> today to see if our bookkeeping services for small businesses can help you take your company from great to outstanding!
                                 </p>
                             </div>
                         </div>
@@ -223,7 +224,7 @@ const Bookkeeping = () => {
                                     Isn't it time to have confidence in the accuracy of your financial records while saving time, money, and maybe even tax dollars? Today is the day to contact ZN Tax Consultant to discuss how a fractional bookkeeper can help you.
                                 </p>
                             </div>
-                            <a className="wp-block-button__link wp-element-button" href="/contact" style={{
+                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
                                 background: '#d13239',
                                 color: '#fff',
                                 padding: '12px 35px',
@@ -233,7 +234,7 @@ const Bookkeeping = () => {
                                 display: 'inline-block'
                             }}>
                                 Contact ZN Tax Consultant
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -273,8 +274,8 @@ const Bookkeeping = () => {
                     </p>
 
                     <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-                        <a className="wp-block-button__link" href="/contact" style={{ padding: '12px 35px', background: '#d13239', borderRadius: '50px', fontWeight: 'bold' }}>Find An Accountant</a>
-                        <a className="wp-block-button__link" href="/about" style={{ padding: '12px 35px', background: '#d13239', borderRadius: '50px', fontWeight: 'bold' }}>See All Staff</a>
+                        <Link className="wp-block-button__link" to="/contact" style={{ padding: '12px 35px', background: '#d13239', borderRadius: '50px', fontWeight: 'bold' }}>Find An Accountant</Link>
+                        <Link className="wp-block-button__link" to="/about" style={{ padding: '12px 35px', background: '#d13239', borderRadius: '50px', fontWeight: 'bold' }}>See All Staff</Link>
                     </div>
                 </div>
             </div>
@@ -287,7 +288,7 @@ const Bookkeeping = () => {
                             <strong>Frequently Asked Questions</strong> About Bookkeeping Services for Small Businesses
                         </h2>
                         <p style={{ color: '#777', marginBottom: '40px', fontSize: '15px' }}>
-                            If you’re thinking about hiring a bookkeeper, you’re bound to have questions. We’re answering some of the most commonly asked ones here, and you’re encouraged to <a href="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contact us</a> for answers to your specific questions.
+                            If you’re thinking about hiring a bookkeeper, you’re bound to have questions. We’re answering some of the most commonly asked ones here, and you’re encouraged to <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contact us</Link> for answers to your specific questions.
                         </p>
                         <FAQ items={faqItems} />
                     </div>

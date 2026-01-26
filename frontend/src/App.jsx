@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/home';
 import Careers from './pages/Careers';
 
@@ -30,10 +31,12 @@ import Guides from './pages/Guides';
 import Checklists from './pages/Checklists';
 import Questionnaires from './pages/Questionnaires';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -66,7 +69,8 @@ function App() {
         <Route path="/checklists" element={<Checklists />} />
         <Route path="/questionnaires" element={<Questionnaires />} />
 
-        {/* We will add other pages here as we go */}
+        {/* Catch-all route for 404 Not Found */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

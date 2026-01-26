@@ -173,7 +173,7 @@ const Home = () => {
                             <p style={{ fontSize: '12px', lineHeight: '1.4', marginBottom: '10px' }}>We’ll handle the bookkeeping, accounting, or other services, so you can focus on your business’s mission.</p>
                             <div className="wp-block-buttons" style={{ marginTop: '15px' }}>
                                 <div className="wp-block-button">
-                                    <a className="wp-block-button__link wp-element-button" href="/why-choose-zn" style={{ padding: '10px 25px', fontSize: '12px' }}>Get To Know US</a>
+                                    <Link className="wp-block-button__link wp-element-button" to="/why-choose-zn" style={{ padding: '10px 25px', fontSize: '12px' }}>Get To Know US</Link>
                                 </div>
                             </div>
                         </div>
