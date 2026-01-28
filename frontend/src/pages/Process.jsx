@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import whiteBg from '../assets/images/white-bg.jpg';
-import officeImg from '../assets/images/Gift-CPA-Commercial-Shoot-174-edited.jpg';
 
 const Process = () => {
     const processSteps = [
@@ -65,11 +64,12 @@ const Process = () => {
                 <div className="container">
                     <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
                         {/* Image Column */}
+                        {/* Image Column */}
                         <div style={{ flex: '40%', zIndex: 2 }}>
-                            <img src={officeImg} alt="ZN Tax Consultant Team" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" alt="Professional Workspace" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
                         {/* Floating Text Card */}
-                        <div style={{
+                        <div className="process-floating-card" style={{
                             flex: '65%',
                             background: '#fff',
                             padding: '60px 60px 60px 115px',
@@ -134,7 +134,7 @@ const Process = () => {
                         </h2>
                         <div style={{ fontSize: '16px', color: '#555', lineHeight: '1.8', marginBottom: '35px' }}>
                             <p style={{ marginBottom: '15px' }}>
-                                We've been helping businesses to be their best and achieve the most for 40 years, and along with that experience comes the knowledge to make the process of hiring an accountant or bookkeeper uncomplicated.
+                                We've been helping businesses to be their best and achieve the most, and along with that experience comes the knowledge to make the process of hiring an accountant or bookkeeper uncomplicated.
                             </p>
                             <p style={{ fontWeight: '700', color: '#333' }}>
                                 Let us handle all the details so you can get back to business.

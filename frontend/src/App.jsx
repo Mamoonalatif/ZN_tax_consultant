@@ -5,12 +5,6 @@ import Footer from './components/footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/home';
 import Careers from './pages/Careers';
-
-// Import location pages
-import Harrisburg from './pages/Harrisburg';
-import Mechanicsburg from './pages/Mechanicsburg';
-import Myerstown from './pages/Myerstown';
-import Lancaster from './pages/Lancaster';
 import Contact from './pages/Contact';
 import FindAccountant from './pages/FindAccountant';
 import Bookkeeping from './pages/Bookkeeping';
@@ -31,7 +25,16 @@ import Guides from './pages/Guides';
 import Checklists from './pages/Checklists';
 import Questionnaires from './pages/Questionnaires';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import ComingSoon from './pages/ComingSoon';
+
+import BusinessOwnership from './pages/BusinessOwnership';
 import NotFound from './pages/NotFound';
+
+// Location Pages
+import Mechanicsburg from './pages/Mechanicsburg';
+import Myerstown from './pages/Myerstown';
+import Harrisburg from './pages/Harrisburg';
+import Lancaster from './pages/Lancaster';
 
 function App() {
   return (
@@ -41,12 +44,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
-        {/* Location Routes */}
-        <Route path="/harrisburg" element={<Harrisburg />} />
-        <Route path="/mechanicsburg" element={<Mechanicsburg />} />
-        <Route path="/myerstown" element={<Myerstown />} />
-        <Route path="/lancaster" element={<Lancaster />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        \
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/find-accountant" element={<FindAccountant />} />
@@ -60,14 +59,17 @@ function App() {
         <Route path="/our-process" element={<Process />} />
         <Route path="/consulting" element={<Consulting />} />
         <Route path="/valuations" element={<Valuations />} />
+        <Route path="/business-ownership" element={<BusinessOwnership />} />
+        <Route path="/boi" element={<BusinessOwnership />} />
         <Route path="/why-choose-zn" element={<WhyChoose />} />
         <Route path="/our-people" element={<OurPeople />} />
         <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/guides" element={<Guides />} />
-        <Route path="/checklists" element={<Checklists />} />
-        <Route path="/questionnaires" element={<Questionnaires />} />
+
+        {/* Location Pages */}
+        <Route path="/mechanicsburg" element={<Mechanicsburg />} />
+        <Route path="/myerstown" element={<Myerstown />} />
+        <Route path="/harrisburg" element={<Harrisburg />} />
+        <Route path="/lancaster" element={<Lancaster />} />
 
         {/* Catch-all route for 404 Not Found */}
         <Route path="*" element={<NotFound />} />

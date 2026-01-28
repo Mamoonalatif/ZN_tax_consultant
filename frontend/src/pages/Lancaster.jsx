@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LocationInfo from '../components/locations/LocationInfo';
 import OtherLocations from '../components/locations/OtherLocations';
-import LocationReviews from '../components/locations/LocationReviews';
+import GoogleReviews from '../components/GoogleReviews';
 
 // Import images
 import lancasterOffice from '../assets/images/lancaster-office.jpg';
@@ -12,7 +12,7 @@ import shootoutImg from '../assets/images/writing.jpg';
 const Lancaster = () => {
     return (
         <div className="location-page">
-            <div className="wp-block-cover alignfull is-light has-parallax hero-section" style={{ minHeight: '350px', display: 'flex', alignItems: 'center', paddingTop: '60px', paddingBottom: '60px', position: 'relative' }}>
+            <div className="wp-block-cover alignfull is-light has-parallax hero-section" style={{ minHeight: '300px', display: 'flex', alignItems: 'center', paddingTop: '60px', paddingBottom: '60px', position: 'relative' }}>
                 <div
                     className="wp-block-cover__image-background has-parallax"
                     style={{
@@ -37,16 +37,9 @@ const Lancaster = () => {
                 </div>
             </div>
 
-            <div className="location-content-section">
-                <div className="container">
+            <div className="location-content-section" style={{ paddingTop: '80px' }}>
+                <div className="container" style={{ maxWidth: '1000px' }}>
                     <div className="location-flex-container">
-                        <div className="location-image-side">
-                            <img src={lancasterOffice} alt="Lancaster Office" />
-                            <div className="location-meta-info">
-                                <span className="location-meta-label">Conveniently located at: <strong><em>151 Good Drive #2, Lancaster, PA 17603</em></strong></span>
-                                <a href="tel:7173933876" className="location-meta-phone">(717) 393-3876</a>
-                            </div>
-                        </div>
                         <div className="location-card-side">
                             <h2 className="location-card-title">
                                 <strong style={{ fontWeight: '700' }}>Get Accounting Services</strong> and More from a Fellow Lancaster Business
@@ -73,7 +66,7 @@ const Lancaster = () => {
             </div>
 
             {/* Detailed Services Section */}
-            <div className="location-services-detailed" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+            <div className="location-services-detailed" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
                 <div
                     className="wp-block-cover__image-background has-parallax"
                     style={{ backgroundImage: `url(${whiteBg})`, backgroundPosition: '50% 50%', backgroundAttachment: 'fixed', opacity: 0.15, zIndex: 0 }}
@@ -124,21 +117,18 @@ const Lancaster = () => {
             </div>
 
             {/* Need More Reasons Section */}
-            <div className="reasons-section" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+            <div className="reasons-section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
                 <div className="container">
-                    <h2 className="text-center" style={{ fontSize: '28px' }}>Even More Reasons to Choose ZN Tax Consultant <strong>in Lancaster</strong></h2>
-                    <p className="text-center" style={{ maxWidth: '900px' }}>
+                    <h2 className="text-center" style={{ fontSize: '32px', marginBottom: '30px' }}>Even More Reasons to Choose ZN Tax Consultant <strong>in Lancaster</strong></h2>
+                    <p className="text-center" style={{ maxWidth: '900px', margin: '0 auto 20px auto' }}>
                         ZN Tax Consultant have been trusted advisors to small businesses across central Pennsylvania. We provide the expertise and services of a large firm but with offices conveniently located where you are in Lancaster.
                     </p>
-                    <p className="text-center" style={{ maxWidth: '900px' }}>
+                    <p className="text-center" style={{ maxWidth: '900px', margin: '0 auto 40px auto' }}>
                         Our local experts know your community and understand what's happening in your backyard, because it's their backyard, too. We are proud to support small businesses, the backbone of our local, national, and global communities.
                     </p>
 
-                    <div className="reasons-flex">
-                        <div className="reasons-image">
-                            <img src={shootoutImg} alt="ZN Tax Consultant Professionals" />
-                        </div>
-                        <div className="reasons-content">
+                    <div className="reasons-flex" style={{ display: 'block' }}>
+                        <div className="reasons-content" style={{ maxWidth: '100%', padding: '0' }}>
                             <h3>Community Support & Recognition</h3>
                             <ul className="wp-block-list">
                                 <li>Simply the Best Lifetime Achievement Award (10+ years of awards!)</li>
@@ -150,7 +140,7 @@ const Lancaster = () => {
                                 <li>LNP Readers' Choice Award</li>
                             </ul>
 
-                            <h3 style={{ marginTop: '20px', marginBottom: '0px', fontSize: '18px' }}>Actively participating with:</h3>
+                            <h3 style={{ marginTop: '30px', marginBottom: '15px', fontSize: '20px' }}>Actively participating with:</h3>
                             <div className="two-col-list">
                                 <ul className="wp-block-list">
                                     <li><a href="https://jacentralpa.org/" target="_blank" rel="noreferrer">Junior Achievement (JA) of South-Central PA</a></li>
@@ -180,7 +170,7 @@ const Lancaster = () => {
 
             <OtherLocations currentLocation="Lancaster" />
 
-            <LocationReviews locationName="Lancaster" />
+            <GoogleReviews />
         </div>
     );
 };

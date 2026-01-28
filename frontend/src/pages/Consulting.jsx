@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import whiteBg from '../assets/images/white-bg.jpg';
-import officeImg from '../assets/images/Gift-CPA-Commercial-Shoot-174-edited.jpg';
-import workingImg from '../assets/images/Gift-CPA-Commercial-Shoot-174-1-edited.jpg';
 
 const Consulting = () => {
     const faqItems = [
@@ -24,58 +22,47 @@ const Consulting = () => {
     return (
         <div className="service-page">
             {/* Hero Section */}
-            <div className="wp-block-cover alignfull is-light careers-hero" style={{
-                minHeight: '300px',
+            <div className="wp-block-cover alignfull is-light careers-hero page-responsive-padding" style={{
+                minHeight: '400px',
                 display: 'flex',
                 alignItems: 'center',
                 paddingTop: '60px',
-                paddingBottom: '40px',
-                background: `#f5f7f8`,
+                paddingBottom: '60px',
+                background: `linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)`,
                 position: 'relative',
                 overflow: 'hidden'
             }}>
-                <div
-                    className="wp-block-cover__image-background"
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${whiteBg})`,
-                        backgroundPosition: '50% 50%',
-                        backgroundAttachment: 'fixed',
-                        opacity: 0.2
-                    }}
-                ></div>
                 <div className="wp-block-cover__inner-container container" style={{ position: 'relative', zIndex: 2 }}>
-                    <h1 className="wp-block-heading" style={{ fontSize: '40px', color: '#000', fontWeight: '300', lineHeight: '1.2' }}>
-                        Small Business <strong>Consulting</strong> in Central Pennsylvania
-                    </h1>
-                    <p style={{ fontSize: '22px', color: '#444', maxWidth: '900px', margin: '25px 0', lineHeight: '1.7', fontWeight: '400' }}>
-                        With ZN Tax Consultant on Your Side, You Can Set Your SME or Nonprofit Up for Success
-                    </p>
-                    <div style={{ fontSize: '15.5px', color: '#555', maxWidth: '900px', lineHeight: '1.7', marginBottom: '30px' }}>
-                        <p style={{ marginBottom: '15px' }}>
-                            You know how your business works right now, but do you know what it will look like in 5 years? We can't tell you what it will look like, but getting there can be a path full of financial roadblocks, frustrations, and stress. You need a small business consultant who can help you get there without the struggles and frustration entrepreneurs and owners often go through.
-                        </p>
-                        <p>
-                            Whether starting a business or trying to grow beyond your current limits, a small and mid-sized business (SME) consultant can give you a new perspective and the benefit of broader business experiences - call us at one of our PA branches to get the winning consultation services you need!
-                        </p>
-                    </div>
-                    <div className="wp-block-buttons">
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
-                            Consult With ZN Tax Consultant
-                        </Link>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
+                        <div style={{ flex: '1 1 500px' }}>
+                            <h1 className="wp-block-heading" style={{ fontSize: '48px', color: '#000', fontWeight: '700', lineHeight: '1.2' }}>
+                                Small Business <strong>Consulting</strong>
+                            </h1>
+                            <p style={{ fontSize: '20px', color: '#444', maxWidth: '850px', margin: '25px 0', lineHeight: '1.6', fontWeight: '400' }}>
+                                Strategic roadmaps to help your business evolve, grow, and overcome financial roadblocks with confidence.
+                            </p>
+                            <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
+                                <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
+                                    background: '#d13239',
+                                    borderRadius: '30px',
+                                    padding: '15px 40px',
+                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                }}>
+                                    Consult With ZN Tax Consultant
+                                </Link>
+                            </div>
+                        </div>
+                        <div style={{ flex: '1 1 300px' }}>
+                            <div className="floating-icon-stack">
+                                <div className="icon-blob"></div>
+                                <i className="fa-solid fa-users-gear main-decorated-icon"></i>
+                                <i className="fa-solid fa-compass sub-icon sub-icon-1"></i>
+                                <i className="fa-solid fa-chess sub-icon sub-icon-2"></i>
+                                <i className="fa-solid fa-gem sub-icon sub-icon-3"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {/* Decorative background element mirroring the site's design language */}
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    right: 0,
-                    width: '45%',
-                    height: '100%',
-                    background: '#e9ecef',
-                    clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)',
-                    zIndex: 1,
-                    opacity: 0.5
-                }}></div>
             </div>
 
             {/* SECTION 1: Take Your Small Business to the Next Level */}
@@ -84,10 +71,10 @@ const Consulting = () => {
                     <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
                         {/* Image Column */}
                         <div style={{ flex: '40%', zIndex: 2 }}>
-                            <img src={officeImg} alt="ZN Tax Consultant Office" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Strategic Partnership" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
                         {/* Floating Text Card */}
-                        <div style={{
+                        <div className="process-floating-card" style={{
                             flex: '65%',
                             background: '#fff',
                             padding: '60px 60px 60px 115px',
@@ -104,7 +91,7 @@ const Consulting = () => {
                                     When the opportunity presents itself to grow your business, you might be frozen by indecision - how do you grow your business without creating waste or making costly mistakes? What if you grow too fast and suffer from success? What if you grow too slow and miss an opportunity?
                                 </p>
                                 <p style={{ marginBottom: '15px' }}>
-                                    These questions can leave you spinning in circles, but with small business financial consultants, you can have the answers you need - even before you ask. Our business financial consultants can assess your business with an honest and experienced eye. Then, you'll get advice based on three decades of experience CPA financial consulting with clients throughout Pennsylvania.
+                                    These questions can leave you spinning in circles, but with small business financial consultants, you can have the answers you need - even before you ask. Our business financial consultants can assess your business with an honest and experienced eye. Then, you'll get expert advice from our CPA financial consulting team with clients throughout Pennsylvania.
                                 </p>
                                 <p style={{ fontWeight: '500' }}>
                                     Lead your business more confidently after <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contacting our team</Link> and scheduling a no-cost consultation.
@@ -144,7 +131,7 @@ const Consulting = () => {
                             </ul>
                         </div>
                         <div>
-                            <img src={workingImg} alt="Working on financial strategy" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Strategy Development" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
                     </div>
 
@@ -177,19 +164,23 @@ const Consulting = () => {
                         </p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '15px', marginBottom: '40px' }}>
+                    <div className="service-grid-v2 center-last-item" style={{ marginTop: '40px' }}>
                         {[
-                            { title: 'Bookkeeping', icon: 'fa-book' },
-                            { title: 'Acquisitions & Startup Support', icon: 'fa-handshake' },
-                            { title: 'Business Valuations', icon: 'fa-chart-pie' },
-                            { title: 'Tax Preparation & Planning', icon: 'fa-calculator' },
-                            { title: 'QuickBooks® Services', icon: 'fa-arrows-rotate' }
-                        ].map((s, idx) => (
-                            <div key={idx} style={{ background: '#fff', color: '#333', padding: '30px 20px', borderRadius: '4px', textAlign: 'center' }}>
-                                <div style={{ fontSize: '40px', color: '#d13239', marginBottom: '20px' }}>
+                            { title: 'Bookkeeping', icon: 'fa-book-bookmark', link: '/bookkeeping' },
+                            { title: 'Tax Preparation & Planning', icon: 'fa-file-invoice-dollar', link: '/tax' },
+                            { title: 'Acquisitions & Startups', icon: 'fa-handshake', link: '/acquisitions' },
+                            { title: 'Business Valuations', icon: 'fa-chart-pie', link: '/valuations' },
+                            { title: 'QuickBooks® Services', icon: 'fa-laptop-code', link: '/quickbooks' },
+                            { title: 'BOI Reporting', icon: 'fa-shield-halved', link: '/coming-soon' }
+                        ].map((s, i) => (
+                            <div key={i} className="service-card-v2 animate-card revealed" style={{ opacity: 1, transform: 'none' }}>
+                                <div className="icon-box-fa">
                                     <i className={`fa-solid ${s.icon}`}></i>
                                 </div>
-                                <h4 style={{ fontSize: '16px', fontWeight: '600', color: '#d13239', textDecoration: 'underline', cursor: 'pointer' }}>{s.title}</h4>
+                                <div className="text-box">
+                                    <h3 style={{ margin: 0 }}>{s.title}</h3>
+                                    <Link to={s.link} style={{ color: '#1b5779', fontWeight: '600' }}>Learn More</Link>
+                                </div>
                             </div>
                         ))}
                     </div>

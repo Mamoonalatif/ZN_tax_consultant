@@ -1,8 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
-const LocationReviews = ({ locationName }) => {
-    const trackRef = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(0);
+const GoogleReviews = () => {
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const [reviewSubmitted, setReviewSubmitted] = useState(false);
     const [reviewName, setReviewName] = useState('');
@@ -11,6 +9,7 @@ const LocationReviews = ({ locationName }) => {
     const handleReviewSubmit = (e) => {
         e.preventDefault();
         setReviewSubmitted(true);
+        // Reset form after success
         setTimeout(() => {
             setIsReviewModalOpen(false);
             setReviewSubmitted(false);
@@ -19,56 +18,24 @@ const LocationReviews = ({ locationName }) => {
         }, 3000);
     };
 
-    const handleScroll = (direction) => {
-        if (trackRef.current) {
-            const cardWidth = trackRef.current.offsetWidth / 2;
-            const scrollAmount = direction === 'next' ? cardWidth : -cardWidth;
-            trackRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-
-            const newIndex = direction === 'next' ? Math.min(activeIndex + 1, 3) : Math.max(activeIndex - 1, 0);
-            setActiveIndex(newIndex);
-        }
-    };
-
-    const reviews = [
-        {
-            name: 'HELENA L. BOWES',
-            content: 'After relocating to Harrisburg I had the good luck to find ZN Tax Consultant. They are very professional and prompt with their follow through and knowledgeable with the Tax Code.',
-            initial: 'H'
-        },
-        {
-            name: 'TIM BARGER',
-            content: 'I have had the pleasure of working with Diana from ZN Tax Consultant for our payroll needs for the past 5 years, and I am extremely satisfied with her exceptional service and expertise. Diana\'s dedication and knowledge in handling our payroll processes have been invaluable. She consistently demonstrates professionalism and attention to detail, ensuring that our... read more',
-            initial: 'T'
-        }
-    ];
-
     return (
-        <div className="location-reviews-section alignfull">
-            <div className="container">
-                <div className="reviews-flex-container">
-                    {/* Left side summary */}
-                    <div className="reviews-summary-side">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" className="google-logo-main" />
-                        <h2 className="reviews-title">Reviews <span className="stars-orange">★★★★★</span></h2>
-
-                        <div className="rating-score-box">
-                            <div className="score-value">0.0</div>
-                            <div className="score-stars">
-                                <span className="stars-orange">☆☆☆☆☆</span>
-                                <div className="score-count">No User Reviews Yet</div>
-                            </div>
+        <>
+            {/* Google Reviews Section */}
+            <div className="reviews-section alignfull">
+                <div className="container">
+                    <div className="reviews-container">
+                        <div className="reviews-left">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" className="google-logo-large" />
+                            <h2 style={{ fontSize: '20px', margin: '10px 0' }}>Reviews</h2>
+                            <div className="google-stars-main">★★★★★</div>
                         </div>
-
-                        <button onClick={() => setIsReviewModalOpen(true)} className="write-review-btn" style={{ cursor: 'pointer', border: 'none', textAlign: 'center' }}>
-                            Write a Google Review for Our {locationName} Team!
-                        </button>
-                    </div>
-
-                    {/* Right side empty state */}
-                    <div className="reviews-slider-side" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <div className="reviews-empty-state" style={{ paddingLeft: 0, textAlign: 'center' }}>
-                            <p style={{ fontSize: '20px' }}>We haven't received any reviews yet. <strong>Be the first to share your experience with us!</strong></p>
+                        <div className="reviews-right">
+                            <div className="reviews-empty-state">
+                                <p style={{fontSize:'12px'}}>We haven't received any reviews yet. <strong>Be the first to share your experience with us!</strong> Your feedback helps us grow and serve you better.</p>
+                                <button onClick={() => setIsReviewModalOpen(true)} className="btn-review-google" style={{ cursor: 'pointer', border: 'none' }}>
+                                    <i className="fa-brands fa-google" style={{ marginRight: '10px' }}></i> Write A Review
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,8 +88,8 @@ const LocationReviews = ({ locationName }) => {
                     </div>
                 </div>
             )}
-        </div>
+        </>
     );
 };
 
-export default LocationReviews;
+export default GoogleReviews;

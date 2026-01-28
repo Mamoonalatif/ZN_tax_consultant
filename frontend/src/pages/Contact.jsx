@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LocationReviews from '../components/locations/LocationReviews';
+import GoogleReviews from '../components/GoogleReviews';
 
 // Import images/assets
 import logoImg from '../assets/images/logoconc.png';
@@ -107,9 +107,9 @@ const Contact = () => {
 
                             <h3 className="sidebar-title">Follow Us On Social</h3>
                             <div className="sidebar-social-icons">
-                                <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
-                                <a href="#"><i className="fa-brands fa-youtube"></i></a>
+                                <Link to="/coming-soon"><i className="fa-brands fa-facebook"></i></Link>
+                                <Link to="/coming-soon"><i className="fa-brands fa-linkedin"></i></Link>
+                                <Link to="/coming-soon"><i className="fa-brands fa-youtube"></i></Link>
                             </div>
 
                             <hr className="sidebar-divider" />
@@ -127,41 +127,10 @@ const Contact = () => {
                 </div>
             </div>
 
-            {/* VISIT LOCAL OFFICE SECTION */}
-            <div className="visit-offices-section alignfull">
-                <div className="container">
-                    <h2>Visit <strong>Your Local Office:</strong></h2>
-                    <div className="office-grid">
-                        {/* Mechanicsburg */}
-                        <div className="office-item">
-                            <Link to="/mechanicsburg"><h3>Mechanicsburg</h3></Link>
-                            <p>1205 Manor Drive, Suite 100,<br />Mechanicsburg, PA 17055</p>
-                            <a href="tel:7177663555" className="office-phone">(717) 766-3555</a>
-                        </div>
-                        {/* Myerstown */}
-                        <div className="office-item">
-                            <Link to="/myerstown"><h3>Myerstown</h3></Link>
-                            <p>101 West Main Avenue, Myerstown,<br />PA 17067</p>
-                            <a href="tel:7172887723" className="office-phone">(717) 288-7723</a>
-                        </div>
-                        {/* Harrisburg */}
-                        <div className="office-item">
-                            <Link to="/harrisburg"><h3>Harrisburg</h3></Link>
-                            <p>4050 Crums Mill Rd, Suite 101,<br />Harrisburg, PA 17112</p>
-                            <a href="tel:7176578907" className="office-phone">(717) 657-8907</a>
-                        </div>
-                        {/* Lancaster */}
-                        <div className="office-item">
-                            <Link to="/lancaster"><h3>Lancaster</h3></Link>
-                            <p>151 Good Drive #2,<br />Lancaster, PA 17603</p>
-                            <a href="tel:7173933876" className="office-phone">(717) 393-3876</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             {/* REVIEWS SECTION */}
-            <LocationReviews locationName="ZN Tax Consultant" />
+            <GoogleReviews />
         </div>
     );
 };

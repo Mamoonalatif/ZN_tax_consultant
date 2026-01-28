@@ -2,15 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 
-// Import images
-import taxPlanningImg from '../assets/images/Gift-CPA-Commercial-Shoot-174-1-edited.jpg';
 import whiteBg from '../assets/images/white-bg.jpg';
 import blueBg from '../assets/images/blue-bg.jpg';
-import service01Img from '../assets/images/services01.png';
-import service03Img from '../assets/images/services03.png';
-import service04Img from '../assets/images/services04.png';
-import service05Img from '../assets/images/services05.png';
-import service06Img from '../assets/images/services06.png';
+import strategicPlanningImg from '../assets/images/strategicplanning.png';
 
 const TaxPreparation = () => {
     const faqItems = [
@@ -31,43 +25,46 @@ const TaxPreparation = () => {
     return (
         <div className="service-page">
             {/* Hero Section */}
-            <div className="wp-block-cover alignfull is-light careers-hero" style={{
-                minHeight: '350px',
+            <div className="wp-block-cover alignfull is-light careers-hero page-responsive-padding" style={{
+                minHeight: '400px',
                 display: 'flex',
                 alignItems: 'center',
                 paddingTop: '60px',
                 paddingBottom: '60px',
-                background: `#f5f7f8`,
-                position: 'relative'
+                background: `linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)`,
+                position: 'relative',
+                overflow: 'hidden'
             }}>
-                <div
-                    className="wp-block-cover__image-background"
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${whiteBg})`,
-                        backgroundPosition: '50% 50%',
-                        backgroundAttachment: 'fixed',
-                        opacity: 0.2
-                    }}
-                ></div>
                 <div className="wp-block-cover__inner-container container" style={{ position: 'relative', zIndex: 2 }}>
-                    <h1 className="wp-block-heading" style={{ fontSize: '48px', color: '#000', fontWeight: '300', lineHeight: '1.2' }}>
-                        <strong>Tax Preparation & Planning Service</strong> in Central Pennsylvania
-                    </h1>
-                    <p style={{ fontSize: '22px', color: '#444', maxWidth: '850px', margin: '25px 0', lineHeight: '1.5', fontWeight: '400' }}>
-                        Ensure Your Business Stays Compliant and Maximizes Savings With Professional Business Tax Services.
-                    </p>
-                    <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
-                        <div className="wp-block-button">
-                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                background: '#d13239',
-                                color: '#fff',
-                                padding: '15px 40px',
-                                borderRadius: '50px',
-                                fontWeight: 'bold',
-                                fontSize: '16px'
-                            }}>
-                                Contact ZN Tax Consultant
-                            </Link>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
+                        <div style={{ flex: '1 1 500px' }}>
+                            <h1 className="wp-block-heading" style={{ fontSize: '48px', color: '#000', fontWeight: '700', lineHeight: '1.2' }}>
+                                <strong>Tax Preparation & Planning</strong>
+                            </h1>
+                            <p style={{ fontSize: '22px', color: '#444', maxWidth: '850px', margin: '25px 0', lineHeight: '1.5', fontWeight: '400' }}>
+                                Strategic tax solutions to minimize liability and maximize your financial growth year-round.
+                            </p>
+                            <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
+                                <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
+                                    background: '#d13239',
+                                    color: '#fff',
+                                    padding: '15px 40px',
+                                    borderRadius: '50px',
+                                    fontWeight: 'bold',
+                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                }}>
+                                    Schedule Your Consultation
+                                </Link>
+                            </div>
+                        </div>
+                        <div style={{ flex: '1 1 300px' }}>
+                            <div className="floating-icon-stack">
+                                <div className="icon-blob"></div>
+                                <i className="fa-solid fa-file-invoice-dollar main-decorated-icon"></i>
+                                <i className="fa-solid fa-calculator sub-icon sub-icon-1"></i>
+                                <i className="fa-solid fa-shield-halved sub-icon sub-icon-2"></i>
+                                <i className="fa-solid fa-percent sub-icon sub-icon-3"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -79,15 +76,15 @@ const TaxPreparation = () => {
                     <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
                         {/* Image Column */}
                         <div style={{ flex: '40%', zIndex: 2 }}>
-                            <img src={taxPlanningImg} alt="Tax Planning" style={{ width: '90%', borderRadius: '4px', display: 'block', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src={strategicPlanningImg} alt="Strategic Planning" style={{ width: '90%', borderRadius: '15px', display: 'block', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
 
                         {/* Overlapping Text Card */}
-                        <div className="cta" style={{
-                            flex: '60%',
-                            padding: '60px 80px',
+                        <div className="process-floating-card" style={{
+                            flex: '65%',
+                            padding: '60px 60px 60px 115px',
                             background: '#fff',
-                            boxShadow: '0 40px 40px rgba(0,0,0,0.1)',
+                            boxShadow: '0 30px 60px rgba(0,0,0,0.1)',
                             zIndex: 1,
                             marginLeft: '-10%',
                             borderRadius: '4px'
@@ -229,7 +226,7 @@ const TaxPreparation = () => {
                         </p>
                         <div style={{ display: 'grid', gap: '30px' }}>
                             {[
-                                { title: 'Decades of Experience', text: 'With years of expertise in business tax services, we have a deep understanding of industry-specific tax challenges and opportunities.' },
+                                { title: 'Proven Expertise', text: 'We have a deep understanding of industry-specific tax challenges and opportunities.' },
                                 { title: 'Customized Tax Strategies', text: 'No two businesses are alike, which is why we tailor our business tax planning services to fit your company’s unique needs and goals.' },
                                 { title: 'Proactive Tax Planning', text: 'We don’t just focus on tax season—we work with you year-round to implement strategies that reduce liabilities and improve cash flow.' },
                                 { title: 'Regulatory Expertise', text: 'Our team stays up to date on changing tax laws at the federal, state, and local levels, ensuring compliance and minimizing risk.' },
@@ -269,47 +266,28 @@ const TaxPreparation = () => {
                         At ZN Tax Consultant, we also offer these services to our clients:
                     </p>
 
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(5, 1fr)',
-                        gap: '20px',
-                        marginBottom: '40px'
-                    }}>
+                    <div className="service-grid-v2 center-last-item" style={{ marginTop: '40px' }}>
                         {[
-                            { title: 'Bookkeeping', img: service01Img, link: '/bookkeeping' },
-                            { title: 'Acquisitions & Startup Support', img: service03Img, link: '/acquisitions' },
-                            { title: 'Business Valuations', img: service05Img, link: '/valuations' },
-                            { title: 'Business & Financial Consulting', img: service04Img, link: '/consulting' },
-                            { title: 'QuickBooks® Services', img: service06Img, link: '/quickbooks' }
-                        ].map((service, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px 20px',
-                                borderRadius: '4px',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                minHeight: '280px',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                            }}>
-                                <div style={{ height: '80px', display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-                                    <img src={service.img} alt={service.title} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                            { title: 'Bookkeeping', icon: 'fa-book-bookmark', link: '/bookkeeping' },
+                            { title: 'Acquisitions & Startups', icon: 'fa-handshake', link: '/acquisitions' },
+                            { title: 'Business Valuations', icon: 'fa-chart-pie', link: '/valuations' },
+                            { title: 'Financial Consulting', icon: 'fa-users-gear', link: '/consulting' },
+                            { title: 'QuickBooks® Services', icon: 'fa-laptop-code', link: '/quickbooks' },
+                            { title: 'BOI Reporting', icon: 'fa-shield-halved', link: '/coming-soon' }
+                        ].map((s, i) => (
+                            <div key={i} className="service-card-v2 animate-card revealed" style={{ opacity: 1, transform: 'none' }}>
+                                <div className="icon-box-fa">
+                                    <i className={`fa-solid ${s.icon}`}></i>
                                 </div>
-                                <Link to={service.link} style={{
-                                    color: '#d13239',
-                                    fontWeight: '700',
-                                    fontSize: '15px',
-                                    textDecoration: 'underline',
-                                    lineHeight: '1.3'
-                                }}>
-                                    {service.title}
-                                </Link>
+                                <div className="text-box">
+                                    <h3 style={{ margin: 0 }}>{s.title}</h3>
+                                    <Link to={s.link} style={{ color: '#1b5779', fontWeight: '600' }}>Learn More</Link>
+                                </div>
                             </div>
                         ))}
                     </div>
 
-                    <p style={{ fontSize: '14px', marginBottom: '30px', opacity: 0.9, maxWidth: '800px', margin: '0 auto 30px auto' }}>
+                    <p style={{ fontSize: '14px', marginBottom: '30px', marginTop: '30px', opacity: 0.9, maxWidth: '800px', margin: '0 auto 30px auto' }}>
                         Find the services you need, provided by people who want to see your business succeed. <span style={{ color: '#fff', fontWeight: 'bold', textDecoration: 'underline' }}>The ZN Tax Consultant team</span> is waiting to hear from you.
                     </p>
 

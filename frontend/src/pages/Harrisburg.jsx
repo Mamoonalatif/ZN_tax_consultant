@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LocationInfo from '../components/locations/LocationInfo';
 import OtherLocations from '../components/locations/OtherLocations';
-import LocationReviews from '../components/locations/LocationReviews';
+import GoogleReviews from '../components/GoogleReviews';
 
 // Import images
 import harrisburgOffice from '../assets/images/harrisburg-office.jpg';
@@ -12,7 +12,7 @@ import shootoutImg from '../assets/images/writing.jpg';
 const Harrisburg = () => {
     return (
         <div className="location-page">
-            <div className="wp-block-cover alignfull is-light has-parallax hero-section" style={{ minHeight: '350px', display: 'flex', alignItems: 'center', paddingTop: '60px', paddingBottom: '60px', position: 'relative' }}>
+            <div className="wp-block-cover alignfull is-light has-parallax hero-section" style={{ minHeight: '300px', display: 'flex', alignItems: 'center', paddingTop: '60px', paddingBottom: '60px', position: 'relative' }}>
                 <div
                     className="wp-block-cover__image-background has-parallax"
                     style={{
@@ -38,16 +38,9 @@ const Harrisburg = () => {
             </div>
 
             {/* Overlapping Card Section */}
-            <div className="location-content-section">
-                <div className="container">
+            <div className="location-content-section" style={{ paddingTop: '80px' }}>
+                <div className="container" style={{ maxWidth: '1000px' }}>
                     <div className="location-flex-container">
-                        <div className="location-image-side">
-                            <img src={harrisburgOffice} alt="Harrisburg Office" />
-                            <div className="location-meta-info">
-                                <span className="location-meta-label">Conveniently located at: <strong><em>4050 Crums Mill Rd, Suite 101, Harrisburg, PA 17112</em></strong></span>
-                                <a href="tel:7176578907" className="location-meta-phone">(717) 657-8907</a>
-                            </div>
-                        </div>
                         <div className="location-card-side">
                             <h2 className="location-card-title">
                                 <strong style={{ fontWeight: '700' }}>Get Accounting Services</strong> and More from a Fellow Harrisburg Business
@@ -71,7 +64,7 @@ const Harrisburg = () => {
             </div>
 
             {/* Detailed Services Section */}
-            <div className="location-services-detailed" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+            <div className="location-services-detailed" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
                 <div
                     className="wp-block-cover__image-background has-parallax"
                     style={{ backgroundImage: `url(${whiteBg})`, backgroundPosition: '50% 50%', backgroundAttachment: 'fixed', opacity: 0.15, zIndex: 0 }}
@@ -122,21 +115,18 @@ const Harrisburg = () => {
             </div>
 
             {/* Need More Reasons Section */}
-            <div className="reasons-section" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+            <div className="reasons-section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
                 <div className="container">
-                    <h2 className="text-center" style={{ fontSize: '28px' }}>Need More Reasons to Work With ZN Tax Consultant <strong>in Harrisburg?</strong></h2>
-                    <p className="text-center" style={{ maxWidth: '900px' }}>
+                    <h2 className="text-center" style={{ fontSize: '32px', marginBottom: '30px' }}>Need More Reasons to Work With ZN Tax Consultant <strong>in Harrisburg?</strong></h2>
+                    <p className="text-center" style={{ maxWidth: '900px', margin: '0 auto 20px auto' }}>
                         We’ve been trusted small-business advisors in Southcentral PA. The ZN Tax Consultant team provides a wide range of services with the expertise you need, like a large firm would—plus the personalized attention you’d expect from a small firm. And it’s all right here, in Harrisburg, PA.
                     </p>
-                    <p className="text-center" style={{ maxWidth: '900px' }}>
+                    <p className="text-center" style={{ maxWidth: '900px', margin: '0 auto 40px auto' }}>
                         We know the community because we live and work here, too. We care about what happens here, and we’re working to make Harrisburg a better place to live and do business.
                     </p>
 
-                    <div className="reasons-flex">
-                        <div className="reasons-image">
-                            <img src={shootoutImg} alt="ZN Tax Consultant Professionals" />
-                        </div>
-                        <div className="reasons-content">
+                    <div className="reasons-flex" style={{ display: 'block' }}>
+                        <div className="reasons-content" style={{ maxWidth: '100%', padding: '0' }}>
                             <h3>Community Support & Recognition</h3>
                             <ul className="wp-block-list">
                                 <li>Simply the Best Lifetime Achievement Award (10+ years of awards!)</li>
@@ -148,7 +138,7 @@ const Harrisburg = () => {
                                 <li>LNP Readers' Choice Award</li>
                             </ul>
 
-                            <h3 style={{ marginTop: '20px', marginBottom: '0px', fontSize: '18px' }}>Actively participating with:</h3>
+                            <h3 style={{ marginTop: '30px', marginBottom: '15px', fontSize: '20px' }}>Actively participating with:</h3>
                             <div className="two-col-list">
                                 <ul className="wp-block-list">
                                     <li><a href="https://jacentralpa.org/" target="_blank" rel="noreferrer">Junior Achievement (JA) of South-Central PA</a></li>
@@ -178,7 +168,7 @@ const Harrisburg = () => {
 
             <OtherLocations currentLocation="Harrisburg" />
 
-            <LocationReviews locationName="Harrisburg" />
+            <GoogleReviews />
         </div>
     );
 };

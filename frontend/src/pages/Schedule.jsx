@@ -32,17 +32,7 @@ const Schedule = () => {
                         {/* LEFT: FORM */}
                         <div className="contact-form-side">
                             <form className="contact-form">
-                                {/* Location */}
-                                <div className="form-group full-width">
-                                    <label>Location <span>(Required)</span></label>
-                                    <select className="filter-select" style={{ width: '100%', maxWidth: 'none' }}>
-                                        <option>Choose the closest location</option>
-                                        <option>Harrisburg, PA</option>
-                                        <option>Mechanicsburg, PA</option>
-                                        <option>Myerstown, PA</option>
-                                        <option>Lancaster, PA</option>
-                                    </select>
-                                </div>
+
 
                                 {/* Services */}
                                 <div className="form-group full-width">
@@ -58,7 +48,7 @@ const Schedule = () => {
                                             'Bookkeeping', 'Accounting',
                                             'Tax Preparation & Planning', 'Acquisitions & New Business Startup',
                                             'Business & Financial Consulting', 'Business Valuations',
-                                            'QuickBooks Consulting'
+                                            'QuickBooks Consulting', 'BOI Reporting'
                                         ].map(service => (
                                             <label key={service} style={{
                                                 display: 'flex',
@@ -181,26 +171,37 @@ const Schedule = () => {
 
                             <h3 className="sidebar-title">Follow Us On Social</h3>
                             <div className="sidebar-social-icons">
-                                <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
-                                <a href="#"><i className="fa-brands fa-youtube"></i></a>
+                                <Link to="/coming-soon"><i className="fa-brands fa-facebook"></i></Link>
+                                <Link to="/coming-soon"><i className="fa-brands fa-linkedin"></i></Link>
+                                <Link to="/coming-soon"><i className="fa-brands fa-youtube"></i></Link>
                             </div>
 
-                            <hr className="sidebar-divider" />
 
-                            <h3 className="sidebar-title" style={{ textAlign: 'left', paddingLeft: '20px' }}>Visit a Location:</h3>
-                            <ul style={{ listStyle: 'none', padding: '0 0 0 20px', textAlign: 'left', fontSize: '14px', lineHeight: '2' }}>
-                                <li><Link to="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'none' }}><i className="fa-solid fa-caret-right" style={{ marginRight: '8px' }}></i> Mechanicsburg, PA</Link></li>
-                                <li><Link to="/myerstown" style={{ color: '#d13239', textDecoration: 'none' }}><i className="fa-solid fa-caret-right" style={{ marginRight: '8px' }}></i> Myerstown, PA</Link></li>
-                                <li><Link to="/harrisburg" style={{ color: '#d13239', textDecoration: 'none' }}><i className="fa-solid fa-caret-right" style={{ marginRight: '8px' }}></i> Harrisburg, PA</Link></li>
-                                <li><Link to="/lancaster" style={{ color: '#d13239', textDecoration: 'none' }}><i className="fa-solid fa-caret-right" style={{ marginRight: '8px' }}></i> Lancaster, PA</Link></li>
-                            </ul>
 
                             <hr className="sidebar-divider" />
 
                             <h3 className="sidebar-title">Subscribe to Our Blogs</h3>
                             <p style={{ fontSize: '12px', color: '#777', fontStyle: 'italic', marginBottom: '15px' }}>No spam, only sound advice.</p>
-                            <Link to="/blogs" className="sidebar-btn">Sign Up Today!</Link>
+                            <button 
+                                className="sidebar-btn" 
+                                onClick={() => {
+                                    const footerForm = document.querySelector('.newsletter-form');
+                                    if (footerForm) footerForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }}
+                                style={{
+                                    background: '#d13239',
+                                    color: '#fff',
+                                    padding: '12px 30px',
+                                    borderRadius: '50px',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    fontSize: '14px',
+                                    fontWeight: '600',
+                                    textAlign: 'center',
+                                    display: 'inline-block',
+                                    width: 'auto'
+                                }}
+                            >Sign Up Today!</button>
                         </aside>
                     </div>
                 </div>

@@ -2,16 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import whiteBg from '../assets/images/white-bg.jpg';
-import shootImg from '../assets/images/Gift-CPA-Commercial-Shoot-304-copy-edited-scaled.jpg';
-import giftCPA006 from '../assets/images/GiftCPA006.jpg';
 import blueBg from '../assets/images/blue-bg.jpg';
+import strategicPlanningImg from '../assets/images/strategicplanning.png';
 
-// Service Icons
-import service01Img from '../assets/images/services01.png';
-import service02Img from '../assets/images/services02.png';
-import service04Img from '../assets/images/services04.png';
-import service05Img from '../assets/images/services05.png';
-import service06Img from '../assets/images/services06.png';
+// FontAwesome Icons are used directly in the JSX
 
 const Acquisitions = () => {
     const faqItems = [
@@ -32,47 +26,67 @@ const Acquisitions = () => {
     return (
         <div className="service-page">
             {/* Hero Section */}
-            <div className="wp-block-cover alignfull is-light careers-hero" style={{
-                minHeight: '300px',
+            <div className="wp-block-cover alignfull is-light careers-hero page-responsive-padding" style={{
+                minHeight: '400px',
                 display: 'flex',
                 alignItems: 'center',
-                paddingTop: '40px',
-                paddingBottom: '40px',
-                background: `#f5f7f8`,
-                position: 'relative'
+                paddingTop: '60px',
+                paddingBottom: '60px',
+                background: `linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)`,
+                position: 'relative',
+                overflow: 'hidden'
             }}>
-                <div
-                    className="wp-block-cover__image-background"
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${whiteBg})`,
-                        backgroundPosition: '50% 50%',
-                        backgroundAttachment: 'fixed',
-                        opacity: 0.2
-                    }}
-                ></div>
                 <div className="wp-block-cover__inner-container container" style={{ position: 'relative', zIndex: 2 }}>
-                    <h1 className="wp-block-heading" style={{ fontSize: '48px', color: '#000', fontWeight: '300', lineHeight: '1.2' }}>
-                        Business <strong>Acquisition & Startup Consulting</strong> in Central Pennsylvania
-                    </h1>
-                    <p style={{ fontSize: '22px', color: '#444', maxWidth: '850px', margin: '25px 0', lineHeight: '1.7', fontWeight: '400' }}>
-                        When You Have an Experienced Startup Consultant or Business Evaluation Partner on Your Side, You Can Expect a More Efficient Transition.
-                    </p>
-                    <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
-                            Consult With ZN Tax Consultant
-                        </Link>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
+                        <div style={{ flex: '1 1 500px' }}>
+                            <h1 className="wp-block-heading" style={{ fontSize: '48px', color: '#000', fontWeight: '700', lineHeight: '1.2' }}>
+                                Business <strong>Acquisition & Startup</strong>
+                            </h1>
+                            <p style={{ fontSize: '22px', color: '#444', maxWidth: '850px', margin: '25px 0', lineHeight: '1.7', fontWeight: '400' }}>
+                                Expert guidance for seamless transitions, whether you're launching a new venture or expanding your portfolio.
+                            </p>
+                            <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
+                                <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
+                                    background: '#d13239',
+                                    borderRadius: '30px',
+                                    padding: '15px 40px',
+                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                }}>
+                                    Consult With ZN Tax Consultant
+                                </Link>
+                            </div>
+                        </div>
+                        <div style={{ flex: '1 1 300px' }}>
+                            <div className="floating-icon-stack">
+                                <div className="icon-blob"></div>
+                                <i className="fa-solid fa-handshake main-decorated-icon"></i>
+                                <i className="fa-solid fa-seedling sub-icon sub-icon-1"></i>
+                                <i className="fa-solid fa-chart-line sub-icon sub-icon-2"></i>
+                                <i className="fa-solid fa-briefcase sub-icon sub-icon-3"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* SECTION 1: Simplify Business Acquisition */}
-            <div className="section-padding bg-white" style={{ padding: '40px 0' }}>
+            {/* SECTION 1: Simplify Business Acquisition (Overlapping Layout) */}
+            <div className="section-padding bg-white" style={{ padding: '60px 0' }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', gap: '60px', alignItems: 'center' }}>
-                        <div>
-                            <img src={shootImg} alt="Business Handshake" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                    <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+                        {/* Image Column */}
+                        <div style={{ flex: '40%', zIndex: 2 }}>
+                            <img src={strategicPlanningImg} alt="Strategic Planning" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
-                        <div>
+                        {/* Floating Text Card */}
+                        <div className="process-floating-card" style={{
+                            flex: '65%',
+                            padding: '60px 60px 60px 115px',
+                            background: '#fff',
+                            boxShadow: '0 30px 60px rgba(0,0,0,0.1)',
+                            zIndex: 1,
+                            marginLeft: '-10%',
+                            borderRadius: '4px'
+                        }}>
                             <h2 style={{ fontSize: '32px', fontWeight: '300', marginBottom: '25px', color: '#333' }}>
                                 Simplify <strong>Business Acquisition</strong> with Expert CPA Guidance
                             </h2>
@@ -159,7 +173,7 @@ const Acquisitions = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', gap: '60px', alignItems: 'center' }}>
                         <div>
-                            <img src={giftCPA006} alt="Startup Consulting" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="Financial Analysis" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
                         <div>
                             <h2 style={{ fontSize: '32px', fontWeight: '300', marginBottom: '25px', color: '#333' }}>
@@ -181,82 +195,6 @@ const Acquisitions = () => {
                 </div>
             </div>
 
-            {/* SECTION 4: Startup Key Questions & FAQ Grid */}
-            <div className="section-padding bg-light" style={{ backgroundColor: '#f9f9f9', padding: '40px 0' }}>
-                <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'start' }}>
-                        {/* Left Column: Startup Considerations */}
-                        <div style={{ background: '#fff', padding: '50px', borderRadius: '4px', boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
-                            <h2 style={{ fontSize: '24px', fontWeight: '300', marginBottom: '25px', color: '#1a1a1a', lineHeight: '1.3' }}>
-                                Starting a business is an exciting venture, but <strong>making the right financial decisions early on is crucial</strong> for long-term success.
-                            </h2>
-                            <p style={{ fontSize: '15px', color: '#555', marginBottom: '25px' }}>
-                                A knowledgeable business startup consulting expert can help you navigate key financial considerations, including:
-                            </p>
-                            <ul style={{ listStyle: 'none', padding: 0, marginBottom: '30px' }}>
-                                {[
-                                    'Should I start my own business?',
-                                    'Can I afford this venture, and how should I structure the purchase?',
-                                    'What is the best way to secure financing?',
-                                    'Which entity structure—sole proprietor, partnership, corporation, or nonprofit—is best for my goals?'
-                                ].map((item, i) => (
-                                    <li key={i} style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative', fontSize: '14px', color: '#444' }}>
-                                        <span style={{ position: 'absolute', left: 0, color: '#d13239', fontWeight: 'bold' }}>•</span> {item}
-                                    </li>
-                                ))}
-                            </ul>
-                            <p style={{ fontSize: '15px', color: '#333', fontWeight: '700', marginBottom: '20px' }}>
-                                Once these foundational questions are answered, a CPA for startups will guide you through:
-                            </p>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px 20px', marginBottom: '30px' }}>
-                                {[
-                                    'Business Structure Selection', 'Cost-Reduction Strategies',
-                                    'Financial Planning', 'Risk Management',
-                                    'Tax Compliance', 'Regulations & Compliance',
-                                    'Accounting Systems', 'Business Expansion',
-                                    'Financial Analysis', 'Profit Maximization',
-                                    'Fundraising Support', 'Advisory Services'
-                                ].map((item, i) => (
-                                    <div key={i} style={{ fontSize: '13px', color: '#555', marginBottom: '8px', display: 'flex', gap: '10px' }}>
-                                        <span style={{ color: '#d13239' }}>•</span> {item}
-                                    </div>
-                                ))}
-                            </div>
-                            <p style={{ fontSize: '14px', color: '#555', fontStyle: 'italic', lineHeight: '1.6' }}>
-                                A strong startup CPA service ensures your business starts on a solid financial footing, helping you avoid costly mistakes and maximize opportunities. Take the first step toward success—<Link to="/schedule" style={{ color: '#d13239', textDecoration: 'underline' }}>schedule a consultation today!</Link>
-                            </p>
-                        </div>
-
-                        {/* Right Column: Startup FAQ */}
-                        <div>
-                            <h2 style={{ fontSize: '28px', fontWeight: '300', marginBottom: '25px', color: '#333' }}>
-                                Frequently Asked <strong>Startup Consulting</strong> Questions
-                            </h2>
-                            <p style={{ fontSize: '15px', color: '#555', marginBottom: '30px', lineHeight: '1.6' }}>
-                                Starting a new business comes with many uncertainties. Below are answers to some of the most common questions entrepreneurs ask. For personalized guidance, a business startup consulting expert can provide tailored solutions for your specific needs.
-                            </p>
-                            <FAQ items={[
-                                {
-                                    question: "Do I Need an Accountant for My Startup?",
-                                    answer: "While many entrepreneurs start by doing their own books, a professional accountant provides strategic value far beyond data entry. We help with entity selection, tax planning, and setting up accounting systems that scale with your growth."
-                                },
-                                {
-                                    question: "Why is Accounting Important for Startups?",
-                                    answer: "Accurate accounting is the only way to track your burn rate, manage cash flow, and demonstrate financial health to potential investors or lenders."
-                                }
-                            ]} />
-                            <div style={{ borderLeft: '4px solid #d13239', background: '#fff', padding: '30px', marginTop: '30px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)' }}>
-                                <p style={{ fontSize: '14px', marginBottom: '20px' }}>
-                                    <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: 'bold' }}>Our team</Link> will work closely with you to help make your startup a success. Let's schedule a consultation to get started.
-                                </p>
-                                <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239' }}>
-                                    Book A Startup Consultation
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             {/* SECTION 5: Acquisitions, Startup Consulting, and Much More (Blue Parallax) */}
             <div className="wp-block-cover alignfull has-parallax" style={{ color: '#fff', padding: '80px 0' }}>
@@ -270,43 +208,28 @@ const Acquisitions = () => {
                         At ZN Tax Consultant, business evaluations and startup consultations are just two of the areas where our accountants and other staff excel. We also offer:
                     </p>
 
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(5, 1fr)',
-                        gap: '15px',
-                        marginBottom: '40px'
-                    }}>
+                    <div className="service-grid-v2 center-last-item" style={{ marginTop: '40px', marginBottom: '20px' }}>
                         {[
-                            { title: 'Bookkeeping', icon: 'fa-book', link: '/bookkeeping' },
-                            { title: 'QuickBooks® Services', icon: 'fa-arrows-rotate', link: '/quickbooks' },
-                            { title: 'Tax Preparation & Planning', icon: 'fa-calculator', link: '/tax' },
+                            { title: 'Bookkeeping', icon: 'fa-book-bookmark', link: '/bookkeeping' },
+                            { title: 'Tax Preparation & Planning', icon: 'fa-file-invoice-dollar', link: '/tax' },
                             { title: 'Business Valuations', icon: 'fa-chart-pie', link: '/valuations' },
-                            { title: 'Business & Financial Consulting', icon: 'fa-users-gear', link: '/consulting' }
+                            { title: 'Business Consulting', icon: 'fa-users-gear', link: '/consulting' },
+                            { title: 'QuickBooks® Services', icon: 'fa-laptop-code', link: '/quickbooks' },
+                            { title: 'BOI Reporting', icon: 'fa-shield-halved', link: '/coming-soon' }
                         ].map((s, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '30px 20px',
-                                borderRadius: '4px',
-                                textAlign: 'center',
-                                color: '#333'
-                            }}>
-                                <div style={{ fontSize: '40px', color: '#d13239', marginBottom: '20px' }}>
+                            <div key={i} className="service-card-v2 animate-card revealed" style={{ opacity: 1, transform: 'none' }}>
+                                <div className="icon-box-fa">
                                     <i className={`fa-solid ${s.icon}`}></i>
                                 </div>
-                                <Link to={s.link} style={{
-                                    color: '#d13239',
-                                    fontWeight: '700',
-                                    fontSize: '15px',
-                                    textDecoration: 'underline',
-                                    lineHeight: '1.3'
-                                }}>
-                                    {s.title}
-                                </Link>
+                                <div className="text-box">
+                                    <h3 style={{ margin: 0 }}>{s.title}</h3>
+                                    <Link to={s.link} style={{ color: '#1b5779', fontWeight: '600' }}>Learn More</Link>
+                                </div>
                             </div>
                         ))}
                     </div>
 
-                    <p style={{ textAlign: 'center', fontSize: '14px', marginBottom: '30px', opacity: 0.9, maxWidth: '800px', margin: '0 auto 30px auto' }}>
+                    <p style={{ textAlign: 'center', fontSize: '14px', marginBottom: '30px', marginTop: '30px', opacity: 0.9, maxWidth: '800px', margin: '0 auto 30px auto' }}>
                         The bookkeeping or accounting services you need are just a call or message away. Let us help you cultivate success—starting today!
                     </p>
 

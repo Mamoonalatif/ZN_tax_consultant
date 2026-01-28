@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import whiteBg from '../assets/images/white-bg.jpg';
-import shootImg from '../assets/images/Gift-CPA-Commercial-Shoot-174-edited.jpg';
 
 const WhyChoose = () => {
     const differences = [
         {
             title: "Expertise You Can Trust",
-            desc: "With decades of experience in the PA market, ZN Tax Consultant brings a level of financial depth that generalist firms simply can't match. We don't just 'do taxes'—we strategize your entire financial future.",
+            desc: "ZN Tax Consultant brings a level of financial depth that generalist firms simply can't match. We don't just 'do taxes'—we strategize your entire financial future.",
             icon: "fa-certificate"
         },
         {
@@ -82,10 +81,10 @@ const WhyChoose = () => {
                     <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
                         {/* Image Column */}
                         <div style={{ flex: '40%', zIndex: 2 }}>
-                            <img src={shootImg} alt="ZN Tax Consultant Team" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" alt="ZN Professional Team" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
                         {/* Floating Text Card */}
-                        <div style={{
+                        <div className="process-floating-card" style={{
                             flex: '65%',
                             background: '#fff',
                             padding: '60px 60px 60px 115px',

@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import whiteBg from '../assets/images/white-bg.jpg';
 
-// Import images
-import bookkeepingImg from '../assets/images/Gift-CPA-Commercial-Shoot-174-edited.jpg';
-import fractionalImg from '../assets/images/Gift-CPA-Commercial-Shoot-375-edited-scaled.jpg';
-import whatWillImg from '../assets/images/AdobeStock_306647077.jpg';
 
 const Bookkeeping = () => {
     const faqItems = [
@@ -31,58 +27,90 @@ const Bookkeeping = () => {
     return (
         <div className="service-page">
             {/* Hero Section */}
-            <div className="contact-hero alignfull">
-                <div
-                    className="wp-block-cover__image-background has-parallax"
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${whiteBg})`,
-                        backgroundPosition: '50% 50%',
-                        backgroundAttachment: 'fixed',
-                        opacity: 0.3
-                    }}
-                ></div>
+            <div className="contact-hero alignfull page-responsive-padding" style={{
+                minHeight: '400px',
+                background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                overflow: 'hidden',
+                paddingTop: '40px',
+                paddingBottom: '40px'
+            }}>
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                    <h1 style={{ fontSize: '48px', color: '#000', fontWeight: '400' }}><strong style={{ color: 'black' }}>Outsourced Bookkeeping Services</strong> in Central Pennsylvania</h1>
-                    <p style={{ fontSize: '22px', color: '#222', fontWeight: '400', marginBottom: '30px' }}>With Outsourced Bookkeeping Services, You’ll Have More Time to Focus on What Matters</p>
-                    <div className="wp-block-buttons">
-                        <div className="wp-block-button">
-                            <Link className="wp-block-button__link wp-element-button" to="/contact">Contact ZN Tax Consultant</Link>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
+                        <div style={{ flex: '1 1 500px' }}>
+                            <h1 style={{ fontSize: '48px', color: '#000', fontWeight: '700', lineHeight: '1.1', marginTop: '0', marginBottom: '15px' }}>
+                                Outsourced <br /><strong>Bookkeeping Services</strong>
+                            </h1>
+                            <p style={{ fontSize: '20px', color: '#555', fontWeight: '400', marginBottom: '35px', maxWidth: '600px', lineHeight: '1.6' }}>
+                                Precision financial records managed by experts, giving you the freedom to focus on your vision.
+                            </p>
+                            <div className="wp-block-buttons">
+                                <button
+                                    className="wp-block-button__link wp-element-button"
+                                    onClick={() => {
+                                        const footerForm = document.querySelector('.newsletter-form');
+                                        if (footerForm) footerForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    }}
+                                    style={{
+                                        background: '#d13239',
+                                        padding: '15px 40px',
+                                        borderRadius: '30px',
+                                        boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)',
+                                        border: 'none',
+                                        color: '#fff',
+                                        cursor: 'pointer',
+                                        fontSize: '16px',
+                                        fontWeight: '500'
+                                    }}
+                                >Get Started Today</button>
+                            </div>
+                        </div>
+                        <div style={{ flex: '1 1 300px' }}>
+                            <div className="floating-icon-stack">
+                                <div className="icon-blob"></div>
+                                <i className="fa-solid fa-file-invoice main-decorated-icon"></i>
+                                <i className="fa-solid fa-calculator sub-icon sub-icon-1"></i>
+                                <i className="fa-solid fa-magnifying-glass-chart sub-icon sub-icon-2"></i>
+                                <i className="fa-solid fa-receipt sub-icon sub-icon-3"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* SECTION 1: What Will a Bookkeeper Do? */}
-            <div className="section-padding bg-white" style={{ position: 'relative', overflow: 'hidden', paddingTop: '40px', paddingBottom: '40px' }}>
+            <div className="section-padding" style={{ position: 'relative', overflow: 'hidden', paddingTop: '60px', paddingBottom: '60px', backgroundColor: '#1b5779' }}>
                 <div className="container">
-                    <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+                    <div className="bookkeeping-intro-grid" style={{ display: 'flex', alignItems: 'center', position: 'relative', gap: '30px', flexWrap: 'wrap' }}>
                         {/* Image Column */}
-                        <div style={{ flex: '40%', zIndex: 2 }}>
-                            <img src={whatWillImg} alt="What will a bookkeeper do" style={{ width: '90%', borderRadius: '4px', display: 'block' }} />
+                        <div style={{ flex: '1 1 400px', zIndex: 2 }}>
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop" alt="Outsourced Bookkeeping" style={{ width: '100%', borderRadius: '15px', display: 'block', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }} />
                         </div>
 
                         {/* Overlapping Text Card */}
-                        <div className="cta" style={{
-                            flex: '60%',
-                            padding: '60px 80px',
-                            background: '#fff',
-                            boxShadow: '0 40px 40px rgba(0,0,0,0.1)',
+                        <div className="process-floating-card glass-card-dark" style={{
+                            flex: '1 1 500px',
+                            padding: '60px',
                             zIndex: 1,
-                            marginLeft: '-10%',
-                            borderRadius: '4px'
+                            borderRadius: '30px',
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            backdropFilter: 'blur(10px)',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            color: '#fff'
                         }}>
-                            <h2 style={{ fontSize: '32px', fontWeight: '300', marginBottom: '25px', color: '#333' }}>
+                            <h2 style={{ fontSize: '32px', fontWeight: '300', marginBottom: '25px', color: '#fff' }}>
                                 What Will <strong>a Bookkeeper</strong> Do for <br />Your Small Business?
                             </h2>
-                            <div style={{ color: '#555', fontSize: '15px', lineHeight: '1.7' }}>
-                                <p style={{ marginBottom: '15px' }}>Are your books suffering because your staff is too busy attending to your customers, expanding your operations, or making sure that your business is fulfilling its purpose? There's nothing wrong with that. In fact, for many small businesses, the ledger is the last item to get attention when things get busy.</p>
+                            <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '15px', lineHeight: '1.7' }}>
+                                <p style={{ marginBottom: '15px' }}>Are your books suffering because your staff is too busy? The ledger is often the last item to get attention when things get busy.</p>
                                 <p style={{ marginBottom: '15px' }}>What separates average from great is recognizing the need for help.</p>
                                 <p style={{ marginBottom: '30px' }}>
-                                    Perhaps it's time to <Link to="/find-accountant" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: '600' }}>hire a fractional bookkeeper</Link> to help you get back on track, ready for tax season, informed about your finances, and in compliance. ZN Tax Consultant can help.
+                                    It's time to <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: '600' }}>hire a fractional bookkeeper</Link> to help you get back on track.
                                 </p>
                             </div>
                             <div>
-                                <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{
+                                <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
                                     background: '#d13239',
                                     color: '#fff',
                                     padding: '12px 35px',
@@ -108,7 +136,7 @@ const Bookkeeping = () => {
                             <h2 style={{ fontSize: '36px', fontWeight: '300', marginBottom: '40px', lineHeight: '1.2' }}>
                                 What is a <br /><strong>Fractional Bookkeeper?</strong>
                             </h2>
-                            <div style={{ fontSize: '12px', lineHeight: '1.7', color: '#333' }}>
+                            <div style={{ fontSize: '15px', lineHeight: '1.8', color: '#444' }}>
                                 <p style={{ marginBottom: '25px' }}>A fractional bookkeeper is a professional who provides bookkeeping services to businesses on a part-time basis. Instead of being a full-time employee of a single company, they typically work with multiple clients, allocating a portion of their time to each client's accounting needs.</p>
                                 <p style={{ marginBottom: '25px' }}>Businesses, particularly SMEs, opt for fractional bookkeeping services to save costs. These services can represent significant savings compared to having a full-time, in-house bookkeeper. These outsourced bookkeepers offer expertise in various accounting software, handle day-to-day financial transactions, reconcile accounts, prepare financial statements, and provide insights into the business's financial health.</p>
                                 <p>Fractional bookkeeping arrangements allow businesses to access professional services without the commitment and expense of hiring a full-time employee. This flexible solution can adapt to the business's changing needs, scaling up or down as needed.</p>
@@ -116,11 +144,15 @@ const Bookkeeping = () => {
                         </div>
 
                         {/* Right Column */}
-                        <div>
-                            <p style={{ fontSize: '12px', lineHeight: '1.7', color: '#333', marginBottom: '10px' }}>
-                                A fractional bookkeeper, also known as an outsourced, contract, remote, on-demand, offsite, or external bookkeeper, gives you the flexibility of having a bookkeeping professional at your service without having to search for, hire, and add a new member to your staff.
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+                            <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555', fontStyle: 'italic' }}>
+                                A fractional bookkeeper gives you the flexibility of having a professional at your service without the overhead of a full-time staff member.
                             </p>
-                            <img src={fractionalImg} alt="Fractional Bookkeeper" style={{ width: '100%', height: 'auto', borderRadius: '4px', boxShadow: '0 5px 20px rgba(0,0,0,0.05)' }} />
+                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" alt="Strategic Bookkeeping Illustration" style={{ width: '100%', height: 'auto', borderRadius: '20px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <div className="glass-card-dark" style={{ padding: '30px', margin: 0, background: 'rgba(27, 87, 121, 0.05)', border: '1px solid rgba(27, 87, 121, 0.1)' }}>
+                                <h4 style={{ color: '#1b5779', marginBottom: '10px' }}>Strategic Growth</h4>
+                                <p style={{ fontSize: '14px', margin: 0 }}>Our bookkeeping doesn't just record the past, it helps you plan for the future with "Strategic Bookkeeping" insights.</p>
+                            </div>
                         </div>
                     </div>
 
@@ -182,7 +214,7 @@ const Bookkeeping = () => {
                         </div>
 
                         {/* Right Column: Difference Card */}
-                        <div style={{
+                        <div className="process-floating-card" style={{
                             background: '#fff',
                             padding: '20px 40px',
                             boxShadow: '0 20px 50px rgba(0,0,0,0.08)',
@@ -252,19 +284,23 @@ const Bookkeeping = () => {
                         You know that we offer comprehensive, customizable bookkeeping services for small businesses. But did you also know that we offer a variety of accounting services as well?
                     </p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '15px', marginBottom: '40px' }}>
+                    <div className="service-grid-v2 center-last-item" style={{ marginTop: '40px' }}>
                         {[
-                            { title: 'Tax Preparation & Planning', icon: 'fa-file-invoice-dollar' },
-                            { title: 'Acquisitions & Startup Support', icon: 'fa-handshake' },
-                            { title: 'Business & Financial Consulting', icon: 'fa-users-gear' },
-                            { title: 'Business Valuations', icon: 'fa-chart-line' },
-                            { title: 'QuickBooks Services', icon: 'fa-calculator' }
+                            { title: 'Tax Prep & Planning', icon: 'fa-file-invoice-dollar', link: '/tax' },
+                            { title: 'Startup Support', icon: 'fa-handshake', link: '/acquisitions' },
+                            { title: 'Financial Consulting', icon: 'fa-users-gear', link: '/consulting' },
+                            { title: 'Business Valuations', icon: 'fa-chart-pie', link: '/valuations' },
+                            { title: 'QuickBooks® Services', icon: 'fa-laptop-code', link: '/quickbooks' },
+                            { title: 'BOI Reporting', icon: 'fa-shield-halved', link: '/coming-soon' }
                         ].map((s, i) => (
-                            <div key={i} style={{ background: '#fff', padding: '30px 20px', borderRadius: '4px', textAlign: 'center', color: '#333' }}>
-                                <div style={{ fontSize: '40px', color: '#d13239', marginBottom: '20px' }}>
+                            <div key={i} className="service-card-v2 animate-card revealed" style={{ opacity: 1, transform: 'none' }}>
+                                <div className="icon-box-fa">
                                     <i className={`fa-solid ${s.icon}`}></i>
                                 </div>
-                                <h4 style={{ fontSize: '16px', fontWeight: '600', color: '#d13239', textDecoration: 'underline', cursor: 'pointer' }}>{s.title}</h4>
+                                <div className="text-box">
+                                    <h3 style={{ margin: 0 }}>{s.title}</h3>
+                                    <Link to={s.link} style={{ color: '#1b5779', fontWeight: '600' }}>Learn More</Link>
+                                </div>
                             </div>
                         ))}
                     </div>

@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import logoWithoutBg from '../assets/images/logo-withoutbg.png';
 import logoNameOnly from '../assets/images/logo-nameonly.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
+
+    const handleSocialClick = (e) => {
+        e.preventDefault();
+        if (location.pathname === '/coming-soon') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/coming-soon');
+        }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -46,28 +57,21 @@ const Footer = () => {
                             </div>
 
                             <ul className="social-icons">
-                                <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#"><i className="fab fa-youtube"></i></a></li>
+                                <li><a href="#" onClick={handleSocialClick}><i className="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" onClick={handleSocialClick}><i className="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#" onClick={handleSocialClick}><i className="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
 
-                        {/* Column 2: Locations & Resources */}
+                        {/* Column 2: Company */}
                         <div className="footer-col-2">
-                            <div className="footer-heading">Locations</div>
+                            <div className="footer-heading">Company</div>
                             <ul className="footer-menu">
-                                <li><Link to="/mechanicsburg">Mechanicsburg, PA</Link></li>
-                                <li><Link to="/myerstown">Myerstown, PA</Link></li>
-                                <li><Link to="/harrisburg">Harrisburg, PA</Link></li>
-                                <li><Link to="/lancaster">Lancaster, PA</Link></li>
-                            </ul>
-
-                            <div className="footer-heading" style={{ marginTop: '30px' }}>Resources</div>
-                            <ul className="footer-menu">
-                                <li><Link to="/blogs">Blog</Link></li>
-                                <li><Link to="/videos">Videos</Link></li>
-                                <li><Link to="/guides">Guides</Link></li>
-                                <li><Link to="/checklists">Checklists</Link></li>
+                                <li><Link to="/why-choose-zn">Why Choose Us</Link></li>
+                                <li><Link to="/our-people">Our People</Link></li>
+                                <li><Link to="/testimonials">Testimonials</Link></li>
+                                <li><Link to="/careers">Careers</Link></li>
+                                <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </div>
 
@@ -116,7 +120,7 @@ const Footer = () => {
                                     </div>
 
                                     <p className="newsletter-disclaimer">
-                                        By submitting this form, you are consenting to receive marketing emails from: ZN Tax Consultant, 1205 Manor Drive, Suite 100, Mechanicsburg, PA, 17055, US, http://www.zntaxconsultant.com. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. <Link to="/privacy-policy">Emails are serviced by Constant Contact.</Link>
+                                        By submitting this form, you are consenting to receive marketing emails from ZN Tax Consultant. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. <Link to="/privacy-policy">View our Privacy Policy.</Link>
                                     </p>
 
                                     <button type="submit" className="newsletter-submit">Sign Up!</button>
@@ -133,7 +137,6 @@ const Footer = () => {
                             <li><Link to="/our-people">Our People</Link></li>
                             <li><Link to="/our-process">Our Process</Link></li>
                             <li><Link to="/careers">Careers</Link></li>
-                            <li><Link to="/client-hub">Client Hub</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>

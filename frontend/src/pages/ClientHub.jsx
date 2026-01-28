@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import whiteBg from '../assets/images/white-bg.jpg';
-import shootImg from '../assets/images/Gift-CPA-Commercial-Shoot-304-copy-edited-scaled.jpg';
+const shootImg = "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop";
 import careers1 from '../assets/images/Careers_1.jpg';
 import careers2 from '../assets/images/Careers_2.jpg';
 import writing from '../assets/images/writing.jpg';
@@ -126,17 +127,59 @@ const ClientHub = () => {
                 <div className="container">
                     <h2 className="section-header" style={{ fontSize: '32px', fontWeight: '300', marginBottom: '40px' }}>Get <strong>Started</strong></h2>
                     <div className="wp-block-columns are-vertically-aligned-center" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
-                        <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-                            <iframe
-                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-                                title="How to Use Your Portal!"
-                                src="https://www.youtube.com/embed/eZvzy1xe4Ww"
-                                allowFullScreen
-                            ></iframe>
+                        <div style={{
+                            background: 'linear-gradient(135deg, #1b5779 0%, #2a6a8f 100%)',
+                            padding: '60px 40px',
+                            borderRadius: '12px',
+                            color: '#fff',
+                            boxShadow: '0 20px 60px rgba(0,0,0,0.15)'
+                        }}>
+                            <div style={{ fontSize: '64px', marginBottom: '20px', opacity: 0.9 }}>
+                                <i className="fas fa-rocket"></i>
+                            </div>
+                            <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '20px' }}>Quick Start Guide</h3>
+                            <ul style={{ fontSize: '16px', lineHeight: '2', listStyle: 'none', padding: 0 }}>
+                                <li style={{ marginBottom: '15px' }}>
+                                    <i className="fas fa-check-circle" style={{ marginRight: '12px', color: '#4ade80' }}></i>
+                                    Log in with your credentials
+                                </li>
+                                <li style={{ marginBottom: '15px' }}>
+                                    <i className="fas fa-check-circle" style={{ marginRight: '12px', color: '#4ade80' }}></i>
+                                    Upload documents securely
+                                </li>
+                                <li style={{ marginBottom: '15px' }}>
+                                    <i className="fas fa-check-circle" style={{ marginRight: '12px', color: '#4ade80' }}></i>
+                                    Access your tax returns
+                                </li>
+                                <li style={{ marginBottom: '15px' }}>
+                                    <i className="fas fa-check-circle" style={{ marginRight: '12px', color: '#4ade80' }}></i>
+                                    Communicate with our team
+                                </li>
+                                <li>
+                                    <i className="fas fa-check-circle" style={{ marginRight: '12px', color: '#4ade80' }}></i>
+                                    Track your requests in real-time
+                                </li>
+                            </ul>
                         </div>
                         <div>
-                            <h3 style={{ fontSize: '24px', fontWeight: '300', marginBottom: '20px' }}>Watch a video on how to use your portal:</h3>
-                            <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7' }}>Our client portal is designed to make your life easier. Securely upload documents, access tax returns, and communicate with our team—all in one place.</p>
+                            <h3 style={{ fontSize: '24px', fontWeight: '300', marginBottom: '20px' }}>Your Portal, Simplified</h3>
+                            <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', marginBottom: '20px' }}>
+                                Our client portal is designed to make your life easier. Securely upload documents, access tax returns, and communicate with our team—all in one place.
+                            </p>
+                            <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', marginBottom: '20px' }}>
+                                Everything you need is just a click away. No complicated processes, no confusion—just simple, secure access to your financial information whenever you need it.
+                            </p>
+                            <div style={{
+                                background: '#f8f8f8',
+                                padding: '25px',
+                                borderRadius: '8px',
+                                borderLeft: '4px solid #d13239',
+                                marginTop: '30px'
+                            }}>
+                                <p style={{ fontSize: '14px', color: '#666', margin: 0, lineHeight: '1.6' }}>
+                                    <strong style={{ color: '#d13239' }}>Need Help?</strong> Our support team is always ready to assist you. Contact us anytime if you have questions about using the portal.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -344,21 +387,21 @@ const ClientHub = () => {
                     </h2>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '60px', alignItems: 'end' }}>
                         <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                            <a className="wp-block-button__link wp-element-button" href="/find-accountant" style={{
+                            <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{
                                 background: '#d13239', padding: '15px 30px', fontSize: '14px'
                             }}>
                                 Find An Accountant
-                            </a>
-                            <a className="wp-block-button__link wp-element-button" href="/schedule" style={{
+                            </Link>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{
                                 background: '#d13239', padding: '15px 30px', fontSize: '14px'
                             }}>
                                 Schedule A Consultation
-                            </a>
-                            <a className="wp-block-button__link wp-element-button" href="/careers" style={{
+                            </Link>
+                            <Link className="wp-block-button__link wp-element-button" to="/careers" style={{
                                 background: '#d13239', padding: '15px 30px', fontSize: '14px'
                             }}>
                                 Join ZN Tax Consultant
-                            </a>
+                            </Link>
                         </div>
                         <div>
                             <p style={{ fontSize: '14px', fontWeight: '700', color: '#333', marginBottom: '15px' }}>Follow Us on Social:</p>
@@ -377,12 +420,12 @@ const ClientHub = () => {
                                 }}>
                                     <i className="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="https://youtube.com" target="_blank" rel="noreferrer" style={{
+                                <a href="/coming-soon" style={{
                                     background: '#d13239', color: '#fff', width: '40px', height: '40px',
                                     borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
                                     textDecoration: 'none'
                                 }}>
-                                    <i className="fab fa-youtube"></i>
+                                    <i className="fas fa-clock"></i>
                                 </a>
                             </div>
                         </div>

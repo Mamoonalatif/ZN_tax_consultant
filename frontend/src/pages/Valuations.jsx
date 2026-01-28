@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import whiteBg from '../assets/images/white-bg.jpg';
-import analysisImg from '../assets/images/Gift-CPA-Commercial-Shoot-375-edited-scaled.jpg';
-import methodsImg from '../assets/images/writing.jpg';
-
+import Valuation from '../assets/images/AdobeStock_306647077.jpg';
 const Valuations = () => {
     const needReasons = [
         "Selling or Buying a Business",
@@ -41,50 +39,47 @@ const Valuations = () => {
     return (
         <div className="service-page">
             {/* Hero Section */}
-            <div className="wp-block-cover alignfull is-light careers-hero" style={{
-                minHeight: '300px',
+            <div className="wp-block-cover alignfull is-light careers-hero page-responsive-padding" style={{
+                minHeight: '400px',
                 display: 'flex',
                 alignItems: 'center',
                 paddingTop: '60px',
-                paddingBottom: '40px',
-                background: `#f5f7f8`,
+                paddingBottom: '60px',
+                background: `linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)`,
                 position: 'relative',
                 overflow: 'hidden'
             }}>
-                <div
-                    className="wp-block-cover__image-background"
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${whiteBg})`,
-                        backgroundPosition: '50% 50%',
-                        backgroundAttachment: 'fixed',
-                        opacity: 0.2
-                    }}
-                ></div>
                 <div className="wp-block-cover__inner-container container" style={{ position: 'relative', zIndex: 2 }}>
-                    <h1 className="wp-block-heading" style={{ fontSize: '40px', color: '#000', fontWeight: '300', lineHeight: '1.2' }}>
-                        Business <strong>Valuation Services</strong> in Central Pennsylvania
-                    </h1>
-                    <p style={{ fontSize: '22px', color: '#444', maxWidth: '900px', margin: '25px 0', lineHeight: '1.7', fontWeight: '400' }}>
-                        Understand the Worth of a Business, its Assets, and its Potential with Business Valuation by ZN Tax Consultant
-                    </p>
-                    <div className="wp-block-buttons">
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
-                            Consult With ZN Tax Consultant
-                        </Link>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
+                        <div style={{ flex: '1 1 500px' }}>
+                            <h1 className="wp-block-heading" style={{ fontSize: '48px', color: '#000000', fontWeight: '700', lineHeight: '1.2' }}>
+                                Business <strong>Valuations</strong>
+                            </h1>
+                            <p style={{ fontSize: '20px', color: '#444', maxWidth: '850px', margin: '25px 0', lineHeight: '1.6', fontWeight: '400' }}>
+                                Accurate appraisals and deep financial insights to help you understand the true value of your business.
+                            </p>
+                            <div className="wp-block-buttons">
+                                <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
+                                    background: '#d13239',
+                                    borderRadius: '30px',
+                                    padding: '15px 40px',
+                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                }}>
+                                    Consult With ZN Tax Consultant
+                                </Link>
+                            </div>
+                        </div>
+                        <div style={{ flex: '1 1 300px' }}>
+                            <div className="floating-icon-stack">
+                                <div className="icon-blob"></div>
+                                <i className="fa-solid fa-chart-pie main-decorated-icon"></i>
+                                <i className="fa-solid fa-scale-balanced sub-icon sub-icon-1"></i>
+                                <i className="fa-solid fa-piggy-bank sub-icon sub-icon-2"></i>
+                                <i className="fa-solid fa-vault sub-icon sub-icon-3"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {/* Decorative background element */}
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    right: 0,
-                    width: '45%',
-                    height: '100%',
-                    background: '#e9ecef',
-                    clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)',
-                    zIndex: 1,
-                    opacity: 0.5
-                }}></div>
             </div>
 
             {/* SECTION 1: Faster and More Accurate (Overlapping) */}
@@ -93,10 +88,10 @@ const Valuations = () => {
                     <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
                         {/* Image Column */}
                         <div style={{ flex: '40%', zIndex: 2 }}>
-                            <img src={analysisImg} alt="Business Valuation Analysis" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2026&auto=format&fit=crop" alt="Precision Financial Analysis" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
                         {/* Floating Text Card */}
-                        <div style={{
+                        <div className="process-floating-card" style={{
                             flex: '65%',
                             background: '#fff',
                             padding: '60px 60px 60px 115px',
@@ -182,7 +177,7 @@ const Valuations = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', gap: '60px', alignItems: 'center' }}>
                         <div>
-                            <img src={methodsImg} alt="Appraisal Methods" style={{ width: '100%', borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+                            <img src={Valuation} alt="Valuation Methodologies" style={{ width: '100%', borderRadius: '15px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
                         </div>
                         <div>
                             <h2 style={{ fontSize: '32px', fontWeight: '300', marginBottom: '25px', color: '#333' }}>
@@ -232,19 +227,23 @@ const Valuations = () => {
                         Valuations are just one of the functions performed by the accounting professionals at ZN Tax Consultant. We also offer the following services to <Link to="/client-hub" style={{ color: '#ff7b7b', textDecoration: 'underline' }}>our clients</Link>:
                     </p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '15px', marginBottom: '40px' }}>
+                    <div className="service-grid-v2 center-last-item" style={{ marginTop: '40px', marginBottom: '60px' }}>
                         {[
-                            { title: 'Bookkeeping', icon: 'fa-book', link: '/bookkeeping' },
-                            { title: 'Acquisitions & Startup Support', icon: 'fa-handshake', link: '/acquisitions' },
-                            { title: 'Business & Financial Consulting', icon: 'fa-users-gear', link: '/consulting' },
-                            { title: 'Tax Preparation & Planning', icon: 'fa-calculator', link: '/tax' },
-                            { title: 'QuickBooks® Services', icon: 'fa-arrows-rotate', link: '/quickbooks' }
-                        ].map((s, idx) => (
-                            <div key={idx} style={{ background: '#fff', color: '#333', padding: '30px 20px', borderRadius: '4px', textAlign: 'center' }}>
-                                <div style={{ fontSize: '40px', color: '#d13239', marginBottom: '20px' }}>
+                            { title: 'Bookkeeping', icon: 'fa-book-bookmark', link: '/bookkeeping' },
+                            { title: 'Tax Preparation & Planning', icon: 'fa-file-invoice-dollar', link: '/tax' },
+                            { title: 'Acquisitions & Startups', icon: 'fa-handshake', link: '/acquisitions' },
+                            { title: 'Business Consulting', icon: 'fa-users-gear', link: '/consulting' },
+                            { title: 'QuickBooks® Services', icon: 'fa-laptop-code', link: '/quickbooks' },
+                            { title: 'BOI Reporting', icon: 'fa-shield-halved', link: '/coming-soon' }
+                        ].map((s, i) => (
+                            <div key={i} className="service-card-v2 animate-card revealed" style={{ opacity: 1, transform: 'none' }}>
+                                <div className="icon-box-fa">
                                     <i className={`fa-solid ${s.icon}`}></i>
                                 </div>
-                                <Link to={s.link} style={{ fontSize: '15px', fontWeight: '600', color: '#d13239', textDecoration: 'underline', lineHeight: '1.3' }}>{s.title}</Link>
+                                <div className="text-box">
+                                    <h3 style={{ margin: 0 }}>{s.title}</h3>
+                                    <Link to={s.link} style={{ color: '#1b5779', fontWeight: '600' }}>Learn More</Link>
+                                </div>
                             </div>
                         ))}
                     </div>

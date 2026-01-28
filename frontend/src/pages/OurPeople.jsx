@@ -7,13 +7,14 @@ const OurPeople = () => {
         {
             name: "Zulqarnain Nasir",
             title: "CPA, EA, Principal",
-            bio: "With over 40 years of financial experience, Zulqarnain leads ZN Tax Consultant with a commitment to integrity and strategic excellence. He specializes in business valuations and complex tax planning for SMEs and nonprofits.",
+            bio: "Zulqarnain leads ZN Tax Consultant with a commitment to integrity and strategic excellence. He specializes in business valuations and complex tax planning for SMEs and nonprofits.",
             icon: "fa-user-tie"
         },
         {
+
             name: "Our Professional Team",
             title: "Accounting & Tax Experts",
-            bio: "Beyond leadership, ZN Tax Consultant is powered by a dedicated team of CPAs, bookkeepers, and advisors across our four Pennsylvania locations. Every member of our staff is committed to your success.",
+            bio: "Beyond leadership, ZN Tax Consultant is powered by a dedicated team of CPAs, bookkeepers, and advisors. Every member of our staff is committed to your success and provides top-tier accounting solutions.",
             icon: "fa-users"
         }
     ];
@@ -64,7 +65,7 @@ const OurPeople = () => {
                             Dedicated to <strong>Excellence</strong>
                         </h2>
                         <p style={{ fontSize: '16px', color: '#666', marginTop: '15px' }}>
-                            Our team combines decades of experience with a passion for helping small businesses thrive.
+                            Our team combines deep expertise with a passion for helping small businesses thrive.
                         </p>
                     </div>
 

@@ -1,21 +1,38 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import GoogleReviews from '../components/GoogleReviews';
 
 // Import images
 import heroImg from '../assets/images/hero.jpg';
-import service01Img from '../assets/images/services01.png';
-import service02Img from '../assets/images/services02.png';
-import service03Img from '../assets/images/services03.png';
-import service04Img from '../assets/images/services04.png';
-import service05Img from '../assets/images/services05.png';
-import service06Img from '../assets/images/services06.png';
-import service07Img from '../assets/images/services07.png';
-import differenceImg from '../assets/images/GiftCPA006.jpg';
 import adobeBg from '../assets/images/white-bg.jpg';
-import GiftCPACommercialShoot304CopyEditedScaled from '../assets/images/Gift-CPA-Commercial-Shoot-304-copy-edited-scaled.jpg';
 
 const Home = () => {
     const location = useLocation();
+    const profileRefs = useRef([]);
+    const serviceRefs = useRef([]);
+    const sectionRefs = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.05 });
+
+        profileRefs.current.forEach(ref => {
+            if (ref) observer.observe(ref);
+        });
+        serviceRefs.current.forEach(ref => {
+            if (ref) observer.observe(ref);
+        });
+        sectionRefs.current.forEach(ref => {
+            if (ref) observer.observe(ref);
+        });
+
+        return () => observer.disconnect();
+    }, []);
     const trackRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -26,7 +43,7 @@ const Home = () => {
             trackRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 
             // Minimal dot tracking logic
-            const newIndex = direction === 'next' ? Math.min(activeIndex + 1, 7) : Math.max(activeIndex - 1, 0);
+            const newIndex = direction === 'next' ? Math.min(activeIndex + 1, 1) : Math.max(activeIndex - 1, 0);
             setActiveIndex(newIndex);
         }
     };
@@ -34,9 +51,9 @@ const Home = () => {
     return (
         <div className="content-wrapper">
             {/* SECTION 1: HERO */}
-            <div className="wp-block-cover alignfull is-light" style={{ paddingTop: '30px', paddingBottom: '60px' }}>
+            <div className="wp-block-cover alignfull is-light hero-section" style={{ paddingTop: '25px', paddingBottom: '60px' }}>
                 <img
-                    fetchpriority="high"
+                    fetchPriority="high"
                     decoding="async"
                     className="wp-block-cover__image-background"
                     alt="ZN Tax Consultant Hero"
@@ -45,45 +62,45 @@ const Home = () => {
                 />
                 <span aria-hidden="true" className="wp-block-cover__background has-background-dim-0 has-background-dim" style={{ backgroundColor: '#e3e3e3' }}></span>
                 <div className="wp-block-cover__inner-container container">
-                    <div className="wp-block-columns is-layout-flex">
-                        <div className="wp-block-column" style={{ flexBasis: '2%' }}>
-                            <h1 className="wp-block-heading" style={{ fontWeight: '500', fontSize: '40px' }}>Central Pennsylvania CPA-Services Firm <strong>For Your Business</strong></h1>
-                            <p style={{ fontSize: '16px', fontWeight: '500' }}>You Want to Impact Lives and Turn Dreams Into Reality. ZN Tax Consultant is Ready to Help with Accounting Services, Tax Services, Bookkeeping, and More.</p>
+                    <div className="wp-block-columns is-layout-flex hero-columns" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
+                        <div className="wp-block-column hero-content-column" style={{ flex: '1 1 500px', minWidth: '300px', zIndex: 10 }}>
+                            <h1 className="wp-block-heading" style={{ fontWeight: '500', fontSize: '48px', lineHeight: '1.1', marginBottom: '20px' }}>Central Pennsylvania CPA-Services Firm <strong style={{ fontWeight: '700' }}>For Your Business</strong></h1>
+                            <p style={{ fontSize: '18px', fontWeight: '400', lineHeight: '1.6', marginBottom: '30px', color: '#333' }}>You Want to Impact Lives and Turn Dreams Into Reality. ZN Tax Consultant is Ready to Help with Accounting Services, Tax Services, Bookkeeping, and More.</p>
                             <div className="wp-block-buttons">
                                 <div className="wp-block-button">
-                                    <Link className="wp-block-button__link" to="/schedule">Let’s Talk About It</Link>
+                                    <Link className="wp-block-button__link" to="/schedule" style={{ padding: '18px 40px', fontSize: '18px', fontWeight: '600' }}>Let’s Talk About It</Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="wp-block-column"></div>
+                        <div className="wp-block-column" style={{ flex: '1 1 300px' }}></div>
                     </div>
                 </div>
             </div>
 
             {/* SECTION 2: SERVICES GRID */}
-            <div className="wp-block-cover alignfull is-light" style={{ paddingTop: '25px' }}>
+            <div className="wp-block-cover alignfull is-light" style={{ paddingTop: '25px', paddingBottom: '40px' }}>
                 <span aria-hidden="true" className="wp-block-cover__background" style={{ backgroundColor: '#ffffff' }}></span>
                 <div className="wp-block-cover__inner-container container">
-                    <h2 className="wp-block-heading" style={{ marginBottom: '15px', fontSize: '28px', fontWeight: '500' }}>Find the <strong>Bookkeeping & Tax Services</strong> Your Small Business Needs</h2>
-                    <p style={{ maxWidth: '1300px', margin: '0 px', fontSize: '14px' }}>You don’t have to know which services your business or non-profit requires in order to take advantage of everything ZN Tax Consultant provides. We’ll help you select the services that are most suited to your business’s unique needs.</p>
+                    <h2 className="wp-block-heading" style={{ marginBottom: '15px', fontSize: '28px', fontWeight: '500' }}>Find the <strong style={{ fontWeight: '700' }}>Bookkeeping & Tax Services</strong> Your Small Business Needs</h2>
+                    <p style={{ maxWidth: '1300px', margin: '0 auto', fontSize: '13px' }}>You don't have to know which services your business or non-profit requires in order to take advantage of everything ZN Tax Consultant provides. We'll help you select the services that are most suited to your business's unique needs.</p>
 
-                    <div className="service-grid-v2">
+                    <div className="service-grid-v2 center-last-item">
                         {/* Service 1: Bookkeeping */}
-                        <div className="service-card-v2">
-                            <div className="icon-box">
-                                <img src={service01Img} alt="Bookkeeping" />
+                        <div className="service-card-v2 animate-card" ref={el => serviceRefs.current[0] = el}>
+                            <div className="icon-box-fa">
+                                <i className="fa-solid fa-book-bookmark"></i>
                             </div>
                             <div className="text-box">
                                 <h3>Bookkeeping</h3>
                                 <p>Are you feeling the effects of not having an in-house bookkeeper? Outsource it to start breathing easier.</p>
-                                <Link to="/bookkeeping" className={location.pathname === '/bookkeeping' ? 'active' : ''}>Outsource Bookkeeping</Link>
+                                <Link to="/bookkeeping">Outsource Bookkeeping</Link>
                             </div>
                         </div>
 
-                        {/* Service 2: Tax Prep */}
-                        <div className="service-card-v2">
-                            <div className="icon-box">
-                                <img src={service02Img} alt="Tax Prep" />
+                        {/* Service 2: Tax Planning */}
+                        <div className="service-card-v2 animate-card" ref={el => serviceRefs.current[1] = el}>
+                            <div className="icon-box-fa">
+                                <i className="fa-solid fa-file-invoice-dollar"></i>
                             </div>
                             <div className="text-box">
                                 <h3>Tax Prep & Planning</h3>
@@ -93,21 +110,21 @@ const Home = () => {
                         </div>
 
                         {/* Service 3: Acquisitions */}
-                        <div className="service-card-v2">
-                            <div className="icon-box">
-                                <img src={service03Img} alt="Acquisitions" />
+                        <div className="service-card-v2 animate-card" ref={el => serviceRefs.current[2] = el}>
+                            <div className="icon-box-fa">
+                                <i className="fa-solid fa-handshake"></i>
                             </div>
                             <div className="text-box">
                                 <h3>Acquisitions & Startups</h3>
-                                <p>Whether you’re buying, selling, or starting a new business, having your books in order is a crucial step in the process.</p>
-                                <Link to="/acquisitions">Get A Consultant’s Help</Link>
+                                <p>Whether you're buying, selling, or starting a new business, having your books in order is a crucial step in the process.</p>
+                                <Link to="/acquisitions">Get A Consultant's Help</Link>
                             </div>
                         </div>
 
                         {/* Service 4: Consulting */}
-                        <div className="service-card-v2">
-                            <div className="icon-box">
-                                <img src={service04Img} alt="Consulting" />
+                        <div className="service-card-v2 animate-card" ref={el => serviceRefs.current[3] = el}>
+                            <div className="icon-box-fa">
+                                <i className="fa-solid fa-users-gear"></i>
                             </div>
                             <div className="text-box">
                                 <h3>Business & Financial Consulting</h3>
@@ -117,9 +134,9 @@ const Home = () => {
                         </div>
 
                         {/* Service 5: Valuations */}
-                        <div className="service-card-v2">
-                            <div className="icon-box">
-                                <img src={service05Img} alt="Valuations" />
+                        <div className="service-card-v2 animate-card" ref={el => serviceRefs.current[4] = el}>
+                            <div className="icon-box-fa">
+                                <i className="fa-solid fa-chart-pie"></i>
                             </div>
                             <div className="text-box">
                                 <h3>Business Valuations</h3>
@@ -129,242 +146,207 @@ const Home = () => {
                         </div>
 
                         {/* Service 6: QuickBooks */}
-                        <div className="service-card-v2">
-                            <div className="icon-box">
-                                <img src={service06Img} alt="QuickBooks" />
+                        <div className="service-card-v2 animate-card" ref={el => serviceRefs.current[5] = el}>
+                            <div className="icon-box-fa">
+                                <i className="fa-solid fa-laptop-code"></i>
                             </div>
                             <div className="text-box">
                                 <h3>QuickBooks</h3>
-                                <p>From setup and installation to training and support, we’ll help you get the most from QuickBooks and all its features.</p>
+                                <p>From setup and installation to training and support, we'll help you get the most from QuickBooks and all its features.</p>
                                 <Link to="/quickbooks">Optimize QuickBooks</Link>
                             </div>
                         </div>
-                        <div className="service-card-v2">
-                            <div className="icon-box">
-                                <img src={service07Img} alt=" Beneficial Ownership Information Reporting (BOI)" />
+
+                        {/* Service 7: BOI */}
+                        <div className="service-card-v2 animate-card" ref={el => serviceRefs.current[6] = el}>
+                            <div className="icon-box-fa">
+                                <i className="fa-solid fa-shield-halved"></i>
                             </div>
                             <div className="text-box">
                                 <h3>Beneficial Ownership Information Reporting (BOI)</h3>
                                 <p>Many companies are required to report information to FinCEN about the individuals who ultimately own or control them.</p>
-                                <Link to="/BOI">Are You One of Them?</Link>
+                                <Link to="/coming-soon">Are You One of Them?</Link>
                             </div>
                         </div>
                     </div>
-                    <p style={{ maxWidth: '1300px', margin: '40px auto 0', fontSize: '14px' }}>Contact our team about supplementing your in-house bookkeeping, using CPA outsourcing services to your advantage, discovering all the perks of virtual CPA services, or just feeling more confident in your CPA tax services. It’s all waiting for you at ZN Tax Consultant.</p>
+                    <p style={{ maxWidth: '1300px', margin: '40px auto 0', fontSize: '13px', textAlign: 'center' }}>Contact our team about supplementing your in-house bookkeeping, using CPA outsourcing services to your advantage, discovering all the perks of virtual CPA services, or just feeling more confident in your CPA tax services. It's all waiting for you at ZN Tax Consultant.</p>
                 </div>
             </div>
-
-
-            {/* --- SECTION: The ZN Tax Consultant Difference (Overlapping Layout) --- */}
-            <div className="wp-block-cover alignfull is-light has-parallax">
-                <div className="wp-block-cover__image-background has-parallax" style={{ backgroundImage: `url(${adobeBg})`, backgroundPosition: '50% 50%' }}></div>
-                <span aria-hidden="true" className="wp-block-cover__background has-background-dim" style={{ backgroundColor: '#eaeaea' }}></span>
-                <div className="wp-block-cover__inner-container container">
-                    <div className="wp-block-columns are-vertically-aligned-center" style={{ gap: '0' }}>
-                        <div className="wp-block-column" style={{ flexBasis: '48%', margin: '0', zIndex: 2, marginRight: '-80px' }}>
-                            <figure className="wp-block-image size-full" style={{ margin: '0' }}>
-                                <img src={differenceImg} alt="ZN Tax Consultant Difference" style={{ width: '90%', display: 'block' }} />
-                            </figure>
+            {/* LEADERSHIP SECTION: ZULQARNAIN NASEER */}
+            <div className="manager-section">
+                <div className="leadership-shape"></div>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '0px', position: 'relative', zIndex: 1 }}>
+                        <div style={{ marginBottom: '0px' }}>
+                            <span className="difference-tag" style={{ background: 'rgba(27, 87, 121, 0.1)', color: '#1b5779', padding: '10px 40px' }}>The Visionary</span>
                         </div>
-                        <div className="wp-block-column cta bg-white" style={{ flexBasis: '52%', padding: '40px 40px 40px 50px', zIndex: 1, marginRight: '0' }}>
-                            <h2 className="wp-block-heading" style={{ fontSize: '20px', fontWeight: '700', marginBottom: '10px' }}>The ZN Tax Consultant <strong>Difference</strong></h2>
-                            <p style={{ fontSize: '12px', lineHeight: '1.4', marginBottom: '10px' }}>All financial services companies are not alike, and you’ll discover that during your first interaction with the ZN Tax Consultant team.</p>
-                            <p style={{ fontSize: '12px', lineHeight: '1.4', marginBottom: '10px' }}>We’ll ensure that your books are in order, that you’re not paying more taxes than you need to, that your business valuation is accurate—and we’ll do it all with your ultimate success in mind.</p>
-                            <p style={{ fontSize: '12px', lineHeight: '1.4', marginBottom: '10px' }}>We’ll handle the bookkeeping, accounting, or other services, so you can focus on your business’s mission.</p>
-                            <div className="wp-block-buttons" style={{ marginTop: '15px' }}>
-                                <div className="wp-block-button">
-                                    <Link className="wp-block-button__link wp-element-button" to="/why-choose-zn" style={{ padding: '10px 25px', fontSize: '12px' }}>Get To Know US</Link>
-                                </div>
+                        <h2 className="wp-block-heading" style={{ fontSize: '28px', fontWeight: '400', color: '#000', marginTop: '0', marginBottom: '10px' }}>Our Leadership</h2>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+                        {/* ZULQARNAIN NASIR */}
+                        <div
+                            className="profile-card-minimal"
+                            ref={el => profileRefs.current[0] = el}
+                            style={{ flex: '1 1 100%', maxWidth: '800px', padding: '20px 40px' }}
+                        >
+                            <div className="leadership-card-top" style={{ textAlign: 'center', marginBottom: '0px' }}>
+                                <span className="title" style={{ fontSize: '14px', color: '#666', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700' }}>Principal Accountant & CEO</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            {/* --- SECTION: Four Locations & Staff Grid --- */}
-            <div className="wp-block-cover alignfull is-light bg-white" style={{ padding: '80px 0' }}>
-                <div className="wp-block-cover__inner-container container">
-                    <div className="wp-block-columns are-vertically-aligned-center">
-                        <div className="wp-block-column" style={{ flexBasis: '25%' }}>
-                            <h2 className="wp-block-heading locations-heading">
-                                <strong>Four Pennsylvania Locations</strong>—All with Seasoned, Caring Professionals to Serve You
-                            </h2>
-                        </div>
-                        <div className="wp-block-column" style={{ flexBasis: '60%', paddingLeft: '40px', fontWeight: '600px' }}>
-                            <p className="locations-intro-text">The community where you’re operating your business or nonprofit has become your home. You know the landscape, the commerce, and the people—how they spend their time and what they need most.</p>
-                            <p className="location-links">You want your bookkeeper or accountant to be part of that same community to help you succeed locally and beyond. That’s why we have offices in <Link to="/mechanicsburg">Mechanicsburg</Link>, <Link to="/myerstown">Myerstown</Link>, <Link to="/harrisburg">Harrisburg</Link>, and <Link to="/lancaster">Lancaster</Link>—to serve you, so you can serve the community your business calls home.</p>
-                        </div>
-                    </div>
-
-                    <div className="wp-block-query" style={{ marginTop: '50px' }}>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            {[
-                                { name: 'Zulqarnain Nasir', title: 'CPA, EA, Principal' }
-                            ].map((staff, i) => (
-                                <div key={i} className="wp-block-post" style={{ width: '300px' }}>
-                                    <div className="agent-location text-center">
-                                        <div style={{
-                                            width: '120px',
-                                            height: '120px',
-                                            margin: '0 auto 20px auto',
-                                            backgroundColor: '#f1f1f1',
-                                            borderRadius: '50%',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            color: '#1b5779',
-                                            fontSize: '50px',
-                                            border: '4px solid #fff',
-                                            boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
-                                        }}>
-                                            <i className="fa-solid fa-user-tie"></i>
-                                        </div>
-                                        <h3 className="wp-block-post-title" style={{ fontSize: '20px', marginBottom: '5px' }}>{staff.name}</h3>
-                                        <div className="wp-block-post-subtitle" style={{ fontSize: '14px', color: '#686c6d', fontWeight: '500' }}>{staff.title}</div>
+                            <div className="leadership-main-row" style={{ display: 'flex', flexDirection: 'column', gap: '0px', alignItems: 'center', justifyContent: 'center' }}>
+                                <div className="leadership-image-container" style={{ width: '120px', height: '120px' }}>
+                                    <div className="manager-image-wrapper" style={{ width: '120px', height: '120px', borderRadius: '50%', margin: '0 auto', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', backgroundColor: '#1b5779', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <i className="fa-solid fa-user" style={{ fontSize: '70px', color: '#fff' }}></i>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
+                                <div className="leadership-text-container" style={{ textAlign: 'center', maxWidth: '700px' }}>
+                                    <h2 className="leadership-name" style={{ fontWeight: '700', color: '#000', margin: '0', marginBottom: '2px', fontSize: '28px' }}>Zulqarnain <strong style={{ color: '#000', fontWeight: '700' }}>Nasir</strong></h2>
+                                    <p className="leadership-location" style={{ color: '#d13239', fontWeight: '700', fontSize: '16px', margin: '0', marginBottom: '3px' }}>
+                                        <i className="fa-solid fa-location-dot" style={{ marginRight: '8px' }}></i> Central Pennsylvania
+                                    </p>
+                                    <div className="manager-bio" style={{ textAlign: 'center' }}>
+                                        <p style={{ fontSize: '12px', lineHeight: '1.8', color: '#555', margin: '0' }}>
+                                            As the Principal Accountant and visionary behind ZN Tax Consultant, Zulqarnain Nasir provides comprehensive financial services through our firm. Under his leadership, the firm has established a hierarchy of excellence, ensuring that every financial strategy is vetted through rigorous professional standards.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
-                    {/* Dual Action Buttons Added per image */}
-                    <div style={{ textAlign: 'center', marginTop: '50px', display: 'flex', gap: '20px', justifyContent: 'center' }}>
-                        <Link className="wp-block-button__link" to="/schedule" style={{ padding: '12px 35px', fontSize: '16px', fontWeight: 'bold' }}>Find An Accountant</Link>
-                        <Link className="wp-block-button__link" to="/our-people" style={{ padding: '12px 35px', fontSize: '16px', fontWeight: 'bold' }}>See All Staff</Link>
+                            <div className="expertise-grid" style={{ paddingTop: '8px', marginTop: '8px', borderTop: '1px solid rgba(0,0,0,0.05)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '8px' }}>
+                                <div className="expertise-item" style={{ padding: '10px 10px', backgroundColor: '#f0f2f5', borderRadius: '15px', border: '1px solid transparent' }}>
+                                    <i className="fa-solid fa-chart-line" style={{ color: '#1b5779', marginBottom: '4px', fontSize: '22px' }}></i>
+                                    <span style={{ fontWeight: '700', fontSize: '13px', color: '#333' }}>Tax Strategy</span>
+                                </div>
+                                <div className="expertise-item" style={{ padding: '10px 10px', backgroundColor: '#f0f2f5', borderRadius: '15px', border: '1px solid transparent' }}>
+                                    <i className="fa-solid fa-handshake" style={{ color: '#1b5779', marginBottom: '4px', fontSize: '22px' }}></i>
+                                    <span style={{ fontWeight: '700', fontSize: '13px', color: '#333' }}>M&A Advisory</span>
+                                </div>
+                                <div className="expertise-item" style={{ padding: '10px 10px', backgroundColor: '#f0f2f5', borderRadius: '15px', border: '1px solid transparent' }}>
+                                    <i className="fa-solid fa-chart-pie" style={{ color: '#1b5779', marginBottom: '4px', fontSize: '22px' }}></i>
+                                    <span style={{ fontWeight: '700', fontSize: '13px', color: '#333' }}>Business Valuation</span>
+                                </div>
+                                <div className="expertise-item" style={{ padding: '10px 10px', backgroundColor: '#f0f2f5', borderRadius: '15px', border: '1px solid transparent' }}>
+                                    <i className="fa-solid fa-users-gear" style={{ color: '#1b5779', marginBottom: '4px', fontSize: '22px' }}></i>
+                                    <span style={{ fontWeight: '700', fontSize: '13px', color: '#333' }}>Consulting</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* --- SECTION: Easy as 1, 2, 3 (Blue Parallax with Overlay) --- */}
-            <div className="wp-block-cover alignfull has-parallax" style={{ color: '#fff', padding: '40px 0' }}>
+            {/* SECTION 3: The Difference */}
+            <div className="wp-block-cover alignfull is-light has-parallax" style={{ marginTop: '0', paddingTop: '25px', paddingBottom: '25px' }}>
+                <div className="wp-block-cover__image-background has-parallax" style={{ backgroundImage: `url(${adobeBg})`, backgroundPosition: '50% 50%' }}></div>
+                <span aria-hidden="true" className="wp-block-cover__background has-background-dim" style={{ backgroundColor: '#f0f2f5', opacity: 0.9 }}></span>
+                <div className="wp-block-cover__inner-container container">
+                    <div className="wp-block-columns are-vertically-aligned-center difference-row" style={{ display: 'flex', alignItems: 'center', gap: '0' }}>
+                        <div className="wp-block-column difference-image-col" style={{ zIndex: 10 }}>
+                            <figure className="wp-block-image size-full" style={{ margin: '0' }}>
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2026&auto=format&fit=crop" alt="Corporate Growth" className="hover-pop-image" style={{ width: '100%', display: 'block', borderRadius: '30px', boxShadow: '0 30px 60px rgba(0,0,0,0.2)', position: 'relative' }} />
+                            </figure>
+                        </div>
+                        <div className="wp-block-column difference-content-box" style={{ zIndex: 1 }}>
+                            <span className="difference-tag" style={{ marginBottom: '15px' }}>Why Choose Us</span>
+                            <h2 className="wp-block-heading" style={{ fontSize: '28px', marginBottom: '20px', fontWeight: '500' }}>The ZN Tax Consultant<strong style={{ fontWeight: '700' }}> Difference</strong></h2>
+                            <p style={{ fontSize: '13px', lineHeight: '1.8', color: '#444', marginBottom: '30px' }}>
+                                Our firm operates on a structured hierarchy of professional excellence. Led by our Principal Accountant, our specialized teams are aligned to ensure that every client engagement benefits from multi-layered expertise and strategic oversight. We don't just provide services; we provide a corporate partnership built on the pillars of integrity, precision, and a commitment to your long-term success.
+                            </p>
+                            <div className="wp-block-buttons">
+                                <div className="wp-block-button">
+                                    <Link className="wp-block-button__link" to="/why-choose-zn" style={{ background: '#1b5779', padding: '15px 40px', borderRadius: '12px', fontSize: '15px', fontWeight: '700' }}>Explore Our Methodology</Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* SECTION 4: Professional Image */}
+            <div className="section-padding clarity-section" style={{ paddingTop: '30px', paddingBottom: '30px', background: '#ffffff' }}>
+                <div className="container">
+                    <div className="wp-block-columns is-vertically-aligned-center clarity-row" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '40px' }}>
+                        <div className="wp-block-column clarity-text-col">
+                            <span className="difference-tag" style={{ background: 'rgba(209, 50, 57, 0.1)', color: '#d13239', marginTop: '10px' }}>Your Success</span>
+                            <h2 className="wp-block-heading" style={{ fontSize: '32px', marginBottom: '15px', fontWeight: '500', marginTop: '10px', color: '#000', lineHeight: '1.2' }}>Committed to Your <strong style={{ fontWeight: '700' }}>Financial Clarity</strong></h2>
+                            <p style={{ fontSize: '13px', lineHeight: '1.8', color: '#555' }}>We provide specialized guidance for small businesses and non-profits, helping you navigate the complexities of tax laws and financial management with ease. Our goal is to empower you with the insights needed to make informed decisions and achieve sustainable growth through professional excellence.</p>
+                        </div>
+                        <div className="wp-block-column clarity-image-col">
+                            <div style={{ position: 'relative', maxWidth: '400px', margin: '0 auto' }}>
+                                <div style={{ position: 'absolute', top: '-15px', right: '-15px', width: '100%', height: '100%', background: 'rgba(27, 87, 121, 0.05)', borderRadius: '30px', zIndex: 0 }}></div>
+                                <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070&auto=format&fit=crop" alt="Financial Analytics" className="hover-pop-image" style={{ width: '100%', borderRadius: '30px', boxShadow: '0 25px 50px rgba(0,0,0,0.1)', position: 'relative', zIndex: 5 }} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* SECTION 5: Easy as 1, 2, 3 */}
+            <div className="wp-block-cover alignfull has-parallax" style={{ color: '#fff', paddingTop: '25px', paddingBottom: '25px' }}>
                 <div className="wp-block-cover__image-background has-parallax" style={{ backgroundImage: `url(${adobeBg})`, backgroundPosition: '50% 50%' }}></div>
                 <span aria-hidden="true" className="wp-block-cover__background" style={{ backgroundColor: '#0f4b6eff', opacity: 0.85, zIndex: 1 }}></span>
                 <div className="wp-block-cover__inner-container container text-center" style={{ zIndex: 2, position: 'relative' }}>
-                    <h2 className="wp-block-heading text-center" style={{ marginBottom: '15px', fontSize: '26px' }}>Finding a CPA or Bookkeeper <strong>is Easy as 1, 2, 3</strong></h2>
-                    <p className="steps-intro-text text-center" style={{ margin: '0 auto 40px auto', maxWidth: '850px', fontSize: '14px' }}>If you’ve been putting off hiring a CPA or accountant because it sounds like too much of a hassle, get ready to be pleasantly surprised! With ZN Tax Consultant, matching you with the professional who’s best suited to your business’s needs is simple:</p>
-                    <div className="wp-block-columns" style={{ marginTop: '30px', justifyContent: 'center', gap: '0.5em', marginBottom: '0', paddingBottom: '30px' }}>
+                    <h2 className="wp-block-heading text-center" style={{ marginBottom: '15px', fontSize: '28px', fontWeight: '500', lineHeight: '1.2' }}>Finding a CPA or Bookkeeper <strong style={{ fontWeight: '700' }}>is Easy as 1, 2, 3</strong></h2>
+                    <p className="steps-intro-text text-center" style={{ margin: '0 auto 40px auto', maxWidth: '850px', fontSize: '13px' }}>With ZN Tax Consultant, matching you with the professional who's best suited to your business's needs is simple:</p>
+                    <div className="wp-block-columns" style={{ marginTop: '30px', justifyContent: 'center', gap: '2em', marginBottom: '0', paddingBottom: '30px' }}>
                         <div className="wp-block-column text-center">
-                            <p className="step">Step<br />1</p>
-                            <Link className="consultation-link aligncenter" to="/schedule" style={{ fontSize: '15px', fontWeight: '500', lineHeight: '1.4' }}>Schedule a Consultation</Link>
+                            <p className="step">Step 1</p>
+                            <Link className="consultation-link aligncenter" to="/schedule">Schedule a Consultation</Link>
                         </div>
                         <div className="wp-block-column text-center">
-                            <p className="step">Step<br />2</p>
-                            <p className="text-center" style={{ fontSize: '15px', fontWeight: '500', lineHeight: '1.4' }}>Tell Us About Your Challenges, Goals,<br />and How You Define Success</p>
+                            <p className="step">Step 2</p>
+                            <p style={{ fontSize: '15px' }}>Tell Us About Your Challenges, Goals</p>
                         </div>
                         <div className="wp-block-column text-center">
-                            <p className="step">Step<br />3</p>
-                            <p className="text-center" style={{ fontSize: '15px', fontWeight: '500', lineHeight: '1.4' }}>Meet Your Financial Professional<br />and Get Back to Business</p>
+                            <p className="step">Step 3</p>
+                            <p style={{ fontSize: '15px' }}>Meet Your Financial Professional</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Work With ZN Tax Consultant Section */}
-            <div className="wp-block-cover alignfull is-light" style={{ backgroundColor: '#e8e8e8', padding: '60px 0', marginTop: '0' }}>
+            {/* SECTION 6: Career & Work With Us */}
+            <div className="wp-block-cover alignfull is-light " style={{ backgroundColor: '#f0f2f5', paddingTop: '30px', paddingBottom: '30px' }}>
                 <div className="wp-block-cover__inner-container container">
                     <div className="wp-block-columns are-vertically-aligned-center">
-                        <div className="wp-block-column" style={{ flexBasis: '40%' }}>
-                            <h2 className="wp-block-heading" style={{ fontSize: '28px', lineHeight: '1.2', fontWeight: '500' }}>Work with ZN Tax Consultant for the Tax Services <strong>You Need</strong> and the Relationship <strong>You Want</strong></h2>
-                            <p style={{ marginTop: '30px' }}>Your Tax Professional should know your business. They should understand your goals, your challenges, and your definition of success. Only then can tax services be tailored to your unique business and help you move forward.</p>
-                            <p style={{ marginTop: '20px' }}>Whether it's bookkeeping, tax preparation, general accounting services, or other tax services you're searching for, you'll find it at ZN Tax Consultant. Schedule a consultation so we can discuss your needs today.</p>
-                            <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
-                                <div className="wp-block-button">
-                                    <Link className="wp-block-button__link" to="/schedule">Book A Consultation</Link>
-                                </div>
-                            </div>
+                        <div className="wp-block-column" style={{ flexBasis: '40%', paddingBottom: '0px', marginBottom: '0px' }}>
+                            <span className="difference-tag" style={{ marginBottom: '0px' }}>Join Our Team</span>
                         </div>
-                        <div className="wp-block-column cta" style={{ flexBasis: '60%', marginLeft: '30px', padding: '24px', overflow: 'hidden' }}>
-                            <img src={GiftCPACommercialShoot304CopyEditedScaled} alt="Careers" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '4px' }} />
-                            <div style={{ padding: '0px 10px 5px' }}>
-                                <h3 className="wp-block-heading" style={{ fontSize: '22px', margin: '10px 0 10px', fontWeight: '500' }}>Interested in a Career with <strong>a Respected Tax Firm</strong> in Central PA?</h3>
-                                <p style={{ fontSize: '12px', color: '#444', lineHeight: '1.5' }}>No matter if you're new to the financial services sector or you're a seasoned professional, we'd like to talk to you about joining the ZN Tax Consultant team. If you're dedicated to excellence and you find fulfillment in helping businesses succeed, then we encourage you to apply.</p>
-                                <div style={{ marginTop: '10px' }}>
-                                    <Link className="career-link" to="/careers">Work For ZN Tax Consultant</Link>
+                        <div className="wp-block-column cta-modern career-section" style={{ flexBasis: '60%', marginLeft: '10px', paddingTop: '0px', background: '#fff' }}>
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Professional Career" style={{ width: '100%' }} />
+                            <div className="career-content" style={{ paddingTop: '0px' }}>
+                                <h3 style={{ fontSize: '20px', fontWeight: '500', marginBottom: '15px', lineHeight: '1.2' }}>Interested in a Career with <strong style={{ fontWeight: '700' }}>a Respected Tax Firm</strong>?</h3>
+                                <p style={{ color: '#666', marginBottom: '20px', fontSize: '13px' }}>Join a culture of professional growth and excellence. We are always looking for talented individuals to join our hierarchy of experts.</p>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+                                    <Link className="career-link" to="/careers" style={{ fontSize: '16px' }}>Work For ZN Tax <i className="fa-solid fa-arrow-right" style={{ marginLeft: '10px' }}></i></Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            {/* --- SECTION: Google Reviews (Exact Replica) --- */}
-            <div className="reviews-section alignfull">
-                <div className="container">
-                    <div className="reviews-container">
-                        {/* Left Side: Google Summary */}
-                        <div className="reviews-left">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" className="google-logo-large" />
-                            <h2 style={{ fontSize: '36px', fontWeight: '400', margin: '0 0 10px 0' }}>Reviews</h2>
-                            <div className="google-stars-main">★★★★★</div>
-                            <div className="rating-summary-box">
-                                <div className="rating-value">4.9</div>
-                                <div className="rating-stars-small">★★★★★</div>
-                                <div className="review-count">108 User Reviews</div>
+            <div className="consultation-section-modern" style={{ backgroundColor: '#ffffff', paddingTop: '30px', paddingBottom: '20px', marginTop: '0', position: 'relative', overflow: 'hidden' }}>
+                <div className="consultation-pattern" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.03, backgroundImage: 'radial-gradient(circle, #1b5779 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+                <div className="wp-block-cover__inner-container container" style={{ position: 'relative', zIndex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap', maxWidth: '1000px', margin: '0 auto', background: 'linear-gradient(135deg, rgba(27, 87, 121, 0.03) 0%, rgba(209, 50, 57, 0.03) 100%)', padding: '40px', borderRadius: '20px', border: '1px solid rgba(27, 87, 121, 0.1)', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)' }}>
+                        <div style={{ flex: '1 1 auto', display: 'flex', alignItems: 'center', gap: '25px' }}>
+                            <div className="consultation-icon-wrapper" style={{ flex: '0 0 auto', width: '70px', height: '70px', borderRadius: '50%', background: 'linear-gradient(135deg, #1b5779 0%, #0d2b3c 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(27, 87, 121, 0.3)' }}>
+                                <i className="fa-solid fa-calendar-check" style={{ fontSize: '30px', color: '#fff' }}></i>
+                            </div>
+                            <div>
+                                <h3 style={{ fontSize: '24px', fontWeight: '500', margin: '0 0 8px 0', color: '#000', lineHeight: '1.2' }}>Schedule a Consultation</h3>
+                                <p style={{ margin: '0', fontSize: '13px', color: '#666', lineHeight: '1.2' }}>Discover how our structured approach can transform your business's financial future.</p>
                             </div>
                         </div>
-
-                        {/* Right Side: Slider */}
-                        <div className="reviews-right">
-                            {/* Prev Arrow */}
-                            <div className="slider-arrow arrow-prev" onClick={() => handleScroll('prev')}>
-                                <i className="fa-solid fa-chevron-left"></i>
-                            </div>
-
-                            <div className="reviews-slider-track" ref={trackRef}>
-                                {/* Card 1 */}
-                                <div className="review-card-wrapper">
-                                    <div className="review-card">
-                                        <div className="quote-icon">“</div>
-                                        <div className="review-stars">★★★★★</div>
-                                        <p className="review-content">
-                                            We wish to express our gratitude to Chad Schweighart. We greatly appreciate his professionalism, expertise and courteousness during our dealings. We rate him a 10 out of 10 in all categories.
-                                        </p>
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="G" className="google-g-icon" />
-                                    </div>
-                                    <div className="reviewer-info">
-                                        <span className="reviewer-name">Bill and Nancy Walker</span>
-                                    </div>
-                                </div>
-
-                                {/* Card 2 */}
-                                <div className="review-card-wrapper">
-                                    <div className="review-card">
-                                        <div className="quote-icon">“</div>
-                                        <div className="review-stars">★★★★★</div>
-                                        <p className="review-content">
-                                            David has prepared our personal income taxes for two years. David is easy to work with and very responsive. Wholeheartedly recommend!
-                                        </p>
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="G" className="google-g-icon" />
-                                    </div>
-                                    <div className="reviewer-info">
-                                        <span className="reviewer-name">Kurt Patberg</span>
-                                    </div>
-                                </div>
-
-                                {/* Padding cards for visual consistency in track */}
-                                <div className="review-card-wrapper">
-                                    <div className="review-card" style={{ opacity: 0.5 }}>
-                                        <div className="review-stars">★★★★★</div>
-                                        <p className="review-content italic">More stunning reviews from our happy clients in the Central PA community...</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Next Arrow */}
-                            <div className="slider-arrow arrow-next" onClick={() => handleScroll('next')}>
-                                <i className="fa-solid fa-chevron-right"></i>
-                            </div>
-
-                            {/* Dots */}
-                            <div className="slider-dots">
-                                {[...Array(8)].map((_, i) => (
-                                    <span key={i} className={`dot ${activeIndex === i ? 'active' : ''}`} onClick={() => setActiveIndex(i)}></span>
-                                ))}
-                            </div>
+                        <div style={{ flex: '0 0 auto' }}>
+                            <Link className="consultation-btn-modern" to="/schedule" style={{ padding: '16px 40px', borderRadius: '50px', fontSize: '15px', fontWeight: '700', whiteSpace: 'nowrap', background: 'linear-gradient(135deg, #d13239 0%, #b02830 100%)', color: '#fff', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '10px', boxShadow: '0 8px 20px rgba(209, 50, 57, 0.3)', transition: 'all 0.3s ease' }}>Book Now <i className="fa-solid fa-arrow-right"></i></Link>
                         </div>
                     </div>
                 </div>
             </div>
+            {/* SECTION 7: Google Reviews */}
+            <GoogleReviews />
         </div>
     );
 };
