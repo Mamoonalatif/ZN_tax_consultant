@@ -202,7 +202,7 @@ const Home = () => {
                                 </div>
                                 <div className="leadership-text-container" style={{ textAlign: 'center', maxWidth: '700px' }}>
                                     <h2 className="leadership-name" style={{ fontWeight: '700', color: '#000', margin: '0', marginBottom: '2px', fontSize: '28px' }}>Zulqarnain <strong style={{ color: '#000', fontWeight: '700' }}>Nasir</strong></h2>
-                                    <p className="leadership-location" style={{ color: '#d13239', fontWeight: '700', fontSize: '16px', margin: '0', marginBottom: '3px' }}>
+                                    <p className="leadership-location" style={{ color: '#bb3b41', fontWeight: '700', fontSize: '16px', margin: '0', marginBottom: '3px' }}>
                                         <i className="fa-solid fa-location-dot" style={{ marginRight: '8px' }}></i> Central Pennsylvania
                                     </p>
                                     <div className="manager-bio" style={{ textAlign: 'center' }}>
@@ -268,7 +268,7 @@ const Home = () => {
                 <div className="container">
                     <div className="wp-block-columns is-vertically-aligned-center clarity-row" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '40px' }}>
                         <div className="wp-block-column clarity-text-col">
-                            <span className="difference-tag" style={{ background: 'rgba(209, 50, 57, 0.1)', color: '#d13239', marginTop: '10px' }}>Your Success</span>
+                            <span className="difference-tag" style={{ background: 'rgba(187, 59, 65, 0.1)', color: '#bb3b41', marginTop: '10px' }}>Your Success</span>
                             <h2 className="wp-block-heading" style={{ fontSize: '32px', marginBottom: '15px', fontWeight: '500', marginTop: '10px', color: '#000', lineHeight: '1.2' }}>Committed to Your <strong style={{ fontWeight: '700' }}>Financial Clarity</strong></h2>
                             <p style={{ fontSize: '13px', lineHeight: '1.8', color: '#555' }}>We provide specialized guidance for small businesses and non-profits, helping you navigate the complexities of tax laws and financial management with ease. Our goal is to empower you with the insights needed to make informed decisions and achieve sustainable growth through professional excellence.</p>
                         </div>
@@ -329,7 +329,7 @@ const Home = () => {
             <div className="consultation-section-modern" style={{ backgroundColor: '#ffffff', paddingTop: '30px', paddingBottom: '20px', marginTop: '0', position: 'relative', overflow: 'hidden' }}>
                 <div className="consultation-pattern" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.03, backgroundImage: 'radial-gradient(circle, #1b5779 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
                 <div className="wp-block-cover__inner-container container" style={{ position: 'relative', zIndex: 1 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap', maxWidth: '1000px', margin: '0 auto', background: 'linear-gradient(135deg, rgba(27, 87, 121, 0.03) 0%, rgba(209, 50, 57, 0.03) 100%)', padding: '40px', borderRadius: '20px', border: '1px solid rgba(27, 87, 121, 0.1)', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap', maxWidth: '1000px', margin: '0 auto', background: 'linear-gradient(135deg, rgba(27, 87, 121, 0.03) 0%, rgba(187, 59, 65, 0.03) 100%)', padding: '40px', borderRadius: '20px', border: '1px solid rgba(27, 87, 121, 0.1)', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)' }}>
                         <div style={{ flex: '1 1 auto', display: 'flex', alignItems: 'center', gap: '25px' }}>
                             <div className="consultation-icon-wrapper" style={{ flex: '0 0 auto', width: '70px', height: '70px', borderRadius: '50%', background: 'linear-gradient(135deg, #1b5779 0%, #0d2b3c 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(27, 87, 121, 0.3)' }}>
                                 <i className="fa-solid fa-calendar-check" style={{ fontSize: '30px', color: '#fff' }}></i>
@@ -340,7 +340,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div style={{ flex: '0 0 auto' }}>
-                            <Link className="consultation-btn-modern" to="/schedule" style={{ padding: '16px 40px', borderRadius: '50px', fontSize: '15px', fontWeight: '700', whiteSpace: 'nowrap', background: 'linear-gradient(135deg, #d13239 0%, #b02830 100%)', color: '#fff', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '10px', boxShadow: '0 8px 20px rgba(209, 50, 57, 0.3)', transition: 'all 0.3s ease' }}>Book Now <i className="fa-solid fa-arrow-right"></i></Link>
+                            <Link className="consultation-btn-modern" to="/schedule" style={{ padding: '16px 40px', borderRadius: '50px', fontSize: '15px', fontWeight: '700', whiteSpace: 'nowrap', background: 'linear-gradient(135deg,#bb3b41 100%, #9d3035 0%)', color: '#fff', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '10px', boxShadow: '0 8px 20px rgba(187, 59, 65, 0.3)', transition: 'all 0.3s ease' }}>Book Now <i className="fa-solid fa-arrow-right"></i></Link>
                         </div>
                     </div>
                 </div>

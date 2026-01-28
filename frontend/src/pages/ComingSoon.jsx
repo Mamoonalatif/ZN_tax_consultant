@@ -27,7 +27,7 @@ const ComingSoon = () => {
                 ></div>
                 <div className="wp-block-cover__inner-container container text-center" style={{ position: 'relative', zIndex: 2, maxWidth: '800px' }}>
                     <div className="coming-soon-icon" style={{
-                        color: '#d13239',
+                        color: '#bb3b41',
                         marginBottom: '40px',
                         fontSize: '80px',
                         fontWeight: '300'
@@ -63,7 +63,7 @@ const ComingSoon = () => {
                                 className="wp-block-button__link wp-element-button"
                                 to="/"
                                 style={{
-                                    backgroundColor: '#d13239',
+                                    backgroundColor: '#bb3b41',
                                     color: '#fff',
                                     padding: '12px 35px',
                                     borderRadius: '50px',
@@ -135,7 +135,7 @@ const ComingSoon = () => {
                                     borderRadius: '8px',
                                     textDecoration: 'none',
                                     transition: 'all 0.3s ease',
-                                    borderBottom: '4px solid #d13239',
+                                    borderBottom: '4px solid #bb3b41',
                                     flex: '1 1 200px',
                                     maxWidth: '250px'
                                 }}
@@ -148,7 +148,7 @@ const ComingSoon = () => {
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}
                             >
-                                <div style={{ fontSize: '48px', marginBottom: '20px', color: '#d13239' }}>
+                                <div style={{ fontSize: '48px', marginBottom: '20px', color: '#bb3b41' }}>
                                     <i className={`fa-solid ${service.icon}`}></i>
                                 </div>
                                 <h3 style={{ fontSize: '20px', margin: 0, color: '#333', fontWeight: '700' }}>

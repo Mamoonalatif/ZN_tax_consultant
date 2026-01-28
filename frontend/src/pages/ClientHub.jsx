@@ -47,11 +47,11 @@ const ClientHub = () => {
                             padding: '60px 40px',
                             textAlign: 'center',
                             borderRadius: '8px',
-                            borderBottom: '4px solid #d13239'
+                            borderBottom: '4px solid #bb3b41'
                         }}>
                             <p style={{ fontSize: '20px', marginBottom: '25px', color: '#333' }}><strong>Login to access the Client Portal:</strong></p>
                             <a href="#" target="_blank" rel="noreferrer noopener" className="btn-resource" style={{
-                                background: '#d13239',
+                                background: '#bb3b41',
                                 color: '#fff',
                                 padding: '15px 40px',
                                 borderRadius: '50px',
@@ -173,11 +173,11 @@ const ClientHub = () => {
                                 background: '#f8f8f8',
                                 padding: '25px',
                                 borderRadius: '8px',
-                                borderLeft: '4px solid #d13239',
+                                borderLeft: '4px solid #bb3b41',
                                 marginTop: '30px'
                             }}>
                                 <p style={{ fontSize: '14px', color: '#666', margin: 0, lineHeight: '1.6' }}>
-                                    <strong style={{ color: '#d13239' }}>Need Help?</strong> Our support team is always ready to assist you. Contact us anytime if you have questions about using the portal.
+                                    <strong style={{ color: '#bb3b41' }}>Need Help?</strong> Our support team is always ready to assist you. Contact us anytime if you have questions about using the portal.
                                 </p>
                             </div>
                         </div>
@@ -200,7 +200,7 @@ const ClientHub = () => {
                             { name: 'Client Draft Authorization', icon: 'fa-file-pdf' }
                         ].map((form, i) => (
                             <a key={i} href="#" className="btn-resource" style={{
-                                background: '#d13239',
+                                background: '#bb3b41',
                                 color: '#fff',
                                 padding: '15px 10px',
                                 textAlign: 'center',
@@ -235,7 +235,7 @@ const ClientHub = () => {
                             { name: 'Mid-Year Business Tune-Up Checklist', icon: 'fa-link' }
                         ].map((guide, i) => (
                             <a key={i} href="#" className="btn-resource" style={{
-                                background: '#d13239',
+                                background: '#bb3b41',
                                 color: '#fff',
                                 padding: '15px 10px',
                                 textAlign: 'center',
@@ -271,7 +271,7 @@ const ClientHub = () => {
                             { name: 'Foreign Tax Certification', icon: 'fa-file-pdf' }
                         ].map((q, i) => (
                             <a key={i} href="#" className="btn-resource" style={{
-                                background: '#d13239',
+                                background: '#bb3b41',
                                 color: '#fff',
                                 padding: '15px 10px',
                                 textAlign: 'center',
@@ -325,11 +325,11 @@ const ClientHub = () => {
                             <div key={post.id} className="news-card" style={{ display: 'flex', flexDirection: 'column' }}>
                                 <img src={post.image} alt={post.title} style={{ width: '100%', height: '220px', objectFit: 'cover', marginBottom: '20px' }} />
                                 <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px', lineHeight: '1.4' }}>
-                                    <a href={post.link} style={{ color: '#d13239', textDecoration: 'underline' }}>{post.title}</a>
+                                    <a href={post.link} style={{ color: '#bb3b41', textDecoration: 'underline' }}>{post.title}</a>
                                 </h3>
                                 <p style={{ color: '#888', fontSize: '13px', marginBottom: '15px' }}>{post.date}</p>
                                 <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.6', marginBottom: '15px', flexGrow: 1 }}>{post.excerpt}</p>
-                                <a href={post.link} style={{ color: '#d13239', textDecoration: 'underline', fontWeight: '700', fontSize: '14px' }}>Read More</a>
+                                <a href={post.link} style={{ color: '#bb3b41', textDecoration: 'underline', fontWeight: '700', fontSize: '14px' }}>Read More</a>
                             </div>
                         ))}
                     </div>
@@ -368,7 +368,7 @@ const ClientHub = () => {
                                     { name: 'Lancaster', link: '#' }
                                 ].map((office, i) => (
                                     <li key={i} style={{ marginBottom: '8px' }}>
-                                        <a href={office.link} style={{ color: '#d13239', textDecoration: 'underline', fontSize: '15px' }}>
+                                        <a href={office.link} style={{ color: '#bb3b41', textDecoration: 'underline', fontSize: '15px' }}>
                                             • Review ZN Tax Consultant in {office.name}
                                         </a>
                                     </li>
@@ -388,17 +388,17 @@ const ClientHub = () => {
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '60px', alignItems: 'end' }}>
                         <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
                             <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{
-                                background: '#d13239', padding: '15px 30px', fontSize: '14px'
+                                background: '#bb3b41', padding: '15px 30px', fontSize: '14px'
                             }}>
                                 Find An Accountant
                             </Link>
                             <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{
-                                background: '#d13239', padding: '15px 30px', fontSize: '14px'
+                                background: '#bb3b41', padding: '15px 30px', fontSize: '14px'
                             }}>
                                 Schedule A Consultation
                             </Link>
                             <Link className="wp-block-button__link wp-element-button" to="/careers" style={{
-                                background: '#d13239', padding: '15px 30px', fontSize: '14px'
+                                background: '#bb3b41', padding: '15px 30px', fontSize: '14px'
                             }}>
                                 Join ZN Tax Consultant
                             </Link>
@@ -407,21 +407,21 @@ const ClientHub = () => {
                             <p style={{ fontSize: '14px', fontWeight: '700', color: '#333', marginBottom: '15px' }}>Follow Us on Social:</p>
                             <div style={{ display: 'flex', gap: '15px' }}>
                                 <a href="https://facebook.com" target="_blank" rel="noreferrer" style={{
-                                    background: '#d13239', color: '#fff', width: '40px', height: '40px',
+                                    background: '#bb3b41', color: '#fff', width: '40px', height: '40px',
                                     borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
                                     textDecoration: 'none'
                                 }}>
                                     <i className="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{
-                                    background: '#d13239', color: '#fff', width: '40px', height: '40px',
+                                    background: '#bb3b41', color: '#fff', width: '40px', height: '40px',
                                     borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
                                     textDecoration: 'none'
                                 }}>
                                     <i className="fab fa-linkedin-in"></i>
                                 </a>
                                 <a href="/coming-soon" style={{
-                                    background: '#d13239', color: '#fff', width: '40px', height: '40px',
+                                    background: '#bb3b41', color: '#fff', width: '40px', height: '40px',
                                     borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
                                     textDecoration: 'none'
                                 }}>

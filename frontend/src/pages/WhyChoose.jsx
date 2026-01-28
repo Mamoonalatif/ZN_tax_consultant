@@ -56,7 +56,7 @@ const WhyChoose = () => {
                         Experience the Difference of a Financial Partner Invested in Your Growth
                     </p>
                     <div className="wp-block-buttons">
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41' }}>
                             Start Your Journey Today
                         </Link>
                     </div>
@@ -116,7 +116,7 @@ const WhyChoose = () => {
                         <h2 style={{ fontSize: '36px', fontWeight: '300', marginBottom: '20px' }}>
                             The ZN Tax Consultant <strong>Difference</strong>
                         </h2>
-                        <div style={{ width: '80px', height: '4px', background: '#d13239', margin: '0 auto' }}></div>
+                        <div style={{ width: '80px', height: '4px', background: '#bb3b41', margin: '0 auto' }}></div>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px' }}>
                         {differences.map((diff, i) => (
@@ -155,7 +155,7 @@ const WhyChoose = () => {
                         Join the hundreds of satisfied clients who trust ZN Tax Consultant to manage their most important assets.
                     </p>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                        <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239', padding: '15px 45px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#bb3b41', padding: '15px 45px' }}>
                             Book A Consultation
                         </Link>
                         <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: 'transparent', border: '2px solid #fff', padding: '13px 45px' }}>

@@ -98,7 +98,7 @@ const Footer = () => {
 
                                 <form onSubmit={handleSubmit} className="newsletter-form">
                                     <div className="form-group">
-                                        <label htmlFor="newsletter-email"><span style={{ color: '#d13239', fontWeight: 'bold' }}>*</span> Email</label>
+                                        <label htmlFor="newsletter-email"><span style={{ color: '#bb3b41', fontWeight: 'bold' }}>*</span> Email</label>
                                         <input
                                             type="email"
                                             id="newsletter-email"
@@ -109,7 +109,7 @@ const Footer = () => {
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="newsletter-firstname"><span style={{ color: '#d13239', fontWeight: 'bold' }}>*</span> First Name</label>
+                                        <label htmlFor="newsletter-firstname"><span style={{ color: '#bb3b41', fontWeight: 'bold' }}>*</span> First Name</label>
                                         <input
                                             type="text"
                                             id="newsletter-firstname"

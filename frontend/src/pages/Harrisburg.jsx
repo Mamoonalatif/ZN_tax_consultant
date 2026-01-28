@@ -31,7 +31,7 @@ const Harrisburg = () => {
                     </p>
                     <div className="wp-block-buttons" style={{ justifyContent: 'flex-start' }}>
                         <div className="wp-block-button">
-                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ backgroundColor: '#d13239', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '700', fontSize: '14px' }}>Book A Consultation</Link>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ backgroundColor: '#bb3b41', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '700', fontSize: '14px' }}>Book A Consultation</Link>
                         </div>
                     </div>
                 </div>

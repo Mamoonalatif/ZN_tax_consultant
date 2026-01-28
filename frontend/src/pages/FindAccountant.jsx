@@ -27,7 +27,7 @@ const FindAccountant = () => {
                     </p>
                     <div className="wp-block-buttons">
                         <div className="wp-block-button">
-                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ backgroundColor: '#d13239', color: '#fff', padding: '12px 30px', borderRadius: '50px', fontWeight: '700' }}>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ backgroundColor: '#bb3b41', color: '#fff', padding: '12px 30px', borderRadius: '50px', fontWeight: '700' }}>
                                 Schedule An Accounting Consultation
                             </Link>
                         </div>

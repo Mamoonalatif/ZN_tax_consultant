@@ -42,7 +42,7 @@ const Careers = () => {
                 alignItems: 'center',
                 paddingTop: '60px',
                 paddingBottom: '60px',
-                background: 'linear-gradient(135deg, rgba(27, 87, 121, 0.03) 0%, rgba(209, 50, 57, 0.03) 100%)',
+                background: 'linear-gradient(135deg, rgba(27, 87, 121, 0.03) 0%, rgba(187, 59, 65, 0.03) 100%)',
                 position: 'relative',
                 overflow: 'hidden'
             }}>
@@ -62,7 +62,7 @@ const Careers = () => {
                     left: '-100px',
                     width: '400px',
                     height: '400px',
-                    background: 'radial-gradient(circle, rgba(209, 50, 57, 0.05) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(187, 59, 65, 0.05) 0%, transparent 70%)',
                     borderRadius: '50%',
                     zIndex: 0
                 }}></div>
@@ -84,13 +84,13 @@ const Careers = () => {
                     <div className="wp-block-buttons" style={{ marginTop: '20px' }}>
                         <div className="wp-block-button">
                             <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                backgroundColor: '#d13239',
+                                backgroundColor: '#bb3b41',
                                 color: '#fff',
                                 borderRadius: '30px',
                                 padding: '12px 35px',
                                 fontWeight: 'bold',
                                 fontSize: '15px',
-                                boxShadow: '0 4px 15px rgba(209, 50, 57, 0.3)',
+                                boxShadow: '0 4px 15px rgba(187, 59, 65, 0.3)',
                                 transition: 'all 0.3s ease'
                             }}>See Job Openings</Link>
                         </div>
@@ -140,7 +140,7 @@ const Careers = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ marginTop: '20px', fontSize: '11px', color: '#666' }}>For more info, <a href="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contact us</a> today.</p>
+                                <p style={{ marginTop: '20px', fontSize: '11px', color: '#666' }}>For more info, <a href="/contact" style={{ color: '#bb3b41', textDecoration: 'underline' }}>contact us</a> today.</p>
                             </div>
                         </div>
                         <div className="wp-block-column" style={{ flex: '1 1 400px' }}>
@@ -150,7 +150,7 @@ const Careers = () => {
                                 <ul style={{ listStyle: 'none', padding: 0, marginBottom: '25px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                                     {['Harrisburg', 'Myerstown', 'Lancaster', 'Mechanicsburg'].map(loc => (
                                         <li key={loc} style={{ fontSize: '13px' }}>
-                                            <Link to={`/${loc.toLowerCase()}`} style={{ color: '#d13239', textDecoration: 'none', fontWeight: '700' }}>
+                                            <Link to={`/${loc.toLowerCase()}`} style={{ color: '#bb3b41', textDecoration: 'none', fontWeight: '700' }}>
                                                 <i className="fa-solid fa-location-dot" style={{ marginRight: '8px' }}></i>{loc}
                                             </Link>
                                         </li>
@@ -158,12 +158,12 @@ const Careers = () => {
                                 </ul>
                                 <div style={{ alignItems: 'center' }}>
                                      <Link to="/contact" className="wp-block-button__link" style={{
-                                    backgroundColor: '#d13239',
+                                    backgroundColor: '#bb3b41',
                                     color: '#fff',
                                     borderRadius: '30px',
                                     padding: '15px 45px',
                                     fontWeight: '700',
-                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                    boxShadow: '0 10px 20px rgba(187, 59, 65, 0.2)'
                                 }}>Join Our Team</Link>     </div>
                             </div>
                         </div>
@@ -218,7 +218,7 @@ const Careers = () => {
                                     { title: 'Tax Preparation', text: 'Individual, fiduciary, corporate, and partnership returns.' }
                                 ].map((skill, i) => (
                                     <li key={i} style={{ fontSize: '12px', lineHeight: '1.6' }}>
-                                        <div style={{ color: '#d13239', fontWeight: '700', marginBottom: '5px' }}>{skill.title}</div>
+                                        <div style={{ color: '#bb3b41', fontWeight: '700', marginBottom: '5px' }}>{skill.title}</div>
                                         <div style={{ color: '#555' }}>{skill.text}</div>
                                     </li>
                                 ))}
@@ -236,7 +236,7 @@ const Careers = () => {
                                     { title: 'Self-reliance', text: 'Juggling multiple engagements efficiently.' }
                                 ].map((skill, i) => (
                                     <li key={i} style={{ fontSize: '12px', lineHeight: '1.6' }}>
-                                        <div style={{ color: '#d13239', fontWeight: '700', marginBottom: '5px' }}>{skill.title}</div>
+                                        <div style={{ color: '#bb3b41', fontWeight: '700', marginBottom: '5px' }}>{skill.title}</div>
                                         <div style={{ color: '#555' }}>{skill.text}</div>
                                     </li>
                                 ))}
@@ -285,7 +285,7 @@ const Careers = () => {
                         <div className="wp-block-buttons" style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                             <Link className="wp-block-button__link" to="/contact" style={{
                                 padding: '15px 40px',
-                                backgroundColor: '#d13239',
+                                backgroundColor: '#bb3b41',
                                 color: '#fff',
                                 borderRadius: '30px',
                                 fontWeight: '700',
@@ -293,7 +293,7 @@ const Careers = () => {
                             }}>View Open Positions</Link>
                             <Link className="wp-block-button__link" to="/contact" style={{
                                 padding: '15px 40px',
-                                backgroundColor: '#d13239',
+                                backgroundColor: '#bb3b41',
                                 color: '#fff',
                                 borderRadius: '30px',
                                 fontWeight: '700',

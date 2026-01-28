@@ -54,15 +54,15 @@ const Checklists = () => {
                                 boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
                             }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                                    <div style={{ color: '#d13239', fontSize: '24px' }}>
+                                    <div style={{ color: '#bb3b41', fontSize: '24px' }}>
                                         <i className="fa-solid fa-square-check"></i>
                                     </div>
                                     <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#333' }}>{item}</h3>
                                 </div>
                                 <button style={{
                                     background: 'transparent',
-                                    color: '#d13239',
-                                    border: '2px solid #d13239',
+                                    color: '#bb3b41',
+                                    border: '2px solid #bb3b41',
                                     padding: '8px 20px',
                                     borderRadius: '50px',
                                     fontWeight: '700',

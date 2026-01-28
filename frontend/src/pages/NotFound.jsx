@@ -31,7 +31,7 @@ const NotFound = () => {
                         It looks like the link might be broken or the page has been moved.
                     </p>
                     <div className="wp-block-buttons" style={{ justifyContent: 'center' }}>
-                        <Link className="wp-block-button__link wp-element-button" to="/" style={{ background: '#d13239', padding: '15px 40px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/" style={{ background: '#bb3b41', padding: '15px 40px' }}>
                             Back to Homepage
                         </Link>
                     </div>

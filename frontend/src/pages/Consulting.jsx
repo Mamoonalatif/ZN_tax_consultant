@@ -43,10 +43,10 @@ const Consulting = () => {
                             </p>
                             <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
                                 <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                    background: '#d13239',
+                                    background: '#bb3b41',
                                     borderRadius: '30px',
                                     padding: '15px 40px',
-                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                    boxShadow: '0 10px 20px rgba(187, 59, 65, 0.2)'
                                 }}>
                                     Consult With ZN Tax Consultant
                                 </Link>
@@ -94,7 +94,7 @@ const Consulting = () => {
                                     These questions can leave you spinning in circles, but with small business financial consultants, you can have the answers you need - even before you ask. Our business financial consultants can assess your business with an honest and experienced eye. Then, you'll get expert advice from our CPA financial consulting team with clients throughout Pennsylvania.
                                 </p>
                                 <p style={{ fontWeight: '500' }}>
-                                    Lead your business more confidently after <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contacting our team</Link> and scheduling a no-cost consultation.
+                                    Lead your business more confidently after <Link to="/contact" style={{ color: '#bb3b41', textDecoration: 'underline' }}>contacting our team</Link> and scheduling a no-cost consultation.
                                 </p>
                             </div>
                         </div>
@@ -111,7 +111,7 @@ const Consulting = () => {
                                 Get These Services with <strong>Small Business Financial Consulting</strong>
                             </h2>
                             <p style={{ fontSize: '15px', color: '#555', marginBottom: '25px', lineHeight: '1.7' }}>
-                                Business strategy consulting can improve your business by leaps and bounds if you are a small business or nonprofit in <Link to="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#d13239', textDecoration: 'underline' }}>Myerstown</Link>, <Link to="/harrisburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Harrisburg</Link>, and <Link to="/lancaster" style={{ color: '#d13239', textDecoration: 'underline' }}>Lancaster</Link>. You can expect a partnership with ZN Tax Consultant to:
+                                Business strategy consulting can improve your business by leaps and bounds if you are a small business or nonprofit in <Link to="/mechanicsburg" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Myerstown</Link>, <Link to="/harrisburg" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Harrisburg</Link>, and <Link to="/lancaster" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Lancaster</Link>. You can expect a partnership with ZN Tax Consultant to:
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, marginBottom: '40px' }}>
                                 {[
@@ -125,7 +125,7 @@ const Consulting = () => {
                                     'Help to Develop an Exit Strategy'
                                 ].map((service, i) => (
                                     <li key={i} style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative', fontSize: '15.5px', color: '#444' }}>
-                                        <span style={{ position: 'absolute', left: 0, color: '#d13239', fontWeight: 'bold' }}>✓</span> {service}
+                                        <span style={{ position: 'absolute', left: 0, color: '#bb3b41', fontWeight: 'bold' }}>✓</span> {service}
                                     </li>
                                 ))}
                             </ul>
@@ -136,14 +136,14 @@ const Consulting = () => {
                     </div>
 
                     {/* Red Box Statement - Moved to Full Width */}
-                    <div style={{ borderLeft: '6px solid #d13239', background: '#fff', padding: '40px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', marginTop: '40px' }}>
+                    <div style={{ borderLeft: '6px solid #bb3b41', background: '#fff', padding: '40px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', marginTop: '40px' }}>
                         <p style={{ fontSize: '15.5px', color: '#555', lineHeight: '1.7', marginBottom: '20px' }}>
                             Your success is not a one-time achievement; it is constantly changing and moving ahead. A successful business is built by constantly re-assessing and redefining your goals. Our team is committed to helping you reach your goals again and again. Our business financial consultants go beyond developing strategies - we'll develop a relationship that gives a deeper understanding of your business's needs.
                         </p>
                         <p style={{ fontSize: '17px', fontWeight: '700', color: '#333', marginBottom: '25px' }}>
                             It's time to build a better business together!
                         </p>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 40px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '15px 40px' }}>
                             Contact ZN Tax Consultant
                         </Link>
                     </div>
@@ -190,8 +190,8 @@ const Consulting = () => {
                             Find the services you need, provided by people who want to see your business succeed. The ZN Tax Consultant team is waiting to hear from you.
                         </p>
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239', padding: '12px 35px' }}>Find An Accountant</Link>
-                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '12px 35px' }}>Find A Bookkeeper</Link>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#bb3b41', padding: '12px 35px' }}>Find An Accountant</Link>
+                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '12px 35px' }}>Find A Bookkeeper</Link>
                         </div>
                     </div>
                 </div>
@@ -223,7 +223,7 @@ const Consulting = () => {
                             <li key={i} style={{ marginBottom: '12px', paddingLeft: '20px', position: 'relative', fontSize: '14.5px', color: '#444' }}>
                                 <span style={{ position: 'absolute', left: 0, color: '#333', fontWeight: 'bold' }}>•</span>
                                 <strong>{industry.name}</strong> – {industry.desc.split(industry.name + ' Accounting Services')[0]}
-                                <Link to={industry.link} style={{ color: '#d13239', textDecoration: 'underline' }}>{industry.name} Accounting Services</Link>
+                                <Link to={industry.link} style={{ color: '#bb3b41', textDecoration: 'underline' }}>{industry.name} Accounting Services</Link>
                                 {industry.desc.split(industry.name + ' Accounting Services')[1]}
                             </li>
                         ))}
@@ -243,7 +243,7 @@ const Consulting = () => {
                             Frequently Asked Questions <strong>About Small Business Financial Consulting</strong>
                         </h2>
                         <p style={{ fontSize: '15.5px', color: '#666', maxWidth: '1000px', margin: '0 auto', lineHeight: '1.6' }}>
-                            If you've made it this far, you already have questions for us to answer and need them answered now. Here are some of the most common questions we answer daily – if we haven't addressed your question here or you'd like more information, please <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contact our team</Link>.
+                            If you've made it this far, you already have questions for us to answer and need them answered now. Here are some of the most common questions we answer daily – if we haven't addressed your question here or you'd like more information, please <Link to="/contact" style={{ color: '#bb3b41', textDecoration: 'underline' }}>contact our team</Link>.
                         </p>
                     </div>
 
@@ -255,7 +255,7 @@ const Consulting = () => {
                         <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.7', maxWidth: '850px', margin: '0 auto 40px auto' }}>
                             When you work with the ZN Tax Consultant team, you will always have a team of professional business accounting experts available to answer your most pressing questions. If you want to learn more about our areas of expertise and what you can expect from our small business financial consultants, call us today and start the conversation!
                         </p>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '15px 50px' }}>
                             Contact ZN Tax Consultant
                         </Link>
                     </div>

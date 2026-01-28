@@ -49,7 +49,7 @@ const Questionnaires = () => {
                                 transition: 'all 0.3s ease',
                                 hover: { transform: 'translateY(-5px)' }
                             }}>
-                                <div style={{ fontSize: '14px', color: '#d13239', fontWeight: '700', marginBottom: '15px', textTransform: 'uppercase' }}>
+                                <div style={{ fontSize: '14px', color: '#bb3b41', fontWeight: '700', marginBottom: '15px', textTransform: 'uppercase' }}>
                                     Estimated Time: {form.time}
                                 </div>
                                 <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1b5779', marginBottom: '20px' }}>{form.title}</h3>

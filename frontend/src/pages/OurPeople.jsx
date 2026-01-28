@@ -86,7 +86,7 @@ const OurPeople = () => {
                                 }}>
                                     <i className={`fa-solid ${person.icon}`}></i>
                                 </div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#d13239', textDecoration: 'none', borderBottom: 'none' }}>{person.name}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#bb3b41', textDecoration: 'none', borderBottom: 'none' }}>{person.name}</h3>
                                 <div style={{ fontSize: '14px', fontWeight: '700', textTransform: 'uppercase', color: '#666', margin: '10px 0 20px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>{person.title}</div>
                                 <p style={{ fontSize: '15px', color: '#555', lineHeight: '1.7' }}>{person.bio}</p>
                             </div>
@@ -104,7 +104,7 @@ const OurPeople = () => {
                     <div className="values-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
                         {values.map((v, i) => (
                             <div key={i} className="value-item" style={{ background: '#fff', padding: '40px', borderRadius: '4px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'center' }}>
-                                <i className={`fa-solid ${v.icon}`} style={{ fontSize: '40px', color: '#d13239', marginBottom: '20px' }}></i>
+                                <i className={`fa-solid ${v.icon}`} style={{ fontSize: '40px', color: '#bb3b41', marginBottom: '20px' }}></i>
                                 <h3 style={{ color: '#1b5779', marginBottom: '15px', fontSize: '22px' }}>{v.title}</h3>
                                 <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#666' }}>{v.text}</p>
                             </div>
@@ -122,7 +122,7 @@ const OurPeople = () => {
                     <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '0 auto 40px', lineHeight: '1.7' }}>
                         We're always looking for talented professionals who share our values and our commitment to client success.
                     </p>
-                    <Link className="wp-block-button__link wp-element-button" to="/careers" style={{ background: '#d13239', padding: '15px 45px' }}>
+                    <Link className="wp-block-button__link wp-element-button" to="/careers" style={{ background: '#bb3b41', padding: '15px 45px' }}>
                         View Career Opportunities
                     </Link>
                 </div>

@@ -55,7 +55,7 @@ const Guides = () => {
                                     <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#333', marginBottom: '10px' }}>{guide.title}</h3>
                                     <div style={{ fontSize: '14px', color: '#666', marginBottom: '20px' }}>{guide.pages} • {guide.type}</div>
                                     <button style={{
-                                        background: '#d13239',
+                                        background: '#bb3b41',
                                         color: '#fff',
                                         border: 'none',
                                         padding: '10px 25px',

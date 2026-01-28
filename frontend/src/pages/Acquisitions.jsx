@@ -47,10 +47,10 @@ const Acquisitions = () => {
                             </p>
                             <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
                                 <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                    background: '#d13239',
+                                    background: '#bb3b41',
                                     borderRadius: '30px',
                                     padding: '15px 40px',
-                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                    boxShadow: '0 10px 20px rgba(187, 59, 65, 0.2)'
                                 }}>
                                     Consult With ZN Tax Consultant
                                 </Link>
@@ -95,10 +95,10 @@ const Acquisitions = () => {
                                     Are you searching for a business acquisition consultant who offers more than just accounting expertise? Whether you're buying a business to expand your current holdings or entering a new industry, the right guidance can make all the difference.
                                 </p>
                                 <p>
-                                    With a strategic <a href="#" style={{ color: '#d13239', textDecoration: 'underline' }}>business acquisition strategy</a>, you can make informed decisions, minimize risks, and ensure financial stability. A CPA for startups and acquisitions provides the due diligence, financial structuring, and cash flow analysis needed for a seamless transition. Get expert insights to navigate mergers and acquisitions with confidence.
+                                    With a strategic <a href="#" style={{ color: '#bb3b41', textDecoration: 'underline' }}>business acquisition strategy</a>, you can make informed decisions, minimize risks, and ensure financial stability. A CPA for startups and acquisitions provides the due diligence, financial structuring, and cash flow analysis needed for a seamless transition. Get expert insights to navigate mergers and acquisitions with confidence.
                                 </p>
                             </div>
-                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239', padding: '15px 40px' }}>
+                            <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#bb3b41', padding: '15px 40px' }}>
                                 Book An Acquisition Consultation
                             </Link>
                         </div>
@@ -127,7 +127,7 @@ const Acquisitions = () => {
                                     'Should I adjust my entity structure for tax and operational efficiency?'
                                 ].map((item, i) => (
                                     <li key={i} style={{ marginBottom: '12px', paddingLeft: '25px', position: 'relative', fontSize: '14px', color: '#444' }}>
-                                        <span style={{ position: 'absolute', left: 0, color: '#d13239', fontWeight: 'bold' }}>•</span> {item}
+                                        <span style={{ position: 'absolute', left: 0, color: '#bb3b41', fontWeight: 'bold' }}>•</span> {item}
                                     </li>
                                 ))}
                             </ul>
@@ -144,7 +144,7 @@ const Acquisitions = () => {
                                         'Collaborating with your trusted advisors to guide strategic financial decisions.'
                                     ].map((item, i) => (
                                         <li key={i} style={{ marginBottom: '8px', paddingLeft: '20px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: 0, color: '#d13239' }}>-</span> {item}
+                                            <span style={{ position: 'absolute', left: 0, color: '#bb3b41' }}>-</span> {item}
                                         </li>
                                     ))}
                                 </ul>
@@ -160,7 +160,7 @@ const Acquisitions = () => {
                                 Frequently Asked <strong>Business Acquisition</strong> Questions
                             </h2>
                             <p style={{ fontSize: '15px', color: '#555', marginBottom: '30px', lineHeight: '1.6' }}>
-                                Navigating a business acquisition comes with many uncertainties. Here are answers to some common questions to help you make an informed decision. If you have additional concerns or need personalized guidance, a business acquisition consultant can <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>provide expert insight</Link> tailored to your situation.
+                                Navigating a business acquisition comes with many uncertainties. Here are answers to some common questions to help you make an informed decision. If you have additional concerns or need personalized guidance, a business acquisition consultant can <Link to="/contact" style={{ color: '#bb3b41', textDecoration: 'underline' }}>provide expert insight</Link> tailored to your situation.
                             </p>
                             <FAQ items={faqItems} />
                         </div>
@@ -184,7 +184,7 @@ const Acquisitions = () => {
                                     Launching a business comes with challenges, but having an experienced business startup consulting expert by your side can set you up for long-term success. A CPA for startups provides essential guidance on entity structuring, cash flow management, and tax strategies to ensure financial stability from day one.
                                 </p>
                                 <p style={{ marginBottom: '15px' }}>
-                                    Strategic <a href="#" style={{ color: '#d13239', textDecoration: 'underline' }}>startup financial consulting</a> helps turn your passion into a profitable business. Whether you're navigating compliance requirements, securing funding, or optimizing tax benefits, a knowledgeable advisor can help you make informed decisions and avoid costly mistakes.
+                                    Strategic <a href="#" style={{ color: '#bb3b41', textDecoration: 'underline' }}>startup financial consulting</a> helps turn your passion into a profitable business. Whether you're navigating compliance requirements, securing funding, or optimizing tax benefits, a knowledgeable advisor can help you make informed decisions and avoid costly mistakes.
                                 </p>
                                 <p>
                                     With the right startup CPA service, you gain the financial insight needed to grow your business with confidence.
@@ -234,10 +234,10 @@ const Acquisitions = () => {
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                        <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{ background: '#bb3b41' }}>
                             Find An Accountant
                         </Link>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41' }}>
                             Find A Bookkeeper
                         </Link>
                     </div>
@@ -252,10 +252,10 @@ const Acquisitions = () => {
                     </h2>
                     <div style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', maxWidth: '900px', margin: '0 auto 40px auto' }}>
                         <p style={{ marginBottom: '15px' }}>
-                            We can help you <Link to="/consulting" style={{ color: '#d13239', textDecoration: 'underline' }}>develop a strategic approach</Link> to handling your startup or acquisition. Make an appointment at one of our four locations in <Link to="/harrisburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Harrisburg</Link>, <Link to="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#d13239', textDecoration: 'underline' }}>Myerstown</Link>, or <Link to="/lancaster" style={{ color: '#d13239', textDecoration: 'underline' }}>Lancaster</Link>, PA.
+                            We can help you <Link to="/consulting" style={{ color: '#bb3b41', textDecoration: 'underline' }}>develop a strategic approach</Link> to handling your startup or acquisition. Make an appointment at one of our four locations in <Link to="/harrisburg" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Harrisburg</Link>, <Link to="/mechanicsburg" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Myerstown</Link>, or <Link to="/lancaster" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Lancaster</Link>, PA.
                         </p>
                     </div>
-                    <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
+                    <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '15px 50px' }}>
                         Contact ZN Tax Consultant
                     </Link>
                 </div>

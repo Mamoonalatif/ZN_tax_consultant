@@ -43,10 +43,10 @@ const BusinessOwnership = () => {
                             </p>
                             <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
                                 <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                    background: '#d13239',
+                                    background: '#bb3b41',
                                     borderRadius: '30px',
                                     padding: '15px 40px',
-                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                    boxShadow: '0 10px 20px rgba(187, 59, 65, 0.2)'
                                 }}>
                                     Get BOI Compliance Help
                                 </Link>
@@ -94,7 +94,7 @@ const BusinessOwnership = () => {
                                     At ZN Tax Consultant, we help businesses navigate BOI reporting requirements, ensuring accurate and timely compliance. Our team stays current with evolving regulations to protect your business from penalties and maintain your good standing.
                                 </p>
                             </div>
-                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '12px 35px', marginTop: '10px' }}>
+                            <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '12px 35px', marginTop: '10px' }}>
                                 Schedule a BOI Consultation
                             </Link>
                         </div>
@@ -136,7 +136,7 @@ const BusinessOwnership = () => {
                             }
                         ].map((item, i) => (
                             <div key={i} style={{ background: '#fff', padding: '30px', borderRadius: '8px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)' }}>
-                                <div style={{ fontSize: '40px', color: '#d13239', marginBottom: '15px' }}>
+                                <div style={{ fontSize: '40px', color: '#bb3b41', marginBottom: '15px' }}>
                                     <i className={`fa-solid ${item.icon}`}></i>
                                 </div>
                                 <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '15px', color: '#333' }}>{item.title}</h3>
@@ -169,7 +169,7 @@ const BusinessOwnership = () => {
                                     'Maintain compliance with evolving regulations'
                                 ].map((item, i) => (
                                     <li key={i} style={{ marginBottom: '15px', paddingLeft: '30px', position: 'relative', fontSize: '15px', color: '#444' }}>
-                                        <span style={{ position: 'absolute', left: 0, color: '#d13239', fontWeight: 'bold', fontSize: '18px' }}>✓</span> {item}
+                                        <span style={{ position: 'absolute', left: 0, color: '#bb3b41', fontWeight: 'bold', fontSize: '18px' }}>✓</span> {item}
                                     </li>
                                 ))}
                             </ul>
@@ -179,11 +179,11 @@ const BusinessOwnership = () => {
                         </div>
                     </div>
 
-                    <div style={{ borderLeft: '6px solid #d13239', background: '#f9f9f9', padding: '40px', marginTop: '50px' }}>
+                    <div style={{ borderLeft: '6px solid #bb3b41', background: '#f9f9f9', padding: '40px', marginTop: '50px' }}>
                         <p style={{ fontSize: '16px', color: '#333', lineHeight: '1.7', marginBottom: '20px', fontWeight: '600' }}>
                             Don't risk penalties for non-compliance. Let ZN Tax Consultant handle your BOI reporting requirements.
                         </p>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 40px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '15px 40px' }}>
                             Get Started Today
                         </Link>
                     </div>
@@ -228,10 +228,10 @@ const BusinessOwnership = () => {
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                        <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/schedule" style={{ background: '#bb3b41' }}>
                             Find An Accountant
                         </Link>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41' }}>
                             Find A Bookkeeper
                         </Link>
                     </div>
@@ -252,7 +252,7 @@ const BusinessOwnership = () => {
                         <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.7', maxWidth: '850px', margin: '0 auto 40px auto' }}>
                             Have more questions about BOI reporting or beneficial ownership compliance? Our team is here to help you navigate these requirements and protect your business.
                         </p>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '15px 50px' }}>
                             Contact ZN Tax Consultant
                         </Link>
                     </div>

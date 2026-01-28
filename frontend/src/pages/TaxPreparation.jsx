@@ -46,12 +46,12 @@ const TaxPreparation = () => {
                             </p>
                             <div className="wp-block-buttons" style={{ marginTop: '30px' }}>
                                 <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                    background: '#d13239',
+                                    background: '#bb3b41',
                                     color: '#fff',
                                     padding: '15px 40px',
                                     borderRadius: '50px',
                                     fontWeight: 'bold',
-                                    boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)'
+                                    boxShadow: '0 10px 20px rgba(187, 59, 65, 0.2)'
                                 }}>
                                     Schedule Your Consultation
                                 </Link>
@@ -168,7 +168,7 @@ const TaxPreparation = () => {
                                         'Succession Planning'
                                     ].map((item, i) => (
                                         <li key={i} style={{ marginBottom: '10px', fontSize: '13px', color: '#444', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                            <span style={{ color: '#d13239' }}>•</span> {item}
+                                            <span style={{ color: '#bb3b41' }}>•</span> {item}
                                         </li>
                                     ))}
                                 </ul>
@@ -183,12 +183,12 @@ const TaxPreparation = () => {
                                         'Tax Reform Impact Analysis'
                                     ].map((item, i) => (
                                         <li key={i} style={{ marginBottom: '10px', fontSize: '13px', color: '#444', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                            <span style={{ color: '#d13239' }}>•</span> {item}
+                                            <span style={{ color: '#bb3b41' }}>•</span> {item}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-                            <div style={{ background: '#fcfcfc', borderLeft: '4px solid #d13239', padding: '20px', fontSize: '14px', color: '#555', lineHeight: '1.6' }}>
+                            <div style={{ background: '#fcfcfc', borderLeft: '4px solid #bb3b41', padding: '20px', fontSize: '14px', color: '#555', lineHeight: '1.6' }}>
                                 <p>Tax planning services help businesses like yours maximize their tax efficiency while remaining compliant with tax laws. When we help you implement the appropriate strategies, you can potentially reduce your tax burden, improve cash flow, and increase your bottom line.</p>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ const TaxPreparation = () => {
                                 { title: 'Dedicated Client Support', text: 'We take pride in building lasting relationships with our clients, offering responsive support and clear communication every step of the way.' }
                             ].map((item, i) => (
                                 <div key={i} style={{ display: 'flex', gap: '20px', background: 'rgba(255,255,255,0.7)', padding: '25px', borderRadius: '4px', boxShadow: '0 5px 15px rgba(0,0,0,0.03)' }}>
-                                    <div style={{ color: '#d13239', fontSize: '24px', fontWeight: 'bold' }}>{i + 1}</div>
+                                    <div style={{ color: '#bb3b41', fontSize: '24px', fontWeight: 'bold' }}>{i + 1}</div>
                                     <div>
                                         <h4 style={{ color: '#333', marginBottom: '10px', fontWeight: '600', fontSize: '18px' }}>{item.title}</h4>
                                         <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.6', margin: 0 }}>{item.text}</p>
@@ -292,10 +292,10 @@ const TaxPreparation = () => {
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                        <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/find-accountant" style={{ background: '#bb3b41' }}>
                             Find An Accountant
                         </Link>
-                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239' }}>
+                        <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41' }}>
                             Find A Bookkeeper
                         </Link>
                     </div>
@@ -310,10 +310,10 @@ const TaxPreparation = () => {
                     </h2>
                     <div style={{ fontSize: '15px', color: '#555', lineHeight: '1.7', maxWidth: '900px', margin: '0 auto 40px auto' }}>
                         <p style={{ marginBottom: '15px' }}>
-                            We can relieve tax time pressure and help you <Link to="/consulting" style={{ color: '#d13239', textDecoration: 'underline' }}>develop a strategic approach</Link> to handling your tax obligations. Make an appointment at one of our four locations in <Link to="/harrisburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Harrisburg</Link>, <Link to="/mechanicsburg" style={{ color: '#d13239', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#d13239', textDecoration: 'underline' }}>Myerstown</Link>, or <Link to="/lancaster" style={{ color: '#d13239', textDecoration: 'underline' }}>Lancaster</Link>, PA.
+                            We can relieve tax time pressure and help you <Link to="/consulting" style={{ color: '#bb3b41', textDecoration: 'underline' }}>develop a strategic approach</Link> to handling your tax obligations. Make an appointment at one of our four locations in <Link to="/harrisburg" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Harrisburg</Link>, <Link to="/mechanicsburg" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Mechanicsburg</Link>, <Link to="/myerstown" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Myerstown</Link>, or <Link to="/lancaster" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Lancaster</Link>, PA.
                         </p>
                     </div>
-                    <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#d13239', padding: '15px 50px' }}>
+                    <Link className="wp-block-button__link wp-element-button" to="/contact" style={{ background: '#bb3b41', padding: '15px 50px' }}>
                         Contact ZN Tax Consultant
                     </Link>
                 </div>

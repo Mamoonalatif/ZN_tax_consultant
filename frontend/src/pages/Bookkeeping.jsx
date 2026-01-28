@@ -53,10 +53,10 @@ const Bookkeeping = () => {
                                         if (footerForm) footerForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                     }}
                                     style={{
-                                        background: '#d13239',
+                                        background: '#bb3b41',
                                         padding: '15px 40px',
                                         borderRadius: '30px',
-                                        boxShadow: '0 10px 20px rgba(209, 50, 57, 0.2)',
+                                        boxShadow: '0 10px 20px rgba(187, 59, 65, 0.2)',
                                         border: 'none',
                                         color: '#fff',
                                         cursor: 'pointer',
@@ -106,12 +106,12 @@ const Bookkeeping = () => {
                                 <p style={{ marginBottom: '15px' }}>Are your books suffering because your staff is too busy? The ledger is often the last item to get attention when things get busy.</p>
                                 <p style={{ marginBottom: '15px' }}>What separates average from great is recognizing the need for help.</p>
                                 <p style={{ marginBottom: '30px' }}>
-                                    It's time to <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline', fontWeight: '600' }}>hire a fractional bookkeeper</Link> to help you get back on track.
+                                    It's time to <Link to="/contact" style={{ color: '#bb3b41', textDecoration: 'underline', fontWeight: '600' }}>hire a fractional bookkeeper</Link> to help you get back on track.
                                 </p>
                             </div>
                             <div>
                                 <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                    background: '#d13239',
+                                    background: '#bb3b41',
                                     color: '#fff',
                                     padding: '12px 35px',
                                     borderRadius: '50px',
@@ -161,7 +161,7 @@ const Bookkeeping = () => {
                         marginTop: '60px',
                         background: '#f1f1f1',
                         padding: '40px 50px',
-                        borderLeft: '5px solid #d13239',
+                        borderLeft: '5px solid #bb3b41',
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '20px'
@@ -171,7 +171,7 @@ const Bookkeeping = () => {
                         </p>
                         <div>
                             <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                background: '#d13239',
+                                background: '#bb3b41',
                                 color: '#fff',
                                 padding: '15px 40px',
                                 borderRadius: '50px',
@@ -203,12 +203,12 @@ const Bookkeeping = () => {
                                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 30px 0', columns: 1, gap: '20px' }}>
                                     {['Recording Transactions', 'Accounts Receivable', 'Accounts Payable', 'Bank Reconciliation', 'Expense Tracking', 'Financial Reporting', 'Payroll Processing', 'Tax Preparation Support', 'Financial Analysis', 'Budgeting & Forecasting', 'Compliance', 'Advisory Services'].map((task, i) => (
                                         <li key={i} style={{ marginBottom: '8px', paddingLeft: '15px', position: 'relative' }}>
-                                            <span style={{ position: 'absolute', left: 0, color: '#d13239' }}>•</span> {task}
+                                            <span style={{ position: 'absolute', left: 0, color: '#bb3b41' }}>•</span> {task}
                                         </li>
                                     ))}
                                 </ul>
                                 <p style={{ fontWeight: '500' }}>
-                                    <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>Get in touch with ZN Tax Consultant</Link> today to see if our bookkeeping services for small businesses can help you take your company from great to outstanding!
+                                    <Link to="/contact" style={{ color: '#bb3b41', textDecoration: 'underline' }}>Get in touch with ZN Tax Consultant</Link> today to see if our bookkeeping services for small businesses can help you take your company from great to outstanding!
                                 </p>
                             </div>
                         </div>
@@ -229,7 +229,7 @@ const Bookkeeping = () => {
                                 When you have a bookkeeping service designed specifically for small businesses (and even more specifically, for your business), your chances of success multiply. That's partially because your books will be accurate—but there's so much more.
                             </p>
                             <h4 style={{ fontSize: '12px', fontWeight: 'bold', marginBottom: '20px' }}>
-                                When you <span style={{ color: '#d13239', textDecoration: 'underline' }}>partner with ZN Tax Consultant</span> for all your bookkeeping services, you'll get all these benefits:
+                                When you <span style={{ color: '#bb3b41', textDecoration: 'underline' }}>partner with ZN Tax Consultant</span> for all your bookkeeping services, you'll get all these benefits:
                             </h4>
                             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 40px 0', fontSize: '12px' }}>
                                 {[
@@ -246,18 +246,18 @@ const Bookkeeping = () => {
                                     'Smooth filing at tax time, with the possibility of reduced tax liabilities'
                                 ].map((benefit, i) => (
                                     <li key={i} style={{ marginBottom: '10px', fontSize: '12px', color: '#444', display: 'flex', alignItems: 'start', gap: '10px' }}>
-                                        <span style={{ color: '#d13239', fontWeight: 'bold' }}>✓</span> {benefit}
+                                        <span style={{ color: '#bb3b41', fontWeight: 'bold' }}>✓</span> {benefit}
                                     </li>
                                 ))}
                             </ul>
 
-                            <div style={{ background: '#fcfcfc', borderLeft: '4px solid #d13239', padding: '20px', marginBottom: '25px' }}>
+                            <div style={{ background: '#fcfcfc', borderLeft: '4px solid #bb3b41', padding: '20px', marginBottom: '25px' }}>
                                 <p style={{ fontSize: '12px', margin: 0, color: '#444', lineHeight: '1.5' }}>
                                     Isn't it time to have confidence in the accuracy of your financial records while saving time, money, and maybe even tax dollars? Today is the day to contact ZN Tax Consultant to discuss how a fractional bookkeeper can help you.
                                 </p>
                             </div>
                             <Link className="wp-block-button__link wp-element-button" to="/contact" style={{
-                                background: '#d13239',
+                                background: '#bb3b41',
                                 color: '#fff',
                                 padding: '12px 35px',
                                 borderRadius: '50px',
@@ -310,8 +310,8 @@ const Bookkeeping = () => {
                     </p>
 
                     <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-                        <Link className="wp-block-button__link" to="/contact" style={{ padding: '12px 35px', background: '#d13239', borderRadius: '50px', fontWeight: 'bold' }}>Find An Accountant</Link>
-                        <Link className="wp-block-button__link" to="/about" style={{ padding: '12px 35px', background: '#d13239', borderRadius: '50px', fontWeight: 'bold' }}>See All Staff</Link>
+                        <Link className="wp-block-button__link" to="/contact" style={{ padding: '12px 35px', background: '#bb3b41', borderRadius: '50px', fontWeight: 'bold' }}>Find An Accountant</Link>
+                        <Link className="wp-block-button__link" to="/about" style={{ padding: '12px 35px', background: '#bb3b41', borderRadius: '50px', fontWeight: 'bold' }}>See All Staff</Link>
                     </div>
                 </div>
             </div>
@@ -324,7 +324,7 @@ const Bookkeeping = () => {
                             <strong>Frequently Asked Questions</strong> About Bookkeeping Services for Small Businesses
                         </h2>
                         <p style={{ color: '#777', marginBottom: '40px', fontSize: '15px' }}>
-                            If you’re thinking about hiring a bookkeeper, you’re bound to have questions. We’re answering some of the most commonly asked ones here, and you’re encouraged to <Link to="/contact" style={{ color: '#d13239', textDecoration: 'underline' }}>contact us</Link> for answers to your specific questions.
+                            If you’re thinking about hiring a bookkeeper, you’re bound to have questions. We’re answering some of the most commonly asked ones here, and you’re encouraged to <Link to="/contact" style={{ color: '#bb3b41', textDecoration: 'underline' }}>contact us</Link> for answers to your specific questions.
                         </p>
                         <FAQ items={faqItems} />
                     </div>
